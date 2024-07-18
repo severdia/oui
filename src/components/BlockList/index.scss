@@ -1,0 +1,130 @@
+////
+/// Block List
+/// @description Create big blocky vertical lists with dividers.
+/// @example[html] Default block list
+///   <ul class="#{$namespace}block-list">
+///     <li>Foo</li>
+///     <li>Bar</li>
+///     <li>Baz</li>
+///     <li><a href="#" class="#{$namespace}block-list__link">Foo Bar Baz</a></li>
+///   </ul>
+/// @example[html] Block list with bottom border
+///   <ul class="#{$namespace}block-list #{$namespace}block-list--all">
+///     <li>Foo</li>
+///     <li>Bar</li>
+///     <li>Baz</li>
+///     <li><a href="#" class="#{$namespace}block-list__link">Foo Bar Baz</a></li>
+///   </ul>
+/// @example[html] Block list with boundary
+///   <ul class="#{$namespace}block-list-group">
+///     <li>Foo</li>
+///     <li>Bar</li>
+///     <li>Baz</li>
+///     <li><a href="#" class="#{$namespace}block-list__link">Foo Bar Baz</a></li>
+///   </ul>
+////
+
+%#{$namespace}block-list,
+.#{$namespace}block-list {
+  list-style: none;
+  margin-left: 0;
+
+  > li {
+    padding: spacer(0.5);
+    border-top: 1px solid map-fetch($color, ui, light);
+  }
+
+  // For links that will take up full space of list item.
+
+  &__link {
+    display: block;
+    cursor: pointer;
+    padding: spacer(0.5) spacer(1.5);
+    margin-left: -(spacer(0.5));
+    margin-right: -(spacer(0.5));
+    border-radius: var(--border-radius);
+
+    &:hover {
+      color: var(--light-blue-75);
+      background-color: var(--light-blue-6);
+    }
+
+    &--active {
+      background-color: map-fetch($color, background, faint);
+    }
+  }
+
+  // Removes padding on left/right so items are not indented.
+
+  &--flush {
+    li {
+      padding-left: 0;
+      padding-right: 0;
+    }
+  }
+
+  &--all {
+    li:last-child {
+      border-bottom: 1px solid map-fetch($color, ui, light);
+    }
+  }
+
+  &--no-border {
+    > li {
+      border-top: 0;
+    }
+  }
+}
+
+.oui-block-list__category:not(:last-child) {
+  border-bottom: 1px solid map-fetch($color, ui, light);
+}
+
+.oui-block-list__category__name {
+  background: map-fetch($color, background, faint);
+  color: map-fetch($color, text, muted);
+  font-size: map-fetch($font, size, micro);
+  font-weight: 400;
+  border-bottom: 1px solid map-fetch($color, ui, light);
+}
+
+.oui-block-list__item {
+  padding: spacer(0.5) spacer(1.5);
+}
+
+.oui-block-list__link:hover,
+.oui-block-list__link:focus {
+  background-color: var(--light-blue-6);
+  outline: none;
+}
+
+%#{$namespace}block-list-group,
+.#{$namespace}block-list-group {
+  @extend %#{$namespace}block-list;
+  padding: 0;
+
+  border: 1px solid map-fetch($border, color, base);
+  border-radius: map-fetch($border, radius, base);
+
+  > li:first-child {
+    border: 0;
+  }
+}
+
+
+// TODO CSS FIX: update pattern
+.#{$namespace}dropdown__item .#{$namespace}dropdown__block-link {
+  margin: 0 !important;
+}
+
+.oui-dropdown-children .oui-dropdown__block-link {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.oui-dropdown-children .oui-block-list__category ul {
+  padding: spacer(0.5);
+}
+.oui-dropdown-children, .oui-dropdown-children .oui-block-list__link {
+  border-radius: var(--border-radius);
+}

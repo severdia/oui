@@ -1,0 +1,16 @@
+////
+/// Card styles
+////
+
+.oui-shadow {
+  $box-shadow-offset: 1px;
+  box-shadow: 0 $box-shadow-offset map-fetch($shadow, base);
+}
+.oui-shadow--light {
+  $box-shadow-offset: 1px;
+  box-shadow: 0 $box-shadow-offset map-fetch($shadow, light);
+}
+.oui-shadow--big {
+  $box-shadow-offset: 1px;
+  box-shadow: 0 $box-shadow-offset map-fetch($shadow, big);
+}

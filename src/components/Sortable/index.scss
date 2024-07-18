@@ -1,0 +1,26 @@
+.#{$namespace}sortable__drag-placeholder,
+.oui-sortable__drag-placeholder {
+  border: 2px dashed darken(map-fetch($color, ui, base), 10) !important;
+
+  * {
+    opacity: 0.0;
+  }
+}
+
+.#{$namespace}sortable__group,
+.oui-sortable__group {
+  border-top: 1px solid map-fetch($color, ui, light);
+
+  &__handle {
+    transform: rotate(90deg);
+    color: darken(map-fetch($color, ui, base), 10);
+    box-sizing: content-box;
+  }
+}
+
+.#{$namespace}sortable__drag-preview,
+.oui-sortable__drag-preview {
+  left: 0;
+  top: 0;
+  z-index: 9999;
+}

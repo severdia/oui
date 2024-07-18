@@ -1,0 +1,19 @@
+////
+/// Clearfix
+/// @description Used to clear floats with this
+/// [technique](http://cssmojo.com/latest_new_clearfix_so_far/). To use, extend
+/// the clearfix class.
+/// @example[scss]
+///   .foo {
+///     @extend %cf;
+///   }
+////
+
+%cf,
+.cf {
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+}

@@ -1,0 +1,52 @@
+////
+/// Textarea
+/// @example[html]
+///   <label>
+///     <span class="oui-label">Experiment Hypothesis</span>
+///     <textarea class="oui-textarea" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+///   </label>
+/// @example[html]
+///   <label>
+///     <span class="oui-label oui-label--disabled">
+///       Experiment Hypothesis
+///     </span>
+///     <textarea class="oui-textarea" disabled placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+///   </label>
+/// @example[html]
+///   <label>
+///     <span class="oui-label">
+///       Tall Experiment Hypothesis
+///     </span>
+///     <textarea class="oui-textarea oui-textarea--tall" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+///   </label>
+/// @example[html]
+///   <label class="#{$namespace}form-bad-news">
+///     <span class="oui-label oui-label--required">
+///       Experiment Hypothesis
+///     </span>
+///     <textarea class="oui-textarea" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+///     <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
+///   </label>
+////
+
+.#{$namespace}textarea,
+.oui-textarea {
+  @include text-input;
+
+  height: 62px;
+  resize: vertical;
+
+  &--tall {
+    height: 100px;
+  }
+}
+
+.#{$namespace}textarea--small,
+.oui-textarea--small {
+  @include text-input--small;
+}
+
+.#{$namespace}textarea--disabled,
+.oui-textarea--disabled {
+  @include text-input--small;
+}

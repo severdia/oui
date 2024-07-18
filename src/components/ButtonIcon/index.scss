@@ -1,0 +1,23 @@
+.oui-button-icon {
+  padding: 4px;
+  line-height: normal;
+}
+
+.oui-button-icon__small {
+  width: $icon-small * 2;
+  height: $icon-small * 2;
+}
+
+.oui-button-icon__medium {
+  width: $icon-small + $icon-large;
+  height: $icon-small + $icon-large;
+}
+
+.oui-button-icon__large {
+  width: $icon-large * 2;
+  height: $icon-large * 2;
+  .oui-icon {
+    width: $icon-large;
+    height: $icon-large;
+  }
+}

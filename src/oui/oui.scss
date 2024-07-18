@@ -1,0 +1,47 @@
+////
+/// OUI
+/// @description Root file compiling only OUI CSS.
+////
+
+/// Reminder: Adding a new partial file here? Don't forget
+/// to add a reference in Optly repo v2.scss!
+
+$include-fonts:(
+  weights: 300 400 500 600 700,
+  italics: true
+);
+
+@import 'library/react-dates/20.1.0/index';
+@import 'library/react-gh-like-diff/1.0.7/index';
+
+/// OUI functions
+@import 'partials/sass/functions';
+
+/// Axiom Tokens
+@import '../tokens/forimport/index';
+
+/// OUI variables
+@import 'oui-variables';
+
+/// OUI partials
+@import 'oui-partials';
+
+/// Overrides
+/// @description Overrides use `!important` classes for overrides and should
+/// always be loaded last.
+@import '../overrides/Background/index';
+@import '../overrides/Border/index';
+@import '../overrides/Color/index';
+@import '../overrides/Layout/index';
+@import '../overrides/Margin/index';
+@import '../overrides/Padding/index';
+@import '../overrides/Type/index';
+@import '../overrides/Sizing/index';
+@import '../overrides/Admin/index';
+
+/// Third Party Code
+@import 'library/highlight.js/9.6.0/docco';
+@import 'library/tether/1.3.7/index';
+@import 'library/react-tippy/tippy';
+@import 'library/tippy/2.1.1/tippy';
+

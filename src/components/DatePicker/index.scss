@@ -1,0 +1,73 @@
+@import 'overrides.scss';
+
+.oui-date-picker {
+  display: inline-block;
+}
+
+.oui-date-picker--absolute {
+  .DayPicker {
+    position: absolute;
+    z-index: map-fetch($z-index, poptip);
+  }
+}
+
+.oui-date-picker__month-title {
+  color: $brand-purple-dark;
+}
+
+.oui-date-picker__input-row {
+  display: flex;
+  padding-bottom: spacer(0.5);
+}
+
+.oui-date-picker__range-panel {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  padding: spacer(1) spacer(2);
+}
+
+.oui-date-picker__range-presets {
+  min-height: 225px;
+}
+
+.oui-date-picker__range-preset-list {
+  border: 1px solid $smoke-dark;
+  margin-top: spacer(6);
+}
+
+.oui-date-picker__range-preset-option {
+  height: 35px;
+  border-bottom: 1px solid $smoke-dark;
+  &--active {
+    background: $brand-blue-light;
+  }
+
+  &:hover {
+    background: $brand-blue-light;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  .oui-button {
+    padding: 0 spacer(1) !important;
+  }
+
+  .oui-button:focus {
+    background-color: $brand-blue-light !important;
+    .link {
+      color: map-fetch($color, link, hover);
+    }
+  }
+}
+
+.oui-date-picker--borderless {
+
+  .DayPicker__withBorder {
+    box-shadow: none;
+  }
+}
+
+

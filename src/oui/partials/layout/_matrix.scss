@@ -1,0 +1,42 @@
+////
+/// Matrix
+/// @description Creates rows of elements with one parent,
+/// extending `#{$namespace}grid`.
+/// @example[scss] Include your own margin/padding and list-item widths.
+///   @include matrix;
+/// @example[scss] Include 2 columns, 4 spacing units, and responsive at
+/// `300px`.
+///   @include matrix(2, 4, 300px);
+/// @example[scss] All arguments are optional but setting the number of columns
+/// value is recommened.
+///   .foo {
+///     @include matrix(2);
+///   }
+/// @example[scss] In this example the matrix will have 3 columns, 4 spacer
+/// units between columns, and will flatten at 300px.
+///   .foo {
+///     @include matrix(3, 4, 300px);
+///   }
+/// @example[html]
+///   <ul class="#{$namespace}matrix #{$namespace}matrix--1-2">
+///     <li><div>matrix 1</div></li>
+///     <li><div>matrix 2</div></li>
+///     <li><div>matrix 3</div></li>
+///     <li><div>matrix 4</div></li>
+///   </ul>
+////
+
+%#{$namespace}matrix,
+.#{$namespace}matrix {
+  @include matrix(2);
+}
+
+%#{$namespace}matrix,
+.#{$namespace}matrix {
+  @include matrix(3);
+}
+
+%#{$namespace}matrix,
+.#{$namespace}matrix {
+  @include matrix(4);
+}

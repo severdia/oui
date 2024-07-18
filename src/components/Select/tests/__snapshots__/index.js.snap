@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Select should render correctly when declared with no properties 1`] = `
+<select
+  className="oui-select"
+  data-oui-component={true}
+>
+  <option
+    value="one"
+  >
+    This is option one
+  </option>
+  <option
+    value="two"
+  >
+    And this is option two
+  </option>
+</select>
+`;
+
+exports[`components/Select should render correctly when isDisabled prop is declare 1`] = `
+<select
+  className="oui-select"
+  data-oui-component={true}
+  disabled={true}
+>
+  <option
+    value="one"
+  >
+    This is option one
+  </option>
+  <option
+    value="two"
+  >
+    And this is option two
+  </option>
+</select>
+`;

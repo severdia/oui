@@ -1,0 +1,50 @@
+////
+/// Text
+/// @description Special type design treatments.
+////
+
+/// Editiable
+/// @description Text that can be edited, like project titles.
+/// @example[html]
+///   <!-- Can be applied to any element -->
+///   <p v-editable-text>This Text is Editable</p>
+
+.editable {
+  &:hover {
+    color: map-fetch($color, text, muted);
+
+    &::after {
+      display: inline-block;
+      color: map-fetch($color, text, muted);
+      content: '\270E';
+      font-size: 1em;
+      padding-right: spacer(0.5);
+      transform: scaleX(-1);
+    }
+  }
+}
+
+/// Monospace font
+/// @description Useful for code examples.
+
+.monospace {
+  font-family: map-fetch($font, family, monospace);
+}
+
+/// Pseudo Content
+/// @description Content that is applied as a pseudo-element and defined as an
+/// attribute on an empty element. This is useful for preventing an element's
+/// text from being copied to the clipboard.
+/// @example[html] Try to highlight and copy the plus sign
+///   <span data-lego-pseudo-content="+"></span> Some text
+
+[data-lego-pseudo-content]::before {
+  content: attr(data-lego-pseudo-content);
+}
+
+/// Number font
+// @description Used on results page and for certain types of tabular data.
+
+.number-display {
+  font-family: map-fetch($font, family, number);
+}

@@ -1,0 +1,46 @@
+////
+/// Input
+/// @example[html]
+///   <label>
+///     <span class="oui-label">Name</span>
+///     <input class="oui-text-input" placeholder="Jane Doe" />
+///   </label>
+/// @example[html]
+///   <label>
+///     <span class="oui-label oui-label--disabled">Name</span>
+///     <input class="oui-text-input" disabled placeholder="Jane Doe" />
+///   </label>
+/// @example[html]
+///   <label class="#{$namespace}form-bad-news">
+///     <span class="oui-label oui-label--required">
+///       Experiment Hypothesis
+///     </span>
+///     <input class="oui-text-input" placeholder="Jane Doe" />
+///     <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
+///   </label>
+////
+
+.#{$namespace}text-input,
+.oui-text-input {
+  @include text-input;
+}
+
+.#{$namespace}text-input[type="number"],
+.oui-text-input[type="number"] {
+  text-align: right;
+}
+
+.#{$namespace}text-input--small,
+.oui-text-input--small {
+  @include text-input--small;
+}
+
+.#{$namespace}text-input--disabled,
+.oui-text-input--disabled {
+  @include text-input--small;
+}
+
+.#{$namespace}text-input--read-only,
+.oui-text-input--read-only {
+  @include text-input--read-only;
+}

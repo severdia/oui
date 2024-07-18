@@ -1,0 +1,17 @@
+////
+/// ListGroup
+////
+
+.#{$namespace}listgroup,
+.oui-listgroup,
+.listgroup {
+
+  .listgroup__item:first-child {
+    padding-top: 0 !important;
+  }
+  .listgroup__item:last-child {
+    border: 0 !important;
+  }
+
+
+}

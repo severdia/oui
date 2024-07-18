@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Poptip renders correctly 1`] = `
+<Poptip
+  bodyDefined={true}
+  content="Really interesting info!"
+  delay={0}
+  disable={false}
+  hideDelay={0}
+  isAnimated={true}
+  isInline={false}
+  position="top"
+  setBodyDefined={[Function]}
+  theme="dark"
+>
+  Testing Poptip
+</Poptip>
+`;

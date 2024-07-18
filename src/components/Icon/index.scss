@@ -1,0 +1,158 @@
+////
+/// Icons
+/// @example[html] 12x12 Icons
+///   <svg class="#{$namespace}icon #{$namespace}icon--small">
+///     <use xlink:href="#feedback-16"></use>
+///   </svg>
+/// @example[html] 16x16 Icons
+///   <svg class="#{$namespace}icon">
+///     <use xlink:href="#feedback-16"></use>
+///   </svg>
+/// @example[html] 24x24 Icons
+///   <svg class="#{$namespace}icon #{$namespace}icon--medium">
+///     <use xlink:href="#feedback-24"></use>
+///   </svg>
+/// @example[html] 32x32 Icons
+///   <svg class="#{$namespace}icon #{$namespace}icon--large">
+///     <use xlink:href="#feedback-24"></use>
+///   </svg>
+////
+
+.#{$namespace}icon,
+.oui-icon {
+  width: map-fetch($icon, size, base, width);
+  height: map-fetch($icon, size, base, height);
+  display: inline-block;
+  fill: currentColor;
+
+  &--small,
+  &--12 {
+    width: map-fetch($icon, size, small, width);
+    height: map-fetch($icon, size, small, height);
+  }
+
+  &--medium,
+  &--24 {
+    width: map-fetch($icon, size, medium, width);
+    height: map-fetch($icon, size, medium, height);
+  }
+
+  &--large,
+  &--32 {
+    width: map-fetch($icon, size, large, width);
+    height: map-fetch($icon, size, large, height);
+  }
+
+  // This is a vertical alignment fix when used to the right of `.#{$namespace}icon`.
+  + [class^="#{$namespace}-arrow-inline"],
+  + [class^="oui-arrow-inline"] {
+    vertical-align: super;
+  }
+
+  &--text-align {
+    position: relative;
+    top: 2px; // This moves the inline icon down so it is visually aligned with the text.
+  }
+}
+
+/// Icon alignment fixes
+/// @description Fix for icons inside tabs.
+
+.#{$namespace}tabs-nav__item .#{$namespace}icon,
+.#{$namespace}tabs-nav__item .oui-icon {
+  vertical-align: sub;
+}
+
+/// Activity Icons
+/// @description Used for showing the status item.
+/// @example[html] Activity icons within a `.block-list-group`.
+///   <ul class="#{$namespace}block-list-group">
+///     <li>
+///       <div class="#{$namespace}media">
+///         <span class="icon-status--active #{$namespace}media__img flush--top"></span>
+///         <div class="#{$namespace}media__body">
+///           <p>This is the active item.</p>
+///         </div>
+///       </div>
+///     </li>
+///     <li>
+///       <div class="#{$namespace}media">
+///         <span class="icon-status--good-news #{$namespace}media__img flush--top"></span>
+///         <div class="#{$namespace}media__body">
+///           <p>This is good.</p>
+///         </div>
+///       </div>
+///     </li>
+///     <li>
+///       <div class="#{$namespace}media">
+///         <span class="icon-status--bad-news #{$namespace}media__img flush--top"></span>
+///         <div class="#{$namespace}media__body">
+///           <p>This is probably not good.</p>
+///         </div>
+///       </div>
+///     </li>
+///     <li>
+///       <div class="#{$namespace}media">
+///         <span class="icon-status--empty #{$namespace}media__img flush--top"></span>
+///         <div class="#{$namespace}media__body">
+///           <p>This is not active but holds the space if needed.</p>
+///         </div>
+///       </div>
+///     </li>
+///   </ul>
+
+.icon-status {
+
+  &--active,
+  &--bad-news,
+  &--good-news,
+  &--empty {
+    &::before {
+      content: '';
+      border-radius: map-fetch($border, radius, full);
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
+  }
+
+  &--active::before {
+    background: map-fetch($color, ui, brand);
+  }
+
+  &--bad-news::before {
+    background: map-fetch($color, ui, bad-news);
+  }
+
+  &--good-news::before {
+    background: map-fetch($color, ui, good-news);
+  }
+}
+
+/// Target icons.
+/// @description Adds a background circle on the hover state of any icon.
+/// @example[html] Close icon with a background color on hover.
+///   <svg class="icon icon-target">
+///     <use xlink:href="#close-16"></use>
+///   </svg>
+
+.icon-target {
+  padding: map-fetch($icon, type, target, padding);
+  border-radius: 50%;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  &:hover {
+    background: var(--light-blue-6);
+    color: var(--light-blue-75);
+  }
+}
+
+.svg--non-scaling-stroke {
+  &-path,
+  &-circle,
+  &-rect,
+  &-line {
+    vector-effect: non-scaling-stroke;
+  }
+}

@@ -1,0 +1,81 @@
+.CalendarDay__default {
+  border: 1px solid $smoke-dark;
+}
+
+.CalendarDay__default:hover {
+  background: $brand-blue-light;
+  border: 1px solid $smoke-dark;
+}
+// Will edit everything selected including everything between a range of dates
+.CalendarDay__selected_span {
+  background: $brand-blue-base; //background
+  border: 1px solid $smoke-dark;
+  color: black;
+
+  &:hover {
+    background: $brand-blue-light; //background
+    border: 1px solid $smoke-dark;
+    color: black;
+  }
+}
+
+// Will edit selected date or the endpoints of a range of dates
+.CalendarDay__selected, .CalendarDay__selected_start, .CalendarDay__selected_end {
+  background: $brand-blue-dark; //background
+  border: 1px solid $smoke-dark;
+  color: white;
+}
+
+// Will edit when hovered over. _span style also has this property
+.CalendarDay__selected:hover {
+  background: $brand-blue-dark;
+  border: 1px solid $smoke-dark;
+}
+
+// Will edit when the second date (end date) in a range of dates
+// is not yet selected. Edits the dates between your mouse and said date
+.CalendarDay__hovered_span:hover,
+.CalendarDay__hovered_span {
+  background: $brand-blue-light;
+  border: 1px solid $smoke-dark;
+  color: black;
+}
+
+.CalendarDay__blocked_out_of_range,
+.CalendarDay__blocked_out_of_range:active,
+.CalendarDay__blocked_out_of_range:hover {
+  background: #fff;
+  border: 1px solid $smoke-base;
+  color: $smoke-dark;
+}
+
+.DateRangePickerInput__withBorder, .SingleDatePickerInput__withBorder {
+  border: 1px solid #e0e0e0;
+  border-radius: var(--border-radius);
+}
+
+.DateInput {
+  border-radius: var(--border-radius);
+  border: transparent 1px solid;
+  background: transparent;
+}
+
+.DateInput_input__focused {
+  border-bottom-color: $brand-blue-dark;
+}
+
+.DayPicker_transitionContainer {
+  border-radius: var(--border-radius);
+}
+
+.DateRangePickerInput_arrow {
+  height: map-fetch($icon, size, medium, height);
+}
+
+.DateInput_fang {
+  display: none;
+}
+
+.DateInput__small {
+  width: 130px;
+}

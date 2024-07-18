@@ -1,0 +1,69 @@
+////
+/// Button Group
+/// @description For buttons that are flush against each other. It is also
+/// possible to include an text input.
+/// @example[html] Default button group
+///   <div class="#{$namespace}button-group">
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
+///   </div>
+/// @example[html] Button group with text input
+///   <div class="#{$namespace}button-group">
+///     <button class="oui-button">Select <span class="oui-arrow-inline--down"></span></button>
+///     <input type="text" class="oui-text-input">
+///   </div>
+/// @example[html] Button group with text input
+///   <div class="#{$namespace}button-group">
+///     <input type="text" class="oui-text-input">
+///     <button class="oui-button">Button</button>
+///   </div>
+////
+
+%#{$namespace}button-group,
+.#{$namespace}button-group {
+  display: flex;
+
+  & > * { // scss-lint:disable UnnecessaryParentReference
+    margin-left: 0;
+    border-radius: 0;
+
+    &:not(:first-child) {
+      margin-left: -1px;
+    }
+
+    &:hover,
+    &:focus {
+      position: relative;
+    }
+
+    &:first-child {
+      border-radius: map-fetch($border, radius, big) 0 0 map-fetch($border, radius, big);
+    }
+
+    &:last-child {
+      border-radius: 0 map-fetch($border, radius, big) map-fetch($border, radius, big) 0;
+    }
+  }
+
+  > .#{$namespace}button--highlight,
+  > .oui-button--highlight {
+    position: relative;
+  }
+
+  > .#{$namespace}text-input,
+  > .oui-text-input {
+    flex: 1;
+    width: auto;
+  }
+
+  // If inside a button group bring the colored buttons to the top so that
+  // the borders are intact.
+
+  .#{$namespace}button--highlight,
+  .oui-button--highlight,
+  .#{$namespace}button--danger,
+  .oui-button--danger {
+    z-index: 1;
+  }
+}

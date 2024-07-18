@@ -1,0 +1,14 @@
+/**
+ * ExampleComponent
+ *
+ * NOTE: If needed, scss files should be imported in src/oui/_oui-partials.scss
+ *  (please use existing OUI classes when possible and consult UI Eng when adding styles is absolutely necessary)
+ */
+
+
+.#{$namespace}example-component,
+.oui-example-component {
+  span.example-background--yellow {
+    background-color: map-fetch($root-color, warning);
+  }
+}

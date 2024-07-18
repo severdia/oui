@@ -1,0 +1,181 @@
+{
+  "name": "optimizely-oui",
+  "version": "44.3.1",
+  "description": "Optimizely's Component Library.",
+  "private": false,
+  "main": "dist/js/main.js",
+  "module": "module/js/main.js",
+  "dependencies": {
+    "@restart/context": "^2.1.4",
+    "awesome-debounce-promise": "^1.0.0",
+    "classnames": "^2.2.5",
+    "clipboard": "^1.5.12",
+    "highlight.js": "9.5.0",
+    "immutable": "3.x.x",
+    "lodash.debounce": "^4.0.8",
+    "lodash.noop": "^3.0.1",
+    "react-copy-to-clipboard": "^5.0.1",
+    "react-dates": "^20.1.0",
+    "react-dnd": "^7.0.2",
+    "react-dnd-html5-backend": "^7.0.2",
+    "react-dnd-test-backend": "^7.0.2",
+    "react-gh-like-diff": "^1.0.7",
+    "react-immutable-proptypes": "^2.1.0",
+    "react-oui-icons": "^2.2.0",
+    "react-outside-click-handler": "^1.2.3",
+    "react-popper": "^1.3.3",
+    "react-tagsinput": "^3.19.0",
+    "react-tippy": "^1.2.2",
+    "recompose": "^0.26.0",
+    "styled-components": "^2.1.2",
+    "svg-jsx-loader": "0.0.18",
+    "tether": "^1.3.7"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.0.0",
+    "@babel/core": "^7.0.0",
+    "@babel/plugin-proposal-class-properties": "^7.4.0",
+    "@babel/plugin-proposal-decorators": "^7.0.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@storybook/addon-a11y": "^5.0.11",
+    "@storybook/addon-actions": "^5.0.11",
+    "@storybook/addon-info": "^5.0.11",
+    "@storybook/addon-knobs": "^5.0.11",
+    "@storybook/addon-notes": "^5.0.11",
+    "@storybook/addon-options": "^5.0.11",
+    "@storybook/addon-viewport": "^5.1.9",
+    "@storybook/react": "^5.0.11",
+    "@storybook/theming": "^5.0.11",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-react-docgen": "^2.0.0",
+    "babel-plugin-transform-class-properties": "^6.24.1",
+    "codecov": "^1.0.1",
+    "css-loader": "^0.25.0",
+    "csswhat": "optimizely/csswhat",
+    "del": "^2.2.2",
+    "doctrine": "^1.2.2",
+    "enzyme": "3.0.0",
+    "enzyme-adapter-react-16": "^1.0.1",
+    "enzyme-to-json": "3.0.0-beta6",
+    "eslint": "^4.16.0",
+    "eslint-plugin-react": "^7.4.0",
+    "extract-text-webpack-plugin": "^3.0.2",
+    "glamor": "^2.20.12",
+    "glob": "^7.0.6",
+    "history": "^3.0.0",
+    "jest": "^23.0.0",
+    "jest-cli": "^23.2.0",
+    "js-yaml": "^3.7.0",
+    "json": "^9.0.4",
+    "json-loader": "^0.5.4",
+    "lodash.find": "^4.6.0",
+    "marked": "^0.3.6",
+    "mkdirp": "^0.5.1",
+    "node-sass": "^4.9.0",
+    "node-sass-chokidar": "^1.3.5",
+    "onchange": "^6.0.0",
+    "postcss-loader": "^0.13.0",
+    "prop-types": "^15.7.2",
+    "react": "16.6.0",
+    "react-addons-test-utils": "15.6.2",
+    "react-docgen": "^2.20.1",
+    "react-dom": "^16.4.0",
+    "react-element-to-jsx-string": "^5.0.0",
+    "react-ga": "^2.1.2",
+    "react-router": "^3.0.1",
+    "react-test-renderer": "^16.0.0",
+    "regenerator-runtime": "^0.11.1",
+    "sass-lint": "^1.12.1",
+    "sass-loader": "7.1.0",
+    "scribesass-parser": "optimizely/scribesass-parser#0.0.3",
+    "storybook-addon-smart-knobs": "^4.1.2",
+    "style-loader": "^0.13.1",
+    "svg-inline-loader": "^0.7.1",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^3.1.11",
+    "webpack-notifier": "^1.5.1"
+  },
+  "peerDependencies": {
+    "react": "^16.0.0",
+    "react-dom": "^16.0.0"
+  },
+  "scripts": {
+    "test": "npm run eslint && npm run jest",
+    "debugtest": "node --inspect-brk node_modules/.bin/jest --watch --runInBand",
+    "build": "npm run build-styles && npm run babel-es5 && npm run babel-module",
+    "babel-es5": "babel src/ --out-dir dist/js --no-babelrc --ignore \"tests/*.js, src/js\"",
+    "babel-module": "babel src/ --out-dir module/js --configFile=false --ignore \"tests/*.js, src/js\"",
+    "codecov": "codecov",
+    "jest": "jest --config jest.config.js --no-cache",
+    "jest:watch": "jest --config jest.config.js --watch",
+    "lint": "git diff origin/devel... --name-only --relative -- '*.js' | tr '\n' ' ' | xargs yarn eslint --ext .js --fix",
+    "lint:nofix": "git diff origin/devel... --name-only --relative -- '*.js' | tr '\n' ' ' | xargs yarn eslint --ext .js",
+    "eslint": "eslint --ext .jsx --ext .js . --max-warnings 0",
+    "preversion": "git checkout master && git pull --rebase=false",
+    "postversion": "npm run postversion:publish && npm run postversion:update-devel",
+    "postversion:publish": "git push --follow-tags",
+    "postversion:update-devel": "git checkout devel && git pull && git merge master && git push origin devel && git checkout master",
+    "storybook": "yarn generate-tokens:watch & yarn csswhat:watch & start-storybook -p 9009",
+    "build-storybook": "yarn generate-tokens && yarn csswhat && build-storybook -c .storybook -o ./storybook",
+    "build-styles": "yarn csswhat && ./node_modules/.bin/webpack",
+    "watch": "./node_modules/.bin/webpack --watch",
+    "csswhat": "yarn csswhat-css && yarn csswhat-json",
+    "csswhat-css": "node-sass-chokidar src/oui/oui.scss -o ./data/csswhat",
+    "csswhat-json": "node node_modules/csswhat/csswhat.js --in=./data/csswhat/oui.css --out=./data/csswhat/oui.css.json",
+    "csswhat:watch": "yarn csswhat-json:watch & yarn csswhat-css:watch",
+    "csswhat-json:watch": "onchange 'data/csswhat/oui.css' -- yarn csswhat-json",
+    "csswhat-css:watch": "node-sass-chokidar src/oui/oui.scss --watch -o ./data/csswhat",
+    "generate-tokens": "node src/tokens/index.js",
+    "generate-tokens:watch": "onchange 'src/tokens/src/**/*.json' -- yarn generate-tokens"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/optimizely/oui.git"
+  },
+  "engines": {
+    "node": ">=8.15.1"
+  },
+  "author": "Tom Genoni <tom@atomeye.com> (http://atomeye.com/)",
+  "contributors": [
+    {
+      "name": "Cheston Lee"
+    },
+    {
+      "name": "Daniel O'Connor"
+    },
+    {
+      "name": "Kelly Walker"
+    },
+    {
+      "name": "Tim Scanlin"
+    },
+    {
+      "name": "Dave Rau"
+    },
+    {
+      "name": "Iñaki Aranzadi"
+    },
+    {
+      "name": "Jack Schlotthauer"
+    }
+  ],
+  "license": "SEE LICENSE IN LICENSE.md",
+  "bugs": {
+    "url": "https://github.com/optimizely/oui/issues"
+  },
+  "homepage": "https://github.com/optimizely/oui",
+  "keywords": [
+    "oui",
+    "components",
+    "optimizely",
+    "scss",
+    "css",
+    "ui"
+  ]
+}

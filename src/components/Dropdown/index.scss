@@ -1,0 +1,185 @@
+////
+/// Dropdown
+/// @example[html] Dropdown default
+///   <div style="min-height: 150px;">
+///     <div class="#{$namespace}dropdown-group">
+///       <button class="oui-button">
+///         Dropdown <span class="oui-arrow-inline--down"></span>
+///       </button>
+///       <ul class="#{$namespace}dropdown width--200" style="display: block;">
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Manage Collaborators</a>
+///           <a href="#" class="#{$namespace}dropdown__block-link">Manage This Thing</a>
+///         </li>
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///         </li>
+///       </ul>
+///     </div>
+///   </div>
+/// @example[html] Dropdown right
+///   <div class="text--right" style="min-height: 150px;">
+///     <div class="#{$namespace}dropdown-group">
+///       <button class="oui-button">
+///         Dropdown <span class="oui-arrow-inline--down"></span>
+///       </button>
+///       <ul class="#{$namespace}dropdown #{$namespace}dropdown--right width--200" style="display: block;">
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Manage Collaborators</a>
+///           <a href="#" class="#{$namespace}dropdown__block-link">Manage This Thing</a>
+///         </li>
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///         </li>
+///       </ul>
+///     </div>
+///   </div>
+/// @example[html] Dropdown with filter
+///   <div style="min-height: 150px;">
+///     <div class="#{$namespace}dropdown-group">
+///       <button class="oui-button">
+///         Dropdown <span class="oui-arrow-inline--down"></span>
+///       </button>
+///       <ul class="#{$namespace}dropdown width--200" style="display: block;">
+///         <li class="#{$namespace}dropdown__item">
+///           <form class="soft-half--ends">
+///             <input type="text" class="oui-text-input oui-text-input--search">
+///           </form>
+///         </li>
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///         </li>
+///       </ul>
+///     </div>
+///   </div>
+/// @example[html] Dropdown inside input
+///   <div style="min-height: 150px;">
+///     <div class="#{$namespace}dropdown-group">
+///       <input type="text" class="oui-text-input" placeholder="Input with a Dropdown">
+///       <ul class="#{$namespace}dropdown width--200" style="display: block;">
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Manage Collaborators</a>
+///           <a href="#" class="#{$namespace}dropdown__block-link">Manage This Thing</a>
+///         </li>
+///         <li class="#{$namespace}dropdown__item">
+///           <a href="#" class="#{$namespace}dropdown__block-link">Experiment Change History</a>
+///         </li>
+///       </ul>
+///     </div>
+///   </div>
+/// @example[html] Descriptive dropdown
+///   <div style="min-height: 190px;">
+///     <div class="#{$namespace}dropdown-group">
+///       <button class="oui-button">
+///         Dropdown <span class="arrow-inline--down"></span>
+///       </button>
+///       <ul class="#{$namespace}dropdown dropdown--descriptive width--250" style="display: block;">
+///         <li class="#{$namespace}dropdown__item">
+///           <div class="#{$namespace}dropdown__block-link">
+///             <div class="#{$namespace}dropdown--descriptive__header">Improvement over time</div>
+///             <div class="#{$namespace}dropdown--descriptive__content">Cumulative improvement over time for the personalized audience compared to the holdback.</div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}dropdown__item">
+///           <div class="#{$namespace}dropdown__block-link">
+///             <div class="#{$namespace}dropdown--descriptive__header">Conversions over time</div>
+///             <div class="#{$namespace}dropdown--descriptive__content">Daily conversions over time for both the personalized and holdback audiences.</div>
+///           </div>
+///         </li>
+///       </ul>
+///     </div>
+///   </div>
+////
+
+.#{$namespace}dropdown-group,
+.oui-dropdown-group {
+  font-size: map-fetch($font, size, base);
+  display: inline-block;
+  position: relative;
+  vertical-align: top;
+
+  &.is-active {
+    .#{$namespace}dropdown,
+    .oui-dropdown {
+      display: block;
+    }
+  }
+}
+
+%#{$namespace}dropdown,
+.#{$namespace}dropdown,
+.oui-dropdown {
+  $box-shadow-offset: 2px;
+  @extend %#{$namespace}block-list-group;
+  background: map-fetch($color, background, white);
+  min-width: 100%;
+  position: absolute;
+  top: 100%;
+  left: auto;
+  z-index: 1;
+  margin-top: 2px;
+  text-align: left;
+  max-height: map-fetch($dropdown, max-height);
+  line-height: map-fetch($font, line-height, base);
+  font-weight: 400;
+  overflow-y: auto;
+  display: none;
+  border: 0;
+  box-shadow: var(--wide-shadow);
+  border-radius: var(--border-radius);
+
+  &__item {
+    color: map-fetch($color, text, base);
+    padding: spacer(.5) spacer(1);
+
+    & > div.isSelected,
+    & > div.micro {
+      padding: spacer(0.5) spacer(1.5);
+    }
+
+    &--active {
+      background: map-fetch($color, background, faint);
+    }
+  }
+
+  &--right {
+    right: 0;
+    left: auto;
+  }
+
+  &--descriptive {
+    &__header {
+      color: var(--dark-blue-100);
+    }
+
+    &__content {
+      font-size: map-fetch($font, size, micro);
+      line-height: map-fetch($font, line-height, tight);
+      color: map-fetch($color, text, muted);
+      margin-bottom: spacer(0.5);
+    }
+  }
+
+  &__block-link {
+    @extend %#{$namespace}block-list__link;
+
+    &:hover {
+      .#{$namespace}dropdown--descriptive__header,
+      .oui-dropdown--descriptive__header,
+      .#{$namespace}dropdown--descriptive__content,
+      .oui-dropdown--descriptive__content {
+        color: var(--light-blue-75);
+      }
+    }
+  }
+
+  &--up {
+    bottom: 100%;
+    top: initial;
+  }
+
+}
+
+.oui-dropdown-children > div {
+  border-radius: var(--border-radius);
+}

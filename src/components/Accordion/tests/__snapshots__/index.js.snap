@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Accordion should render a \`ul\` HTML element with the right classes 1`] = `
+<ul
+  className="accordion accordion__react"
+  data-oui-component={true}
+>
+  <AccordionSection
+    _isSelected={true}
+    _onClickHandler={[Function]}
+    key="0/.0"
+    title="Hello"
+  >
+    World!
+  </AccordionSection>
+</ul>
+`;

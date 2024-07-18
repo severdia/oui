@@ -1,0 +1,98 @@
+<html>
+<head>
+  <link href="http://design.optimizely.com/oui/latest/styles.css" rel="stylesheet" />
+  <title>OUI Starter</title>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+  <script src="dist/main.js"></script>
+
+</head>
+<body>
+
+  <section class="push-quad reading-column">
+    <h1>OUI React Button Example</h1>
+    <p>Following the guide at https://reactjs.org/docs/add-react-to-a-website.html</p>
+    <div id="oui_react_example"></div>
+  </section>
+
+  <script type="text/babel">
+    // Access any OUI component via the global namespace
+    ReactDOM.render(
+        <div>
+          <div>
+            <Table density="loose">
+            <Table.THead>
+            <Table.TR>
+            <Table.TH>
+             Experiment
+            </Table.TH>
+            <Table.TH>
+             Conversion Rate
+            </Table.TH>
+            <Table.TH>
+             Status
+            </Table.TH>
+            </Table.TR>
+            </Table.THead>
+            <Table.TBody>
+            <Table.TR>
+            <Table.TD>
+             Header CTA
+            </Table.TD>
+            <Table.TD width="20%">
+             12%
+            </Table.TD>
+            <Table.TD>
+             Paused
+            </Table.TD>
+            </Table.TR>
+            <Table.TR>
+            <Table.TD>
+             Shorter Contact Form
+            </Table.TD>
+            <Table.TD>
+             4%
+            </Table.TD>
+            <Table.TD>
+             Draft
+            </Table.TD>
+            </Table.TR>
+            <Table.TR>
+            <Table.TD>
+             Larger search bar
+            </Table.TD>
+            <Table.TD>
+             6.7%cal
+            </Table.TD>
+            <Table.TD>
+             Paused
+            </Table.TD>
+            </Table.TR>
+            <Table.TR>
+            <Table.TD>
+             Center aligned headline
+            </Table.TD>
+            <Table.TD>
+             9.3%
+            </Table.TD>
+            <Table.TD>
+             Running
+            </Table.TD>
+            </Table.TR>
+            </Table.TBody>
+            </Table>
+          </div>
+
+          <Button>Hello</Button>
+
+          <RangeSlider>Hello</RangeSlider>
+
+        </div>,
+        document.getElementById('oui_react_example')
+    );
+  </script>
+
+</body>
+</html>

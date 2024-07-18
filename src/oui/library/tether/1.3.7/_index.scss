@@ -1,0 +1,161 @@
+$margin: 10px;
+$popover-border-width: 1px;
+
+.tether-element {
+  &.tether-element-attached-middle.tether-element-attached-right.tether-target-attached-middle.tether-target-attached-left {
+    margin-left: -$margin;
+
+    .oui-pop--over {
+      @include arrow(right, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-right: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(right, center, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-top.tether-element-attached-right.tether-target-attached-top.tether-target-attached-left {
+    margin-left: -$margin;
+
+
+    .oui-pop--over {
+      @include arrow(right, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-right: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(right, top, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-bottom.tether-element-attached-right.tether-target-attached-bottom.tether-target-attached-left {
+    margin-left: -$margin;
+
+    .oui-pop--over {
+      @include arrow(right, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-right: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(right, bottom, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-middle.tether-element-attached-left.tether-target-attached-middle.tether-target-attached-right {
+    margin-left: $margin;
+
+    .oui-pop--over {
+      @include arrow(left, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-left: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(left, center, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-top.tether-element-attached-left.tether-target-attached-top.tether-target-attached-right {
+    margin-left: $margin;
+
+    .oui-pop--over {
+      @include arrow(left, top, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-left: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(left, top, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-bottom.tether-element-attached-left.tether-target-attached-bottom.tether-target-attached-right {
+    margin-left: $margin;
+
+    .oui-pop--over {
+      @include arrow(left, bottom, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-left: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(left, bottom, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-center.tether-element-attached-top.tether-target-attached-bottom.tether-target-attached-center {
+    margin-top: $margin;
+
+    .oui-pop--over {
+      @include arrow(top, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-top: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(top, center, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-left.tether-element-attached-top.tether-target-attached-bottom.tether-target-attached-left {
+    margin-top: $margin;
+
+    .oui-pop--over {
+      @include arrow(top, left, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-top: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(top, left, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-right.tether-element-attached-top.tether-target-attached-bottom.tether-target-attached-right {
+    margin-top: $margin;
+
+    .oui-pop--over {
+      @include arrow(top, right, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-top: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(top, right, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-center.tether-element-attached-bottom.tether-target-attached-top.tether-target-attached-center {
+    margin-top: -$margin;
+
+    .oui-pop--over {
+      @include arrow(bottom, center, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-bottom: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(bottom, center, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-left.tether-element-attached-bottom.tether-target-attached-top.tether-target-attached-left {
+    margin-top: -$margin;
+
+    .oui-pop--over {
+      @include arrow(bottom, left, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-bottom: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(bottom, left, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+
+  &.tether-element-attached-right.tether-element-attached-bottom.tether-target-attached-top.tether-target-attached-right {
+    margin-top: -$margin;
+
+    .oui-pop--over {
+      @include arrow(bottom, right, map-fetch($color, ui, white), map-fetch($color, ui, base));
+      margin-bottom: -$popover-border-width;
+    }
+
+    .oui-pop--tip {
+      @include arrow(bottom, right, map-fetch($color, ui, dark), map-fetch($color, ui, dark));
+    }
+  }
+}

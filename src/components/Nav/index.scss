@@ -1,0 +1,74 @@
+////
+/// Nav
+/// @description Creates simple nav pattens to extend.
+/// @example[html] Default
+///   <ul class="#{$namespace}nav">
+///     <li><a href="#">Home</a></li>
+///     <li><a href="#">About</a></li>
+///     <li><a href="#">Portfolio</a></li>
+///     <li><a href="#">Contact</a></li>
+///   </ul>
+/// @example[html] Stacked
+///   <ul class="#{$namespace}nav #{$namespace}nav--stacked">
+///     <li><a href="#">Home</a></li>
+///     <li><a href="#">About</a></li>
+///     <li><a href="#">Portfolio</a></li>
+///     <li><a href="#">Contact</a></li>
+///   </ul>
+/// @example[html] Banner (centered)
+///   <ul class="#{$namespace}nav #{$namespace}nav--center">
+///     <li><a href="#">Home</a></li>
+///     <li><a href="#">About</a></li>
+///     <li><a href="#">Portfolio</a></li>
+///     <li><a href="#">Contact</a></li>
+///   </ul>
+/// @example[html] Fit
+///   <ul class="#{$namespace}nav #{$namespace}nav--fit">
+///     <li><a href="#">Home</a></li>
+///     <li><a href="#">About</a></li>
+///     <li><a href="#">Portfolio</a></li>
+///     <li><a href="#">Contact</a></li>
+///   </ul>
+////
+
+%#{$namespace}nav,
+.#{$namespace}nav {
+  display: flex;
+
+  > li {
+    margin-right: spacer(1);
+
+    > a {
+      display: block;
+    }
+  }
+
+  &--stacked {
+    display: block;
+
+    > li {
+      margin-right: 0;
+    }
+  }
+
+  &--center {
+    justify-content: center;
+
+    > li {
+      margin-left: spacer(0.5);
+      margin-right: spacer(0.5);
+    }
+  }
+
+  &--fit {
+    display: flex;
+
+    > li {
+      flex: 1;
+
+      > a {
+        display: block;
+      }
+    }
+  }
+}

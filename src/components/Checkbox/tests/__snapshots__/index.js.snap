@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Checkbox should render a checked checkbox when \`checked\` is true 1`] = `
+<Label>
+  <div
+    className="flex"
+  >
+    <input
+      checked={true}
+      className="flex--none"
+      data-oui-component={true}
+      onChange={[MockFunction]}
+      style={
+        Object {
+          "marginTop": "0.35em",
+        }
+      }
+      type="checkbox"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Checkbox should render a checked checkbox when \`defaultChecked\` is true 1`] = `
+<Label>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      defaultChecked={true}
+      style={
+        Object {
+          "marginTop": "0.35em",
+        }
+      }
+      type="checkbox"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Checkbox should render an unchecked checkbox when \`checked\` is false 1`] = `
+<Label>
+  <div
+    className="flex"
+  >
+    <input
+      checked={false}
+      className="flex--none"
+      data-oui-component={true}
+      onChange={[MockFunction]}
+      style={
+        Object {
+          "marginTop": "0.35em",
+        }
+      }
+      type="checkbox"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Checkbox should render an unchecked checkbox when \`defaultChecked\` is false 1`] = `
+<Label>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      defaultChecked={false}
+      style={
+        Object {
+          "marginTop": "0.35em",
+        }
+      }
+      type="checkbox"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;

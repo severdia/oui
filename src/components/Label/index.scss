@@ -1,0 +1,79 @@
+////
+/// Label
+/// @example[html]
+///   <label>
+///     <span class="oui-label">Name</span>
+///     <input class="oui-text-input" placeholder="Jane Doe">
+///   </label>
+/// @example[html]
+///   <label>
+///     <span class="oui-label oui-label--required">Name</span>
+///     <input class="oui-text-input" placeholder="Jane Doe" required>
+///   </label>
+/// @example[html]
+///   <label>
+///     <div class="oui-label">
+///       Name
+///       <span class="oui-label__optional">
+///         (Optional)
+///       </span>
+///     </div>
+///     <input class="oui-text-input" placeholder="Jane Doe">
+///   </label>
+/// @example[html]
+///   <label>
+///     <span class="oui-label oui-label--disabled">Name</span>
+///     <input class="oui-text-input" disabled placeholder="Jane Doe">
+///   </label>
+/// @example[html]
+///   <ul class="oui-input-list">
+///     <li>
+///       <input name="radio-set-1" id="bar-1" type="radio" checked>
+///       <label class="oui-label" for="bar-1">Radio Option #1
+///     </li>
+///   </ul>
+/// @example[html]
+///   <label>
+///     <span class="oui-label">
+///       Experiment Hypothesis
+///     </span>
+///     <textarea class="oui-textarea" placeholder="Lorem ipsum dolor sit amet, consectetur adipiscing elit."></textarea>
+///   </label>
+////
+.#{$namespace}label,
+.oui-label {
+  display: block;
+  margin-bottom: spacer(0.5);
+  font-weight: 400;
+
+  // Fun fact: We used to implement the “(Optional)” text with an `::after`,
+  // but had to change that because `content: '(Optional)';` couldn't be
+  // translated by our translation service.
+  &__optional {
+    margin-left: spacer(0.5);
+    color: map-fetch($color, text, muted);
+    font-size: map-fetch($font, size, micro);
+    font-weight: 400;
+  }
+
+  &--required::after {
+    content: '*';
+    margin-left: spacer(0.5);
+    color: map-fetch($color, text, bad-news);
+    font-weight: 400;
+    font-size: map-fetch($font, size, delta);
+    line-height: 1;
+    position: relative;
+    top: 2px; // Corrects position.
+  }
+
+  &--rule {
+    border-bottom: 1px solid map-fetch($border, color, base);
+    padding-bottom: spacer(0.5);
+  }
+
+  &--disabled {
+    color: map-fetch($color, text, muted);
+    cursor: default !important;
+  }
+}

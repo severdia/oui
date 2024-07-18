@@ -1,0 +1,13 @@
+// FilterPicker
+
+/**
+ * When a text search input is in .oui-filter-picker and not disabled or read-only, styles will be changed.
+ * This allows for a nice fit with the BlockList / FilterList items, but assumes those aren't present
+ * when disabled or read-only
+ */
+.#{$namespace}filter-picker-list, .oui-filter-picker-list {
+  .#{$namespace}text-input--search, .oui-text-input--search {
+    border-bottom: 0 !important;
+    border-radius: 5px 5px 0px 0px !important;
+  }
+}

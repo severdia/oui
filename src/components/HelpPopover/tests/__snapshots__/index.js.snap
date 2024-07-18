@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/HelpPopover renders correctly 1`] = `
+<OverlayWrapper
+  attachmentConstraint="together"
+  behavior="click"
+  horizontalAttachment="center"
+  isConstrainedToScreen={true}
+  overlay={
+    <Popover
+      padding="default"
+      title="I am a popover title!"
+    >
+      I am a popover description.
+    </Popover>
+  }
+  shouldHideOnClick={true}
+  testSection="help-popover"
+  verticalAttachment="top"
+>
+  <span
+    className="cursor--pointer push-half--left"
+    data-test-section="help-popover-icon"
+    style={
+      Object {
+        "marginBottom": "1px",
+      }
+    }
+  >
+    <Icon
+      name="help"
+      size="medium"
+    />
+  </span>
+</OverlayWrapper>
+`;

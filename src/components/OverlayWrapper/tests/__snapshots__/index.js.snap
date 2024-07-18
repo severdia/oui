@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/OverlayWrapper snapshots & others should render a Popover component inside 1`] = `
+<OverlayWrapper
+  attachmentConstraint="together"
+  behavior="click"
+  horizontalAttachment="center"
+  isConstrainedToScreen={false}
+  overlay={<TestPopover />}
+  shouldHideOnClick={true}
+  verticalAttachment="top"
+>
+  <div
+    data-oui-component={true}
+    style={
+      Object {
+        "display": "inline-block",
+      }
+    }
+  >
+    <div
+      className="click-area"
+      onClick={[Function]}
+      style={
+        Object {
+          "display": "inline-block",
+        }
+      }
+    >
+      <TestButton
+        text="button"
+      >
+        <button>
+          button
+        </button>
+      </TestButton>
+    </div>
+    <div
+      style={
+        Object {
+          "display": "none",
+        }
+      }
+    >
+      <TestPopover>
+        <Popover
+          padding="default"
+          title="Lorem ipsum dolor sit amet"
+        >
+          <div
+            className="oui-pop--over"
+            data-oui-component={true}
+            style={
+              Object {
+                "display": "block",
+                "opacity": 1,
+                "position": "initial",
+              }
+            }
+          >
+            <div
+              className="oui-pop--over__content"
+            >
+              <div
+                className="oui-pop--over__title"
+              >
+                Lorem ipsum dolor sit amet
+              </div>
+              <p>
+                Ipsa officiis bad-news minus earum a aperiam! Aperiam reiciendis vitae nihil libero et, hic!
+              </p>
+            </div>
+          </div>
+        </Popover>
+      </TestPopover>
+    </div>
+  </div>
+</OverlayWrapper>
+`;

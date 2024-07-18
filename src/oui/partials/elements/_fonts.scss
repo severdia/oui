@@ -1,0 +1,132 @@
+////
+/// Fonts
+/// @description Pulls in fonts from self hosting.
+///
+/// Font Support:
+/// - woff2: Chrome 26+, Opera 23+
+
+$hosted-fonts:(
+  weights:(
+    300: light,
+    400: regular,
+    500: medium,
+    600: semibold,
+    700: bold,
+  ),
+  url: 'https://dhm5hy2vn8l0l.cloudfront.net'
+);
+
+
+// TODO(dave.rau) Update loop so this works as a mixin
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 300;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-light.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 300;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-lightitalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 400;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-regular.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 400;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-regularitalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 500;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-medium.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 500;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-mediumitalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 600;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-semibold.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 600;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-semibolditalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 700;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-bold.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Graphik';
+  font-weight: 700;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/graphik/graphik-bolditalic.woff2') format('woff2'),
+}
+
+// Include full Lato versions as Graphik fallbacks
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-light.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 300;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-lightitalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-regular.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 400;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-regularitalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 500;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-medium.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 500;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-mediumitalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 600;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-semibold.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 600;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-semibolditalic.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-bold.woff2') format('woff2'),
+}
+@font-face {
+  font-family: 'Lato';
+  font-weight: 700;
+  font-style: italic;
+  src: url(map-fetch($hosted-fonts, url)+'/lato/lato-bolditalic.woff2') format('woff2'),
+}

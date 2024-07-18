@@ -1,0 +1,159 @@
+////
+/// Placeholders
+////
+
+/// Arrows
+/// @description If you only need an inline arrow for dropdown menus or similar
+/// uses, see "Arrow Inline" below for ready-made classes.
+///
+/// It is a common design treatment to give an element a triangular points-out
+/// arrow, we typically build these with CSS. These following classes allow us
+/// to generate these arbitrarily with a mixin, `@arrow()`.
+/// @example[scss]
+///   .foo {
+///     @include arrow(top, right, red);
+///     width: 100px;
+///     height: 100px;
+///     background: red;
+///   }
+
+$arrow-size: 6px !default;
+$arrow-border: 1 !default;
+$border-size: $arrow-size;
+$arrow: $arrow-size - $arrow-border;
+
+// Forms the basis for any/all CSS arrows.
+
+%arrow {
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    border-collapse: separate;
+    pointer-events: none; // Added to preview hover issues. FF/Saf/Chrome/IE 10+.
+  }
+
+  &::before {
+    border: $border-size solid transparent;
+  }
+
+  &::after {
+    border: $arrow solid transparent;
+  }
+}
+
+// Define individual edges so we can combine what we need, when we need.
+
+%arrow--top {
+  @extend %arrow;
+
+  &::before,
+  &::after {
+    bottom: 100%;
+  }
+}
+
+%arrow--upper {
+  @extend %arrow;
+
+  &::before {
+    top: $arrow;
+  }
+
+  &::after {
+    top: $border-size;
+  }
+}
+
+%arrow--middle {
+  @extend %arrow;
+
+  &::before,
+  &::after {
+    top: 50%;
+    margin-top: -$border-size;
+  }
+
+  &::after {
+    margin-top: -$arrow;
+  }
+}
+
+%arrow--lower {
+  @extend %arrow;
+
+  &::before {
+    bottom: $arrow;
+  }
+
+  &::after {
+    bottom: $border-size;
+  }
+}
+
+%arrow--bottom {
+  @extend %arrow;
+
+  &::before,
+  &::after {
+    top: 100%;
+  }
+}
+
+%arrow--near {
+  @extend %arrow;
+
+  &::before,
+  &::after {
+    right: 100%;
+  }
+}
+
+%arrow--left {
+  @extend %arrow;
+
+  &::before {
+    left: $arrow;
+  }
+
+  &::after {
+    left: $border-size;
+  }
+}
+
+%arrow--center {
+  @extend %arrow;
+
+  &::before,
+  &::after {
+    left: 50%;
+    margin-left: -$border-size;
+  }
+
+  &::after {
+    margin-left: -$arrow;
+  }
+}
+
+%arrow--right {
+  @extend %arrow;
+
+  &::before {
+    right: $arrow;
+  }
+
+  &::after {
+    right: $border-size;
+  }
+}
+
+%arrow--far {
+  @extend %arrow;
+
+  &::before,
+  &::after {
+    left: 100%;
+  }
+}

@@ -1,0 +1,370 @@
+////
+/// Buttons
+/// @example[html] Button colors
+///   <button class="oui-button">Button</button>
+///   <button class="oui-button oui-button--highlight">Button</button>
+///   <button class="oui-button oui-button--danger">Button</button>
+///   <button class="oui-button oui-button--danger-outline">Button</button>
+///   <button class="oui-button oui-button--outline">Button</button>
+///   <button class="oui-button oui-button--underline">Button <span class="oui-arrow-inline--down"></span></button>
+///   <button class="oui-button oui-button--plain">Button</button>
+/// @example[html] Tiny buttons
+///   <button class="oui-button oui-button--tiny">Button</button>
+///   <button class="oui-button oui-button--small">Button</button>
+/// @example[html] Full width buttons
+///   <button class="oui-button oui-button--full">Button</button>
+/// @example[html] Disabled buttons
+///   <button class="oui-button oui-button--disabled">Disabled with Class</button>
+///   <button class="oui-button" disabled>Disabled with Attribute</button>
+////
+
+%#{$namespace}button,
+.#{$namespace}button,
+%oui-button,
+.oui-button {
+  display: inline-block;
+  vertical-align: middle;
+  white-space: nowrap;
+  font-family: inherit;
+  cursor: pointer;
+  margin: 0;
+  line-height: map-fetch($button, size, base, line-height);
+  border-width: 1px;
+  border-style: solid;
+  font-size: map-fetch($button, size, base, font-size);
+  font-weight: map-fetch($button, size, base, font-weight);
+  user-select: none;
+  border-radius: map-fetch($button, size, base, border-radius);
+  height: map-fetch($button, size, base, height);
+  padding: map-fetch($button, size, base, padding);
+  transition: color map-fetch($transition-duration, base), background-color map-fetch($transition-duration, base), box-shadow map-fetch($transition-duration, base), border-color map-fetch($transition-duration, base);
+
+  // Unique styles for the base, button start here.
+  background-color: map-fetch($button, type, base, background);
+  border-color: map-fetch($button, type, base, border);
+  color: map-fetch($button, type, base, color);
+
+  &:visited {
+    color: map-fetch($button, type, base, color);
+  }
+
+  &:hover {
+    color: map-fetch($button, type, base, color);
+    background-color: $base-white;
+  }
+
+  &:focus {
+    // Uses the same style as input hover and removes the outline while
+    // remaining accessible.
+    outline: none;
+    border: 1px solid map-fetch($color, ui, medium);
+  }
+
+  &.is-active,
+  &:active {
+    background: map-fetch($button, type, base, active, background);
+    border-color: map-fetch($button, type, base, active, border);
+    color: map-fetch($button, type, base, active, color);
+    box-shadow: map-fetch($button, type, base, active, box-shadow);
+  }
+
+  &--highlight {
+    background-color: map-fetch($button, type, highlight, background);
+    border-color: map-fetch($button, type, highlight, border);
+    color: map-fetch($color, text, white);
+
+    &:hover {
+      background: map-fetch($button, type, highlight, hover, background);
+      border-color: map-fetch($button, type, highlight, hover, border);
+    }
+
+    &:focus {
+      border: 1px solid map-fetch($button, type, highlight, focus, border);
+    }
+
+    &:active {
+      background: map-fetch($button, type, highlight, active, background);
+      border-color: map-fetch($button, type, highlight, active, border);
+      box-shadow: map-fetch($button, type, highlight, active, box-shadow);
+    }
+
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      color: map-fetch($color, text, white);
+    }
+  }
+
+  &--outline {
+    background-color: map-fetch($button, type, outline, background);
+    border-color: map-fetch($button, type, outline, border);
+    color: map-fetch($button, type, outline, color);
+
+    &:visited {
+      color: map-fetch($button, type, outline, color);
+    }
+
+    &:focus {
+      border: 1px solid map-fetch($button, type, outline, hover, border);
+    }
+
+    &:hover {
+      background-color: map-fetch($button, type, outline, background);
+      border-color: map-fetch($button, type, outline, hover, border);
+      color: map-fetch($button, type, outline, hover, color);
+      box-shadow: none;
+    }
+
+    &:active {
+      background-color: map-fetch($button, type, outline, background);
+      border-color: map-fetch($button, type, outline, active, border);
+      color: map-fetch($button, type, outline, active, color);
+      box-shadow: none;
+    }
+  }
+
+  &--danger {
+    background-color: map-fetch($button, type, danger, background);
+    border-color: map-fetch($button, type, danger, border);
+    color: map-fetch($color, text, white);
+
+    &:hover {
+      background: map-fetch($button, type, danger, hover, background);
+      border-color: map-fetch($button, type, danger, hover, border);
+    }
+
+    &:active {
+      background: map-fetch($button, type, danger, active, background);
+      border-color: map-fetch($button, type, danger, active, border);
+    }
+
+    &:focus {
+      border: 1px solid shade(map-fetch($button, type, danger, background), 30%);
+    }
+
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      color: map-fetch($color, text, white);
+    }
+  }
+
+  &--danger-outline {
+    color: map-fetch($button, type, danger-outline, color);
+    border-color: map-fetch($button, type, danger-outline, border);
+    background-color: transparent;
+    box-shadow: none;
+
+    &:focus {
+      border: 1px solid shade(map-fetch($button, type, danger, background), 30%);
+    }
+
+    &:hover {
+      color: map-fetch($button, type, danger-outline, hover, color);
+      border-color: map-fetch($button, type, danger-outline, hover, border);
+      background-color: transparent;
+      box-shadow: none;
+    }
+
+    &:active {
+      border-color: map-fetch($button, type, danger-outline, active, border);
+      background-color: transparent;
+      color: map-fetch($button, type, danger-outline, active, color);
+      box-shadow: none;
+    }
+  }
+
+  &--plain,
+  &--underline {
+    color: map-fetch($button, type, plain, color);
+    border-color: transparent;
+    background-color: transparent;
+    box-shadow: none;
+
+    &:hover {
+      color: map-fetch($button, type, plain, hover, color);
+    }
+
+    &:active {
+      color: map-fetch($button, type, plain, active, color);
+    }
+
+    &:visited,
+    &:hover,
+    &:active,
+    &:focus {
+      border-color: transparent;
+      background-color: transparent;
+      box-shadow: none;
+    }
+  }
+
+  &--underline {
+    border-radius: 0 !important;
+  }
+
+  &--plain {
+    &:focus {
+      border: 1px solid var(--light-blue-25);
+    }
+  }
+
+  &--toggle {
+    &:hover {
+      color: map-fetch($button, type, base, color);
+    }
+
+    &:active,
+    &.is-active:hover {
+      color: map-fetch($button, type, base, active, color);
+    }
+
+    &:not(:hover):not(:active):not(.is-active) {
+      border-color: transparent;
+      background-color: transparent;
+    }
+  }
+
+  &--underline {
+    border-bottom: 2px solid map-fetch($button, type, underline, border);
+    color: map-fetch($button, type, base, color);
+    padding-left: spacer(0.5);
+    padding-right: spacer(0.5);
+
+    &:hover {
+      border-bottom-width: 2px;
+      border-bottom-color: map-fetch($button, type, underline, hover, border);
+      color: map-fetch($button, type, underline, color);
+      & .oui-arrow-inline--down {
+        color: map-fetch($button, type, underline, hover, arrow-color);
+      }
+    }
+
+    &:focus {
+      border-bottom-width: 2px;
+      border-bottom-color: map-fetch($button, type, underline, focus, border);
+      & .oui-arrow-inline--down {
+        color: map-fetch($button, type, underline, focus, border);
+      }
+    }
+
+    &:active {
+      border-bottom-width: 2px;
+      border-bottom-color: map-fetch($button, type, underline, active, border);
+      color: map-fetch($button, type, underline, active, color);
+      & .oui-arrow-inline--down {
+        color: map-fetch($button, type, underline, active, arrow-color);
+      }
+    }
+  }
+
+  // Button Sizes
+
+  &--tiny {
+    font-size: map-fetch($button, size, tiny, font-size);
+    font-weight: map-fetch($button, size, tiny, font-weight);
+    border-radius: map-fetch($button, size, tiny, border-radius);
+    line-height: map-fetch($button, size, tiny, line-height);
+    height: map-fetch($button, size, tiny, height);
+    padding: map-fetch($button, size, tiny, padding);
+  }
+
+  &--small {
+    font-size: map-fetch($button, size, small, font-size);
+    font-weight: map-fetch($button, size, small, font-weight);
+    border-radius: map-fetch($button, size, small, border-radius);
+    line-height: map-fetch($button, size, small, line-height);
+    height: map-fetch($button, size, small, height);
+    padding: map-fetch($button, size, small, padding);
+  }
+
+  &--large {
+    font-size: map-fetch($button, size, large, font-size);
+    font-weight: map-fetch($button, size, large, font-weight);
+    border-radius: map-fetch($button, size, large, border-radius);
+    line-height: map-fetch($button, size, large, line-height);
+    height: map-fetch($button, size, large, height);
+    padding: map-fetch($button, size, large, padding);
+  }
+
+  &--narrow {
+    padding-left: spacer(1);
+    padding-right: spacer(1);
+  }
+
+  &--tight {
+    padding-left: spacer(0.5);
+    padding-right: spacer(0.5);
+  }
+
+  &--full {
+    width: 100%;
+    text-align: center;
+  }
+
+  // With Icon
+  // Some extra help is needed to get the icon and text to line up.
+
+  &--icon {
+    line-height: 1.4;
+
+    .#{$namespace}icon {
+      vertical-align: sub;
+    }
+  }
+
+  &--unstyled {
+    // scss-lint:disable ImportantRule
+    background: inherit !important;
+    border: none !important;
+    border-radius: inherit !important;
+    box-shadow: inherit !important;
+    color: inherit !important;
+    font-size: inherit !important;
+    font-weight: inherit !important;
+    height: inherit !important;
+    line-height: 1 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    text-shadow: inherit !important;
+  }
+
+  // Disabled State
+  // Used either an attribute or a class, depending on the use case.
+
+  &[disabled],
+  &--disabled,
+  &--disabled:visited,
+  &--disabled:hover,
+  &--disabled:active,
+  &--disabled:focus {
+    cursor: default;
+    box-shadow: none;
+    background-color: map-fetch($button, type, disabled, background);
+    border-color: map-fetch($button, type, disabled, border);
+    color: map-fetch($button, type, disabled, color);
+    box-shadow: none;
+
+    &.#{$namespace}button--plain,
+    &.#{$namespace}button--toggle,
+    &.oui-button--plain,
+    &.oui-button--toggle {
+      background-color: transparent;
+      border-color: transparent;
+    }
+
+    &.#{$namespace}button--outline-reverse,
+    &.oui-button--outline-reverse {
+      background-color: transparent;
+    }
+  }
+
+  &--loading {
+    .oui-spinner {
+      margin-bottom: spacer(-0.5);
+      margin-right: spacer(0.5);
+    }
+  }
+}

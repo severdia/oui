@@ -1,0 +1,109 @@
+////
+/// Background Colors
+/// @description Classes to add background colors.
+/// @example[html]
+///   <div class="cf">
+///     <div class="background--faint float--left soft">
+///       faint
+///     </div>
+///     <div class="background--light float--left soft">
+///       light
+///     </div>
+///     <div class="background--muted float--left soft">
+///       muted
+///     </div>
+///     <div class="background--medium reverse float--left soft">
+///       medium
+///     </div>
+///     <div class="background--charcoal reverse float--left soft">
+///       charcoal
+///     </div>
+///     <div class="background--brand reverse float--left soft">
+///       brand
+///     </div>
+///     <div class="background--brand-dark reverse float--left soft">
+///       brand-dark
+///     </div>
+///     <div class="background--warning float--left soft">
+///       warning
+///     </div>
+///     <div class="background--bad-news float--left soft">
+///       bad-news
+///     </div>
+///     <div class="background--good-news float--left soft">
+///       good-news
+///     </div>
+///     <div class="background--live float--left soft">
+///       live
+///     </div>
+///     <div class="background--draft float--left soft">
+///       draft
+///     </div>
+///     <div class="background--current-color float--left soft">
+///       current-color
+///     </div>
+///     <div class="background--none float--left soft">
+///       none
+///     </div>
+///   </div>
+////
+
+.background--white {
+  background-color: map-fetch($color, background, white) !important;
+}
+
+.background--faint {
+  background-color: map-fetch($color, background, faint) !important;
+}
+
+.background--light {
+  background-color: map-fetch($color, background, light) !important;
+}
+
+.background--muted {
+  background-color: map-fetch($color, background, muted) !important;
+}
+
+.background--medium {
+  background-color: map-fetch($color, background, medium) !important;
+}
+
+.background--charcoal {
+  background-color: map-fetch($color, background, charcoal) !important;
+}
+
+.background--brand {
+  background-color: map-fetch($color, background, brand) !important;
+}
+
+.background--brand-dark {
+  background-color: map-fetch($color, background, brand-dark) !important;
+}
+
+.background--warning {
+  background-color: map-fetch($color, background, warning) !important;
+}
+
+.background--bad-news {
+  background-color: map-fetch($color, background, bad-news) !important;
+}
+
+.background--good-news {
+  background-color: map-fetch($color, background, good-news) !important;
+}
+
+.background--live {
+  background-color: map-fetch($color, ui, live) !important;
+}
+
+.background--draft {
+  background-color: map-fetch($color, ui, draft) !important;
+}
+
+.background--current-color {
+  background-color: currentColor !important;
+}
+
+.background--none {
+  background-color: none !important;
+}

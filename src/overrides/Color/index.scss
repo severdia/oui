@@ -1,0 +1,38 @@
+////
+/// Colors
+/// @description Classes to add colors.
+////
+
+// CSS3 Variables
+:root {
+   --wide-shadow             : 0 1px 3px rgba(0,0,0,0.10), 0 1px 2px rgba(0,0,0,0.17);
+   --border-radius           : 5px;
+   --highlight               : var(--light-blue-6);
+   --ron-project-badge       : #7b81d1;
+   --white                   : #FFFFFF;
+}
+
+// Create CSS3 variables for each $brand-color
+// Use `color: var(--light-blue-100);`
+:root {
+  @each $name, $hex in map-fetch($brand-color) {
+    --#{$name}: #{$hex};
+  }
+}
+
+// Background colors
+// Use `.background--colorname`
+@each $name, $hex in map-fetch($brand-color) {
+  .background--#{$name} {
+    background-color: #{$hex};
+    color: white;
+  }
+}
+
+// Foreground colors
+// Use `.color--colorname`
+@each $name, $hex in map-fetch($brand-color) {
+  .color--#{$name} {
+    color: #{$hex};
+  }
+}

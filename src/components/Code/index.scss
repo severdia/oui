@@ -1,0 +1,47 @@
+////
+/// Code
+/// @description Monospace code snippets, both inline and multiline.
+/// @example[html] Inline code
+///   Text can have <code class="oui-code">code snippets</code> in a sentence.
+/// @example[html] Multiline code
+///   <pre class="oui-pre"><code>&lt;!DOCTYPE html&gt;
+///   &lt;html&gt;
+///     &lt;body&gt;
+///
+///       &lt;h1&gt;My First Heading&lt;/h1&gt;
+///
+///       &lt;p&gt;My first paragraph.&lt;/p&gt;
+///
+///     &lt;/body&gt;
+///   &lt;/html&gt;</code></pre>
+////
+
+code {
+  font-family: map-fetch($font, family, monospace);
+  // Bump the monospace font size down a bit because it renders larger than the
+  // default body text.
+  font-size: map-fetch($font, size, base) - 1;
+}
+
+.#{$namespace}pre,
+.oui-pre {
+  margin-bottom: spacer(1);
+  white-space: pre-wrap;
+
+  code {
+    padding: spacer(1);
+    background: map-fetch($color, background, faint);
+    overflow-x: auto;
+    display: block;
+    border-radius: map-fetch($border, radius, base);
+    border: 1px solid map-fetch($border, color, base);
+  }
+}
+
+.#{$namespace}code,
+.oui-code {
+  background: map-fetch($color, background, faint);
+  border-radius: map-fetch($border, radius, base);
+  border: 1px solid map-fetch($border, color, base);
+  padding: 1px 3px;
+}

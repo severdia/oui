@@ -1,0 +1,24 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/ProgressDots should render correctly with testSection prop 1`] = `
+<ul
+  className="oui-progress-dots"
+  data-oui-component={true}
+  data-test-section="testing-foo"
+>
+  <li />
+  <li />
+  <li />
+</ul>
+`;
+
+exports[`components/ProgressDots should render correctly without props 1`] = `
+<ul
+  className="oui-progress-dots"
+  data-oui-component={true}
+>
+  <li />
+  <li />
+  <li />
+</ul>
+`;

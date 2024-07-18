@@ -1,0 +1,112 @@
+.oui-dialog__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: map-fetch($z-index, dialog);
+}
+
+.oui-dialog {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  box-shadow: 0 0 map-fetch($shadow, big);
+  width: map-fetch($dialog, width, narrow);
+  background: map-fetch($color, background, white);
+  max-height: 75%;
+}
+
+.oui-dialog__overlay {
+  background: map-fetch($color, background, white);
+  opacity: map-fetch($opacity, heavy);
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+}
+
+.oui-dialog__header {
+  padding: spacer(2) spacer(2) spacer(1) spacer(2);
+}
+
+.oui-dialog__footer-container {
+  background: map-fetch($dialog, footer, color);
+  border-top: 1px solid map-fetch($color, ui, light);
+  padding: spacer(1) spacer(2);
+}
+
+.oui-dialog__body {
+  padding: spacer(1) spacer(2);
+}
+
+.oui-dialog__link {
+  margin-left: spacer(0.5);
+}
+
+/* OLD DIALOG CSS ----------------------------------------- */
+
+.lego-dialog {
+  position: relative;
+  box-shadow: 0 0 map-fetch($shadow, big);
+  width: map-fetch($dialog, width, base);
+
+  &--narrow {
+    width: map-fetch($dialog, width, narrow);
+  }
+
+  &--wide {
+    width: map-fetch($dialog, width, wide);
+  }
+
+  &__header,
+  &__body,
+  &__footer {
+    padding: spacer(2);
+  }
+
+  &__header,
+  &__footer {
+    background-color: map-fetch($color, background, faint);
+  }
+
+  &__header {
+    border-bottom: 1px solid map-fetch($color, ui, light);
+  }
+
+  &__footer {
+    border-top: 1px solid map-fetch($color, ui, light);
+  }
+
+  &__title {
+    font-size: map-fetch($font, size, beta);
+    color: map-fetch($color, text, brand-dark);
+    line-height: 1;
+  }
+
+  &__body {
+    @extend %kill-last-child-margin;
+    background: map-fetch($color, background, white);
+    padding-bottom: spacer(3);
+  }
+
+  &__close {
+    @include flex-center;
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    cursor: pointer;
+    background: map-fetch($color, background, black);
+    color: map-fetch($color, ui, white);
+    border: 2px solid map-fetch($color, ui, white);
+    box-shadow: 0 0 map-fetch($shadow, big);
+    z-index: 1; // This is needed to bring the close icon above the dialog background.
+  }
+}

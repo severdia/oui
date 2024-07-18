@@ -1,0 +1,21 @@
+////
+/// Island
+/// @description Simple, boxed off content, as per the island object.
+/// @example[html]
+///   <div class="#{$namespace}island">
+///      I am boxed off.
+///   </div>
+////
+
+%#{$namespace}island,
+.#{$namespace}island {
+  @extend %kill-last-child-margin;
+  border: 1px solid map-fetch($color, ui, light);
+  border-radius: map-fetch($border, radius, base);
+  background: map-fetch($color, background, faint);
+  padding: spacer(1);
+
+  &--center {
+    text-align: center;
+  }
+}

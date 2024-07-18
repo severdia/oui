@@ -1,0 +1,137 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/EmptyDashboard should render 1`] = `
+<EmptyDashboard
+  button={
+    <Button
+      isDisabled={false}
+      isLink={false}
+      isLoading={false}
+      isSubmit={false}
+      loadingText=""
+      onBlur={[Function]}
+      onClick={[Function]}
+      onMouseDown={[Function]}
+      style="highlight"
+      width="default"
+    >
+      Highlight Button
+    </Button>
+  }
+  description={
+    <div>
+      This is a test description about 
+      <Link
+        href="http://google.com"
+      >
+        X Feature
+      </Link>
+       with a Google.
+    </div>
+  }
+  headline="Get started with Optimizely X"
+  imagePath="https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg"
+>
+  <div
+    className="flex overflow-y--scroll flex--1"
+    data-oui-component={true}
+    data-test-section="layers-empty-state"
+    style={
+      Object {
+        "margin": "auto",
+        "width": "750px",
+      }
+    }
+  >
+    <div
+      className="anchor--middle height--1-1 flex flex--column"
+    >
+      <div
+        className="text--center soft-quad"
+        data-oui-component={true}
+      >
+        <div
+          className="muted push-double--bottom"
+          style={
+            Object {
+              "margin": "auto",
+              "width": "550px",
+            }
+          }
+        >
+          <object
+            alt=""
+            className="svg--non-scaling-stroke display--inline"
+            data="https://app.optimizely.com/static/img/p13n/campaign-list-empty-state.svg"
+            style={
+              Object {
+                "maxHeight": "290px",
+                "maxWidth": "450px",
+              }
+            }
+          />
+        </div>
+        <h1
+          className="alpha push--bottom"
+        >
+          Get started with Optimizely X
+        </h1>
+        <div
+          className="muted push--bottom anchor--middle"
+          style={
+            Object {
+              "maxWidth": undefined,
+            }
+          }
+        >
+          <div>
+            This is a test description about 
+            <Link
+              href="http://google.com"
+            >
+              <a
+                className="link"
+                data-oui-component={true}
+                disabled={false}
+                href="http://google.com"
+              >
+                X Feature
+              </a>
+            </Link>
+             with a Google.
+          </div>
+        </div>
+        <div
+          className="push-double--top"
+        >
+          <Button
+            isDisabled={false}
+            isLink={false}
+            isLoading={false}
+            isSubmit={false}
+            loadingText=""
+            onBlur={[Function]}
+            onClick={[Function]}
+            onMouseDown={[Function]}
+            style="highlight"
+            width="default"
+          >
+            <button
+              aria-live="polite"
+              className="oui-button oui-button--highlight oui-button--default"
+              data-oui-component={true}
+              disabled={false}
+              onBlur={[Function]}
+              onClick={[Function]}
+              onMouseDown={[Function]}
+              type="button"
+            >
+              Highlight Button
+            </button>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+</EmptyDashboard>
+`;

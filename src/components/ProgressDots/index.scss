@@ -1,0 +1,51 @@
+////
+/// Progress Dots
+/// @description Creates a row of three animated progress dots.
+/// @example[html]
+///   <ul class="#{$namespace}progress-dots">
+///     <li></li>
+///     <li></li>
+///     <li></li>
+///   </ul>
+////
+
+.#{$namespace}progress-dots,
+.oui-progress-dots {
+  display: inline-block;
+  white-space: nowrap;
+
+  li {
+    opacity: 0;
+    display: inline-block;
+    width: map-fetch($progress-dots, width);
+    height: map-fetch($progress-dots, height);
+    margin: 0 map-fetch($progress-dots, margin);
+    border-radius: map-fetch($border, radius, full);
+    background: map-fetch($color, ui, brand);
+    animation: progress-pulse 2s infinite;
+
+    &:nth-child(2) {
+      animation-delay: 0.2s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: 0.4s;
+    }
+  }
+
+  &--reverse li {
+    background: map-fetch($color, ui, white);
+  }
+
+  &--small li {
+    width: map-fetch($progress-dots, width-small);
+    height: map-fetch($progress-dots, height-small);
+    margin: 0 map-fetch($progress-dots, margin-small);
+  }
+}
+
+@keyframes progress-pulse {
+  0% { opacity: 0; }
+  50% { opacity: 1; }
+  100% { opacity: 0; }
+}

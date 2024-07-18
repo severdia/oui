@@ -1,0 +1,67 @@
+////
+/// Button Row
+/// @description For buttons that align left or right with space between them.
+/// @example[html] Left aligned button row.
+///   <div class="oui-button-row--left">
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
+///   </div>
+/// @example[html] Center aligned button row.
+///   <div class="oui-button-row--center">
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
+///   </div>
+/// @example[html] Right aligned button row.
+///   <div class="oui-button-row--right">
+///     <button class="oui-button">Button</button>
+///     <button class="oui-button">Button</button>
+///   </div>
+////
+
+%#{$namespace}button-row,
+.#{$namespace}button-row,
+.oui-button-row {
+
+  &--left {
+
+    .#{$namespace}button,
+    .oui-button {
+      margin-right: spacer(1);
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &--right {
+    text-align: right;
+
+    .#{$namespace}button,
+    .oui-button {
+      margin-left: spacer(1);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--center {
+    text-align: center;
+
+    .#{$namespace}button,
+    .oui-button {
+      margin-left: spacer(0.5);
+      margin-right: spacer(0.5);
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+.oui-close-button {
+  @include flex-center;
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+  background: none;
+  border: none;
+  top: spacer(0.5);
+  right: spacer(0.5);
+  box-shadow: none;
+  padding: spacer(1);
+
+  .oui-icon {
+    fill: var(--dark-blue-75);
+  }
+
+  &:hover {
+    background: var(--light-blue-6);
+    color: var(--light-blue-75);
+  }
+}

@@ -1,0 +1,1 @@
+{"name":"Accordion\n","description":"A vertical accordion with any number of panels.\nThere are two dependencies:\n- The parent div must be `display:flex`;\n- The parent div must have height, usually accomplished with a `flex: 1`;","start":{"line":1,"column":1},"end":{"line":11,"column":4},"example":[{"type":"html","description":null,"code":"HTML for an accordion"}]}

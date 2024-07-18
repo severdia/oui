@@ -1,0 +1,128 @@
+@import './_mixins.scss';
+@import './_vars.scss';
+
+// base tippy 2 sass styles
+.tippy-popper {
+  max-width: 350px;
+  perspective: 700px;
+  z-index: 9999;
+  outline: 0;
+  transition-timing-function: cubic-bezier(0.165, 0.84, 0.44, 1);
+  pointer-events: none;
+
+  &[data-html] {
+    max-width: 96%;
+    max-width: calc(100% - 20px);
+  }
+
+}
+
+// overrides included from poptip
+.tippy-tooltip {
+  background: map-fetch($color, ui, dark);
+  color: map-fetch($color, text, white);
+  border-radius: map-fetch($border, radius, base);
+  font-size: map-fetch($font, size, micro);
+  padding: spacer(0.5) spacer(1);
+  max-width: map-fetch($poptip, max-width);
+  font-weight: 500;
+
+  position: relative;
+  text-align: center;
+  will-change: transform;
+
+  &[data-interactive] {
+    pointer-events: auto;
+  }
+
+}
+
+.tippy-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.tippy-backdrop {
+  position: absolute;
+  will-change: transform;
+  background-color: #333;
+  border-radius: 50%;
+  width: 26%;
+  left: 50%;
+  top: 50%;
+  z-index: -1;
+  transition: all cubic-bezier(0.46, 0.1, 0.52, 0.98);
+  backface-visibility: hidden;
+
+  &::after {
+    content: '';
+    float: left;
+    padding-top: 100%;
+  }
+}
+
+// light-theme from Tippy 2
+.tippy-popper .tippy-tooltip.light-theme {
+  border: 1px solid map-fetch($border, color, base);
+  border-radius: map-fetch($border, radius, base);
+  background: map-fetch($color, background, white);
+  max-width: map-fetch($popover, max-width);
+  //box-shadow: 0 2px map-fetch($shadow, light) !important;
+  box-shadow: 0 2px 22px rgba(0, 0, 0, 0.1) !important;
+}
+.tippy-tooltip.bordered-theme {
+  border: 1px solid map-fetch($border, color, base);
+  box-shadow: none !important;
+}
+
+// border-theme styles from Tippy 1
+.tippy-popper[x-placement^='top'] .tippy-tooltip.light-theme .arrow-regular {
+  border-top: 7px solid map-fetch($border, color, base);
+}
+.tippy-popper[x-placement^='top'] .tippy-tooltip.light-theme .arrow-regular::after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  left: -6px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid white;
+}
+.tippy-popper[x-placement^='bottom'] .tippy-tooltip.light-theme .arrow-regular {
+  border-bottom: 7px solid map-fetch($border, color, base);
+}
+.tippy-popper[x-placement^='bottom'] .tippy-tooltip.light-theme .arrow-regular::after {
+  content: '';
+  position: absolute;
+  bottom: -7px;
+  left: -6px;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid white;
+}
+
+.tippy-popper[x-placement^='left'] .tippy-tooltip.light-theme .arrow-regular {
+  border-left: 7px solid map-fetch($border, color, base);
+}
+.tippy-popper[x-placement^='left'] .tippy-tooltip.light-theme .arrow-regular::after {
+  content: '';
+  position: absolute;
+  left: -7px;
+  top: -6px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-left: 6px solid white;
+}
+.tippy-popper[x-placement^='right'] .tippy-tooltip.light-theme .arrow-regular {
+  border-right: 7px solid map-fetch($border, color, base);
+}
+.tippy-popper[x-placement^='right'] .tippy-tooltip.light-theme .arrow-regular::after {
+  content: '';
+  position: absolute;
+  right: -7px;
+  top: -6px;
+  border-top: 6px solid transparent;
+  border-bottom: 6px solid transparent;
+  border-right: 6px solid white;
+}

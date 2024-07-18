@@ -1,0 +1,22 @@
+////
+/// Admin Color Helpers
+/// @description Use to label admin-gated features for internal use only.
+/// @example[html]
+///   <h3 href="#" class="admin--color">Some Gated Feature Title</h3>
+/// @example[html]
+///   <ul class="badge"><li class="admin--background">Admin</li></ul>
+/// @example[html]
+///   <div class="attention admin--border">Some Gated Feature Box</div>
+////
+
+.admin--color {
+  color: map-fetch($color, ui, admin) !important;
+}
+
+.admin--border {
+  border-color: map-fetch($color, ui, admin) !important;
+}
+
+.admin--background {
+  background-color: map-fetch($color, ui, admin) !important;
+}

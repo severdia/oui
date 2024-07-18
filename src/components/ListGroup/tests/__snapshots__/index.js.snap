@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/ListGroup render listgroup with correct classes 1`] = `
+<div
+  className="oui-listgroup flex soft--top soft--bottom border--bottom"
+  data-test-section=""
+>
+  <div
+    className="width--1-4"
+  >
+    <div
+      className="zeta muted weight--normal"
+    />
+    <div
+      className="epsilon line--tight force-break"
+    >
+      Hello Title
+    </div>
+    <div
+      className="micro muted push-half--ends"
+    >
+      Hello Title
+    </div>
+  </div>
+  <div
+    className="group flex--1 soft--left"
+  >
+    <ListGroupItem
+      density="loose"
+    >
+      Item!
+    </ListGroupItem>
+    <ListGroupItem
+      density="loose"
+    >
+      Item 2!
+    </ListGroupItem>
+  </div>
+</div>
+`;

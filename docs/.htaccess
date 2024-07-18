@@ -1,0 +1,10 @@
+# The OUI documentation is a single page app with many different routes. But, since
+# there is no Node server running and listening for requests, we must use Apache
+# to forward requests to the one entry-point (index.html) in the application.
+# http://www.zeilenwechsel.de/it/articles/8/Using-mod_rewrite-in-.htaccess-files-without-knowing-the-RewriteBase.html
+
+RewriteBase /
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond $0#%{REQUEST_URI} ([^#]*)#(.*)\1$
+RewriteRule ^.*$ %2index.html [QSA,L]

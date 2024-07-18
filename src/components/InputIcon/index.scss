@@ -1,0 +1,42 @@
+////
+/// Input Icons
+/// @description Add SVG icons, like search or calendar, to the left and/or
+/// right of inputs.
+///
+/// Use padding classes on input as needed to provide space, e.g.
+/// `soft-triple--left`.
+/// @example[html] Calendar and arrow icons surrounding text input
+///   <div class="#{$namespace}input-icon display--inline-block">
+///     <input type="text" class="oui-text-input soft-triple--sides width--150">
+///     <svg class="#{$namespace}icon #{$namespace}input-icon__left #{$namespace}input-icon__muted">
+///       <use xlink:href="#calendar-16"></use>
+///     </svg>
+///     <svg class="#{$namespace}icon #{$namespace}input-icon__right #{$namespace}input-icon__muted">
+///       <use xlink:href="#undo-16"></use>
+///     </svg>
+///   </div>
+////
+
+.#{$namespace}input-icon {
+  position: relative;
+
+  &__left,
+  &__right {
+    transform: translateY(-50%);
+    pointer-events: none;
+    position: absolute;
+    top: 50%;
+  }
+
+  &__left {
+    left: spacer(1);
+  }
+
+  &__right {
+    right: spacer(1);
+  }
+
+  &__muted {
+    fill: map-fetch($color, ui, medium);
+  }
+}

@@ -1,0 +1,35 @@
+////
+/// Array
+/// @description Create a row of any number of items at equal height and width.
+/// @example[html] Background classes are added to show the equal dimensions.
+///   <div class="#{$namespace}array">
+///     <div class="#{$namespace}array__item background--faint">
+///       Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+///     </div>
+///     <div class="#{$namespace}array__item background--faint">
+///       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repudiandae excepturi eum suscipit necessitatibus iure nam architecto.
+///     </div>
+///     <div class="#{$namespace}array__item background--faint">
+///       Lorem ipsum dolor sit amet.
+///     </div>
+///   </div>
+////
+
+%#{$namespace}array,
+.#{$namespace}array {
+  display: flex;
+
+  &__item {
+    flex: 1;
+    margin-left: spacer(1);
+    margin-right: spacer(1);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

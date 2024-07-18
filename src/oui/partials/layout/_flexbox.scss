@@ -1,0 +1,112 @@
+////
+/// Flexbox
+/// @description Flexbox fully supported in Chrome, Firefox and Safari
+/// and mostly supported in IE 10.
+///
+/// In IE10 at least one of the flex children needs to have a width or flex
+/// value otherwise the content in those children will not wrap. However, if
+/// none of children will collide, no width or flex value is needed.
+/// @example[html] Classes can be used directly in HTML.
+///   <div class="flex flex--1">item</div>
+////
+
+.flex {
+  display: flex;
+}
+
+.flex--row {
+  flex-direction: row;
+}
+
+.flex--column {
+  flex-direction: column;
+}
+
+.flex--1 {
+  flex: 1;
+}
+
+.flex--none {
+  flex: none;
+}
+
+.flex-shrink--none {
+  flex-shrink: 0;
+}
+
+.flex-grow--none {
+  flex-grow: 0;
+}
+
+// Flex align
+
+.flex-align--start {
+  align-items: flex-start;
+}
+
+.flex-align--center {
+  align-items: center;
+}
+
+.flex-align--end {
+  align-items: flex-end;
+}
+
+// Flex justified
+
+.flex-justified--start {
+  justify-content: flex-start;
+}
+
+.flex-justified--center {
+  justify-content: center;
+}
+
+.flex-justified--end {
+  justify-content: flex-end;
+}
+
+.flex-justified--between {
+  justify-content: space-between;
+}
+
+// Flex wrap
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-wrap--reverse {
+  flex-wrap: wrap-reverse;
+}
+
+// Flex align-self
+// Note: applies to immediate children of `display: flex;` parent.
+
+.flex-self--start {
+  align-self: flex-start;
+}
+
+.flex-self--center {
+  align-self: center;
+}
+
+.flex-self--end {
+  align-self: flex-end;
+}
+
+// Flex Firefox layout fix
+// This is triggered when children of flex elements require overflow. Firefox requires a `min-height/width`.
+// http://stackoverflow.com/questions/28636832/firefox-overflow-y-not-working-with-nested-flexbox
+
+.flex-overflow-fix {
+  min-height: 0;
+  min-width: 0;
+}
+
+// Flex dead center
+// Centers vertically and horizontally
+
+.flex--dead-center {
+  @include flex-center;
+}

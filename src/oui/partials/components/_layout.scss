@@ -1,0 +1,32 @@
+////
+/// Layout
+/// @description Classes for different layout options.
+///
+/// Used on the *parent* element this causes the immediate child to center
+/// vertically/horizontally.
+/// @group Components
+////
+
+.center--child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+// Used on any element to center it inside a parent that has a width/height.
+// Element should be `display: block` with a width.
+
+.center--me--absolute,
+.center--me--relative {
+  top: 50%;
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+.center--me--relative {
+  position: relative;
+}
+
+.center--me--absolute {
+  position: absolute;
+}

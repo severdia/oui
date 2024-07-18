@@ -1,0 +1,17 @@
+# Updating this? Consider updating `.npmignore` as well.
+npm-debug.log
+yarn-error.log
+package-lock.json
+
+dist
+module
+tmp
+node_modules
+s3
+coverage
+
+.bundle
+.sass-cache
+.DS_Store
+.idea
+data/csswhat

@@ -1,0 +1,20 @@
+{
+  "friendlyName": "Size",
+  "description": "Optimizely product size values.",
+  "tokens": [
+    {
+      "friendlyName": "Small Icon",
+      "id": "icon-small",
+      "value": "12px",
+      "type": "size",
+      "name": "iconSmall"
+    },
+    {
+      "friendlyName": "Large Icon",
+      "id": "icon-large",
+      "value": "16px",
+      "type": "size",
+      "name": "iconlarge"
+    }
+  ]
+}

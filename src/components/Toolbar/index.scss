@@ -1,0 +1,97 @@
+.toolbar {
+  z-index: map-fetch($z-index, toolbar);
+
+  &__left {
+    display: flex;
+
+    .toolbar__button {
+      &[disabled],
+      &.toolbar__button--disabled,
+      &:not(:hover):not(:active):not(.is-active) {
+        border-right: 1px solid transparent;
+      }
+    }
+  }
+
+  &__right {
+    display: flex;
+    margin-left: auto !important;
+
+    .toolbar__button {
+      &[disabled],
+      &.toolbar__button--disabled,
+      &:not(:hover):not(:active):not(.is-active) {
+        border-left: 1px solid transparent;
+      }
+    }
+  }
+
+  &__content {
+    flex: none;
+    min-width: 0;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    padding: spacer(0.5) spacer(1);
+    border-bottom: 1px solid var(--grey-50);
+    position: relative;
+    background: var(--white);
+
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      box-shadow: 0 1px map-fetch($shadow, light);
+      z-index: map-fetch($z-index, toolbar-shadow);
+      width: 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+  }
+
+  &__button-group {
+    display: flex;
+
+    .toolbar__button {
+      margin-right: spacer(1);
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+    }
+  }
+
+  &__button {
+    @extend %oui-button;
+    @extend %oui-button--narrow;
+    @extend %oui-button--toggle;
+
+    background-color: transparent;
+    border-color: transparent;
+    border: 1px solid transparent;
+
+    &:not(.is-active):hover {
+      color: var(--light-blue-75) !important;
+      border: 1px solid var(--light-blue-25);
+      box-shadow: none;
+      background-color: var(--white);
+    }
+
+    &[disabled],
+    &--disabled,
+    &--disabled:hover {
+      @extend %link--disabled;
+      box-shadow: none;
+      border-color: transparent !important;
+      background: none;
+    }
+
+  }
+
+  &--icon {
+    width: map-fetch($icon, size, medium, width);
+    height: map-fetch($icon, size, medium, width);
+  }
+}

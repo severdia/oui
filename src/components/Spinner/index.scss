@@ -1,0 +1,104 @@
+////
+/// Spinner
+/// @description Loading spinner. Target `.#{$namespace}overlay` to position
+/// as needed.
+///
+/// @example[html] Default spinner
+///   <div class="position--relative height--100">
+///     <div class="#{$namespace}overlay">
+///       <div class="#{$namespace}spinner"></div>
+///     </div>
+//    </div>
+/// @example[html] Small spinner
+///   <div class="position--relative height--100">
+///     <div class="#{$namespace}overlay">
+///       <div class="#{$namespace}spinner #{$namespace}spinner--small"></div>
+///     </div>
+//    </div>
+/// @example[html] Tiny spinner
+///   <div class="position--relative height--100">
+///     <div class="#{$namespace}overlay">
+///       <div class="#{$namespace}spinner #{$namespace}spinner--tiny"></div>
+///     </div>
+//    </div>
+///
+/// @example[html] Spinner with overlay
+///
+/// This gets inserted into an element and blocks user interaction. Requires a
+/// parent `div` with positioning (`absolute` or `relative`).
+///
+///   <div class="position--relative">
+///      <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non cum iusto repudiandae earum porro reprehenderit perspiciatis iste delectus ipsam, accusantium ad sunt, rem mollitia, omnis illum explicabo facere quibusdam qui.</div>
+///      <div class="#{$namespace}overlay">
+///        <div class="#{$namespace}spinner #{$namespace}spinner--small"></div>
+///      </div>
+///   </div>
+////
+
+%#{$namespace}overlay,
+.#{$namespace}overlay,
+.oui-overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.6);
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes spin-animate {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.#{$namespace}spinner,
+.oui-spinner {
+  animation: spin-animate map-fetch($spinner, speed) infinite linear;
+  width: map-fetch($spinner, size, base);
+  height: map-fetch($spinner, size, base);
+  border: map-fetch($spinner, border, width, base) solid map-fetch($color, background, brand-light);
+  display: inline-block;
+  border-radius: 50%;
+  position: relative;
+
+  &::before {
+    content: '';
+    width: map-fetch($spinner, size, base);
+    height: map-fetch($spinner, size, base);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    left: -(map-fetch($spinner, border, width, base));
+    top: -(map-fetch($spinner, border, width, base));
+    border-width: map-fetch($spinner, border, width, base);
+    border-style: solid;
+    border-right-color: map-fetch($color, background, brand-light);
+    border-top-color: map-fetch($color, background, brand-light);
+    border-left-color: map-fetch($color, background, brand);
+    border-bottom-color: map-fetch($color, background, brand-light);
+  }
+
+  &--small,
+  &--small::before {
+    width: map-fetch($spinner, size, small);
+    height: map-fetch($spinner, size, small);
+    border-width: map-fetch($spinner, border, width, small);
+    left: -(map-fetch($spinner, border, width, small));
+    top: -(map-fetch($spinner, border, width, small));
+  }
+
+  &--tiny,
+  &--tiny::before {
+    width: map-fetch($spinner, size, tiny);
+    height: map-fetch($spinner, size, tiny);
+    border-width: map-fetch($spinner, border, width, tiny);
+    left: -(map-fetch($spinner, border, width, tiny));
+    top: -(map-fetch($spinner, border, width, tiny));
+  }
+}

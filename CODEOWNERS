@@ -1,0 +1,14 @@
+# OUI CODEOWNERS file
+
+# These owners will be the default owners for everything in
+# the repo. Unless a later match takes precedence,
+# @optimizely/ui-engineers and @optimizely/frontend will be requested for
+# review when someone opens a pull request.
+* @optimizely/ui-engineers @optimizely/frontend
+
+# UI engineers must review .scss/.css changes
+**/*.css @optimizely/ui-engineers
+**/*.scss @optimizely/ui-engineers
+
+# Frontend engineers must review .js changes
+**/*.js @optimizely/frontend

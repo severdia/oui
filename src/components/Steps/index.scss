@@ -1,0 +1,131 @@
+////
+/// Steps
+/// @description A type of progress bar showing steps through a flow. Use with
+/// a width helper class if needed so that it fits cleanly.
+/// @example[html]
+///   <ul class="#{$namespace}steps width-9-10">
+///     <li class="#{$namespace}steps__item #{$namespace}steps__item--complete">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step One Label</div>
+///     </li>
+///     <li class="#{$namespace}steps__item #{$namespace}steps__item--complete">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step Two Label</div>
+///     </li>
+///     <li class="#{$namespace}steps__item #{$namespace}steps__item--active">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step Three Label</div>
+///     </li>
+///     <li class="#{$namespace}steps__item">
+///       <div class="#{$namespace}steps__dot"></div>
+///       <div class="#{$namespace}steps__label">Step Four Label</div>
+///     </li>
+///   </ul>
+////
+
+$hover-color: lighten(map-fetch($color, link, base), 10%);
+
+%#{$namespace}steps,
+.#{$namespace}steps,
+.oui-steps {
+  display: flex;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+
+  &__dot {
+    transform: translateX(-50%);
+    transition: all map-fetch($transition-duration, base);
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    top: -7px;
+    left: 50%;
+    border-radius: 50%;
+    border: 3px solid map-fetch($color, ui, base);
+    background: map-fetch($color, ui, white);
+    z-index: 1;
+  }
+
+  &__label {
+    text-align: center;
+    font-weight: 400;
+    color: map-fetch($color, text, muted);
+  }
+
+  &__item {
+    flex: 1;
+    padding-top: spacer(2);
+    position: relative;
+
+    &::before {
+      content: '';
+      height: 3px;
+      background: map-fetch($color, ui, base);
+      width: 100%;
+      position: absolute;
+      top: 0;
+      right: 50%;
+    }
+
+    &--active {
+      &::before {
+        background: map-fetch($color, ui, brand);
+      }
+
+      .#{$namespace}steps__dot,
+      .oui-steps__dot {
+        border-color: map-fetch($color, ui, brand);
+      }
+
+      .#{$namespace}steps__label,
+      .oui-steps__label {
+        color: map-fetch($color, text, brand);
+      }
+    }
+
+    &--complete {
+
+      &::before {
+        background: map-fetch($color, ui, brand);
+      }
+
+      .#{$namespace}steps__dot,
+      .oui-steps__dot {
+        background: map-fetch($color, ui, brand);
+        border-color: map-fetch($color, ui, brand);
+      }
+    }
+
+    &--editable {
+      &:hover {
+        cursor: pointer;
+
+        .#{$namespace}steps__dot,
+        .oui-steps__dot {
+          border-color: $hover-color;
+        }
+        
+        .#{$namespace}steps__label,
+        .oui-steps__label {
+          color: $hover-color;
+        }
+      }
+
+      &:hover.oui-steps__item--complete {
+        .#{$namespace}steps__dot,
+        .oui-steps__dot {
+          background: $hover-color;
+        }
+      }
+    }
+
+    // Prevents line showing up on step.
+    &:first-child {
+      &::before {
+        display: none;
+      }
+    }
+  }
+
+}

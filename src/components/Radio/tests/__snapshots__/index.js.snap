@@ -1,0 +1,325 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Radio label should render text 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    >
+      foo
+    </div>
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should add disabled attribute to radio input when disabled 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      disabled={true}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer oui-label--disabled"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should add disabled class to label text when disabled 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      disabled={true}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer oui-label--disabled"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should be wrapped in a label 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should not add disabled attribute to radio input when not disabled 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      disabled={false}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should not add disabled class to label text when not disabled 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      disabled={false}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should render a checked radio input when \`checked\` is true 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      checked={true}
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      name="goose"
+      onChange={[MockFunction]}
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should render a checked radio input when \`defaultChecked\` is true 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      defaultChecked={true}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should render an input of type radio 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should render an unchecked radio input when \`checked\` is false 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      checked={false}
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      name="goose"
+      onChange={[MockFunction]}
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should render an unchecked radio input when \`defaultChecked\` is false 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      defaultChecked={false}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;
+
+exports[`components/Radio should render input with name when provided 1`] = `
+<Label
+  data-test-section="null-label"
+>
+  <div
+    className="flex"
+  >
+    <input
+      className="flex--none"
+      data-oui-component={true}
+      data-test-section={null}
+      name="goose"
+      style={
+        Object {
+          "marginTop": "0.3em",
+        }
+      }
+      type="radio"
+    />
+    <div
+      className="flush--bottom push--left weight--normal cursor--pointer"
+    />
+  </div>
+</Label>
+`;

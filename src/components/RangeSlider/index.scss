@@ -1,0 +1,152 @@
+////
+/// RangeSlider
+/// @description Visual range selector
+///
+/// @example[html] Visual range slider
+/// <div class="oui-rangeslider">
+///   <div class="lego-grid">
+///     <div class="lego-grid__cell position--relative">
+///       <div class="flex">
+///         <label class="lego-label muted flex--1">0%</label>
+///         <label class="lego-label muted">100%</label>
+///       </div>
+///       <div class="range-display">
+///         <div class="range-display range-display-overlay"></div>
+///       </div>
+///       <div class="range-grid">
+///         <div class="gridline grid-1"></div>
+///         <div class="gridline grid-2"></div>
+///         <div class="gridline grid-3"></div>
+///         <div class="gridline grid-4"></div>
+///         <div class="gridline grid-5"></div>
+///         <div class="gridline gridline-half grid-h1"></div>
+///         <div class="gridline gridline-half grid-h2"></div>
+///         <div class="gridline gridline-half grid-h3"></div>
+///         <div class="gridline gridline-half grid-h4"></div>
+///       </div>
+///       <input class="hard position--relative width--1-1" data-traffic-group="1" type="range" min="0" max="100" step="1" value="50" oninput="resizeRangeDisplay(this.value)" />
+///     </div>
+///   </div>
+/// </div>
+
+.oui-rangeslider {
+  input[type="range"] {
+    -webkit-appearance: none;
+    height: 50px;
+    background: transparent;
+  }
+  input[type="range"]:focus {
+    outline: none;
+  }
+  input[type="range"]::-webkit-slider-runnable-track {
+    position: relative;
+    top: 16px;
+  }
+  input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 4px solid white;
+    cursor: pointer;
+    margin-top: -0.3em;
+    width: 24px;
+    height: 24px;
+    background: white;
+    background-size: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.13), rgba(255, 255, 255, 0));
+    box-shadow: 0 0 4px rgba(110, 110, 110, 0.8), 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+  }
+  input[type="range"]:focus::-webkit-slider-thumb {
+    box-shadow: 0 0 8px rgba(0, 116, 180,.9);
+  }
+  .range-display {
+    height: 35px;
+    position: absolute;
+    left: 12px;
+    right: 11px;
+  }
+  .range-display svg {
+    display: inline-flex;
+    width: 100%;
+    height: 100%;
+  }
+  &.oui-rangeslider--disabled {
+    .range-display {
+      filter: grayscale(1) opacity(0.3);
+    }
+    .range-grid .gridline, .range-labels {
+      opacity: 0.5;
+    }
+  }
+  .range-display.range-display-overlay {
+    background-color: white;
+    background-image: none;
+    display: inline-flex;
+    left: 50%;
+    opacity: 0.9;
+    right: 0;
+  }
+  .range-display.range-display-overlay::after {
+    display: none;
+  }
+  .range-display::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0px;
+    height: 8px;
+    background-color: map-fetch($color, background, faint);
+    border: 1px solid map-fetch($button, type, base, border);
+    bottom: -8px;
+    border-bottom-left-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-top: none;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.2) inset;
+  }
+  .range-grid {
+    position: absolute;
+    width: calc(100% - 24px);
+    margin-left: 12px;
+    height: 38px;
+    top: 20px;
+  }
+  .range-grid .gridline {
+    background-color: map-fetch($button, type, base, border);
+    opacity: 1;
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    width: 1px;
+    height: 95%;
+    bottom: 0px;
+  }
+  .range-grid .gridline.gridline-half {
+    left: 0px;
+    right: 0px;
+    width: 1px;
+    height: 50%;
+  }
+  .range-grid .gridline.grid-2 {
+    left: 25%;
+  }
+  .range-grid .gridline.grid-3 {
+    left: 50%;
+  }
+  .range-grid .gridline.grid-4 {
+    left: 75%;
+  }
+  .range-grid .gridline.grid-5 {
+    left: 100%;
+  }
+  .range-grid .gridline.grid-h1 {
+    left: 12.5%;
+  }
+  .range-grid .gridline.grid-h2 {
+    left: 37.5%;
+  }
+  .range-grid .gridline.grid-h3 {
+    left: 62.5%;
+  }
+  .range-grid .gridline.grid-h4 {
+    left: 87.5%;
+  }
+}

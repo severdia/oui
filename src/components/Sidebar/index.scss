@@ -1,0 +1,5 @@
+.oui-sidebar {
+  transition: all 0.3s;
+  top: 0;
+  z-index: map-fetch($z-index, sidebar);
+}

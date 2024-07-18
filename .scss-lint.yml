@@ -1,0 +1,93 @@
+# SCSS Lint list
+exclude: 'src/oui/library/**'
+
+severity: error
+linters:
+  BangFormat: # Reports when you use improper spacing around ! (the "bang")
+    enabled: true
+  BorderZero:   # border: 0 is preferred over border: none.
+    enabled: true
+  CapitalizationInSelector: # All class names should be in lowercase.
+    enabled: true
+  ColorKeyword: # Use color in hex rather than name.
+    enabled: false
+  ColorVariable: # Color literals (keywords or hexadecimal codes) to be used only in variable declarations.
+    enabled: false
+  DeclarationOrder: # Rule sets should start with @extend declarations, followed by properties and nested rule sets, in that order.
+    enabled: true
+  DuplicateProperty: # Catches duplicate properities.
+    enabled: false
+  ElsePlacement: # @else should be placed on same line as previous curly brace.
+    enabled: true
+  EmptyLineBetweenBlocks: # Rule declaration should be preceded by an empty line.
+    enabled: true
+  EmptyRule: # Reports when you have an empty rule set.
+    enabled: true
+  FinalNewline: # Files should end with a trailing newline.
+    enabled: true
+  HexNotation: # Color `#721B09` should be written as `#721b09`
+    style: uppercase
+    enabled: true
+  HexValidation: # Ensure hexadecimal colors are valid (either three or six digits).
+    enabled: true
+  ImportantRule: # Avoid using !important in properties.
+    enabled: false
+  ImportPath: #The basenames of @imported SCSS partials should not begin with an underscore and should not include the filename extension.
+    enabled: true
+  Indentation: # Line should be indented 2 spaces, but was indented 4 spaces.
+    enabled: false
+  LeadingZero: # `.18` should be written with a leading zero as `0.18`.
+    style: include_zero
+    enabled: true
+  MergeableSelector: # Reports when you define the same selector twice in a single sheet.
+    enabled: true
+  NameFormat: # Functions, mixins, and variables should be declared with all lowercase letters and hyphens instead of underscores.
+    enabled: false
+  NestingDepth: # Avoid nesting selectors too deeply.
+    max_depth: 4
+    enabled: false
+  PlaceholderInExtend: # Always use placeholder selectors in @extend.
+    enabled: true
+  PropertySpelling: # Reports when you use an unknown CSS property (ignoring vendor-prefixed properties).
+    enabled: true
+  PropertySortOrder: # Properties should be sorted in order, with vendor-prefixed extensions before the standardized CSS property.
+    enabled: false
+  QualifyingElement: # Avoid qualifying elements in selectors.
+    enabled: false
+  SelectorDepth: # Selector should have depth of applicability no greater than 3, but was 4.
+    enabled: false
+  SelectorFormat: # Selector should follow the hyphenated BEM syntax.
+    convention: hyphenated_BEM
+    enabled: true
+  Shorthand: # Prefer the shortest shorthand form possible for properties that support it.
+    enabled: true
+  SingleLinePerProperty: # Properties within rule sets should each reside on their own line.
+    enabled: true
+  SingleLinePerSelector: # Each selector in a comma sequence should be on its own line.
+    enabled: true
+  SpaceAfterComma: # Commas in function arguments should be followed by a single space.
+    enabled: true
+  SpaceAfterPropertyColon: # Colon after property should be followed by one space.
+    enabled: true
+  SpaceAfterPropertyName: # Properties should be formatted with no space between the name and the colon.
+    enabled: true
+  SpaceBeforeBrace: # Opening curly brace `{` should be preceded by one space.
+    enabled: true
+  SpaceBetweenParens: # Expected 0 spaces between parentheses instead of 1.
+    enabled: true
+  StringQuotes: # Prefer single quoted strings.
+    enabled: true
+  TrailingSemicolon: # Declaration should not have a space before the terminating semicolon.
+    enabled: true
+  TrailingZero: # Don't write trailing zeros for numeric values with a decimal point: .500em -- > .5em.
+    enabled: true
+  UnnecessaryMantissa: # Numeric values should not contain unnecessary fractional portions: 1.0em --> 1em.
+    enabled: true
+  UnnecessaryParentReference: # Unnecessary parent selector (&).
+    enabled: true
+  UrlQuotes: # URLs should always be enclosed within quotes.
+    enabled: true
+  VendorPrefix: # Avoid vendor prefixes. That is, don't write them yourself.
+    enabled: false
+  ZeroUnit: # `0px` should be written without units as `0`.
+    enabled: true

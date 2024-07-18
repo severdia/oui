@@ -1,0 +1,518 @@
+////
+/// Forms
+/// @description Form variations.
+/// @example[html]
+///   <form>
+///     <div class="#{$namespace}form__header">
+///       <div class="#{$namespace}form__title">Title</div>
+///       <p>Form information might go here if there was reason to do it.</p>
+///     </div>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">
+///             Single Input
+///             <span class="oui-label__optional">(Optional)</span>
+///           </label>
+///           <input type="text" class="oui-text-input">
+///           <div class="#{$namespace}form-note">This is a form note.</div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Diabled Input</label>
+///           <input type="text" class="oui-text-input" disabled>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Add/Remove Row</label>
+///           <table class="oui-table oui-table--add-row width--1-1">
+///             <tr>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td class="oui-table--add-row__controls">
+///                 <div class="flex">
+///                   <button class="oui-button push--right">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#add-16"></use>
+///                     </svg>
+///                   </button>
+///                 </div>
+///               </td>
+///             </tr>
+///             <tr>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td class="oui-table--add-row__controls">
+///                 <div class="flex">
+///                   <button class="oui-button push--right">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#add-16"></use>
+///                     </svg>
+///                   </button>
+///                   <button class="oui-button">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#close-16"></use>
+///                     </svg>
+///                   </button>
+///                 </div>
+///               </td>
+///             </tr>
+///             <tr>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td><input type="text" class="oui-text-input"></td>
+///               <td class="oui-table--add-row__controls">
+///                 <div class="flex">
+///                   <button class="oui-button push--right">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#add-16"></use>
+///                     </svg>
+///                   </button>
+///                   <button class="oui-button">
+///                     <svg class="#{$namespace}icon">
+///                       <use xlink:href="#close-16"></use>
+///                     </svg>
+///                   </button>
+///                 </div>
+///               </td>
+///             </tr>
+///           </table>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <div class="#{$namespace}form__footer oui-button-row oui-button-row--right">
+///       <button class="oui-button">Cancel</button>
+///       <button class="oui-button oui-button--highlight">Submit</button>
+///     </div>
+///   </form>
+/// @example[html]
+///   <form>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Fixed-width Input</label>
+///           <input type="text" class="oui-text-input width-150">
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Fixed-width Input</label>
+///           <input type="text" class="oui-text-input width-250">
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <select name="zoo" id="zoo" class="#{$namespace}select">
+///                 <option value="one">This is option one</option>
+///                 <option value="two">And this is option two</option>
+///               </select>
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="#{$namespace}grid__cell">
+///               <label class="oui-label">Split Inputs</label>
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Fill Space</label>
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="push-double--left">
+///               <button class="oui-button oui-button--highlight">Do This</button>
+///             </div>
+///           </div>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Fill Space</label>
+///           <div class="#{$namespace}grid">
+///             <div class="#{$namespace}grid__cell">
+///               <input type="text" class="oui-text-input" placeholder="This is placeholder">
+///             </div>
+///             <div class="push-double--left">
+///               <select name="zoo" id="zoo" class="#{$namespace}select">
+///                 <option value="one">This is option one</option>
+///                 <option value="two">And this is option two</option>
+///               </select>
+///             </div>
+///           </div>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <div class="#{$namespace}or">or</div>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="oui-label">Checklist</li>
+///         <li class="#{$namespace}form-field__item">
+///           <ul class="#{$namespace}input-list">
+///             <li>
+///               <input name="foo-1" id="foo-1a" type="checkbox" checked=""> <label class="oui-label" for="foo-1a">Send me email notifications when I am projected to or have exceeded my plan limits</label>
+///             </li>
+///             <li>
+///               <input name="foo-2" id="foo-2a" type="checkbox"> <label class="oui-label" for="foo-2a">Send me email summaries of my experiment results</label>
+///             </li>
+///           </ul>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Select one thing or another</label>
+///           <select name="zoo" id="zoo" class="#{$namespace}select">
+///             <option value="one">This is option one</option>
+///             <option value="two">And this is option two</option>
+///           </select>
+///         </li>
+///         <li class="#{$namespace}form-field__item">
+///           <ul class="#{$namespace}input-list">
+///             <li>
+///               <input name="radio-1" id="bar-1a" type="radio" checked=""> <label class="oui-label" for="bar-1a">Radio 1</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-2a" type="radio" disabled> <label class="oui-label oui-label--disabled" for="bar-2a">Radio 2 with disabled label</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-3a" type="radio"> <label class="oui-label" for="bar-3a">Radio 3</label>
+///             </li>
+///           </ul>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item">
+///           <label class="oui-label">Horizontal Inputs</label>
+///           <p>Use these only for short inputs where there's no chance they will wrap.</p>
+///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
+///             <li>
+///               <input name="radio-1" id="bar-1b" type="radio" checked=""> <label class="oui-label" for="bar-1b">Radio 1</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-2b" type="radio" disabled> <label class="oui-label oui-label--disabled" for="bar-2b">Radio 2 with disabled label</label>
+///             </li>
+///             <li>
+///               <input name="radio-1" id="bar-3b" type="radio"> <label class="oui-label" for="bar-3b">Radio 3</label>
+///             </li>
+///           </ul>
+///         </li>
+///         <li class="oui-label">Checklist</li>
+///         <li class="#{$namespace}form-field__item">
+///           <ul class="#{$namespace}input-list #{$namespace}input-list--horizontal">
+///             <li>
+///               <input name="foo-1" id="foo-1b" type="checkbox" checked=""> <label class="oui-label" for="foo-1b">Short option</label>
+///             </li>
+///             <li>
+///               <input name="foo-2" id="foo-2b" type="checkbox"> <label class="oui-label" for="foo-2b">Another short option</label>
+///             </li>
+///           </ul>
+///         </li>
+///       </ol>
+///     </fieldset>
+///     <div class="#{$namespace}form__footer oui-button-row oui-button-row--right">
+///       <button class="oui-button">Cancel</button>
+///       <button class="oui-button oui-button--highlight">Submit</button>
+///     </div>
+///   </form>
+/// @example[html] Form error states
+///   <form>
+///     <div class="#{$namespace}form__header">
+///       <div class="#{$namespace}form__title">Error States</div>
+///     </div>
+///     <fieldset>
+///       <ol class="#{$namespace}form-fields">
+///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
+///           <label class="oui-label oui-label--required">Address</label>
+///           <input type="text" class="oui-text-input">
+///           <div class="#{$namespace}form-note #{$namespace}form-note---news">This field is required.</div>
+///         </li>
+///         <li class="#{$namespace}form-field__item #{$namespace}form-bad-news">
+///           <label class="oui-label oui-label--required">Fill Space</label>
+///           <select name="zoo" id="zoo" class="#{$namespace}select">
+///             <option value="one">This is option one</option>
+///             <option value="two">And this is option two</option>
+///           </select>
+///           <div class="#{$namespace}form-note #{$namespace}form-note--bad-news">This field is required.</div>
+///         </li>
+///       </ol>
+///     </fieldset>
+///   </form>
+////
+
+@mixin text-input {
+  transition: border-color map-fetch($transition-duration, base);
+  width: 100%;
+  border: 1px solid map-fetch($border, color, base);
+  border-radius: map-fetch($border, radius, base);
+  padding: map-fetch($form, input, padding);
+  vertical-align: middle;
+  line-height: 1.3;
+
+  &:hover {
+    border-color: map-fetch($color, ui, medium);
+  }
+
+  &:focus {
+    border-color: map-fetch($color, ui, brand-light);
+  }
+
+  &[disabled] {
+    @include text-input--disabled;
+  }
+}
+
+@mixin text-input--small {
+  padding-top: 2px;
+  padding-bottom: 2px;
+}
+
+@mixin text-input--disabled {
+  background-color: map-fetch($color, background, faint);
+  color: map-fetch($color, ui, medium);
+  cursor: default;
+
+  &:hover,
+  &:focus {
+    border-color: map-fetch($color, ui, base);
+  }
+}
+
+@mixin text-input--read-only {
+  &:focus {
+    border-color: map-fetch($color, ui, medium);
+  }
+}
+
+.#{$namespace}form__header {
+  margin-bottom: spacer(2);
+}
+
+.#{$namespace}form__footer {
+  margin-top: spacer(3);
+}
+
+.#{$namespace}form__title {
+  font-size: map-fetch($font, size, gamma);
+  margin-bottom: spacer(1);
+  line-height: 1;
+}
+
+.#{$namespace}form-fields,
+.oui-form-fields {
+  @extend %kill-last-child-margin;
+  list-style: none;
+  margin: 0;
+}
+
+.#{$namespace}form-field__item,
+.oui-form-field__item {
+  margin-bottom: spacer(1.5);
+}
+
+fieldset {
+  margin-bottom: spacer(4);
+}
+
+// Labels in `.#{$namespace}input-lists`
+
+.#{$namespace}check-label,
+.#{$namespace}input-list .#{$namespace}label,
+.oui-input-list .oui-label {
+  display: table-cell;
+  padding-left: spacer(1);
+  font-weight: 400;
+}
+
+//  Groups of checkboxes and radios.
+
+.#{$namespace}input-list,
+.oui-input-list {
+  list-style: none;
+  margin: 0;
+
+  > li {
+    display: table;
+    margin-bottom: spacer(0.5);
+  }
+
+  input {
+    display: table-cell;
+  }
+
+  .#{$namespace}label,
+  .oui-label {
+    width: 100%;
+  }
+
+  // Horizontal version of inputs.
+
+  &--horizontal {
+
+    > li {
+      padding-right: spacer(2);
+      display: inline-block;
+    }
+
+    .#{$namespace}label {
+      display: inline;
+      padding-left: 6px; // Should be `10px` but this compensates for white space.
+    }
+  }
+}
+
+.#{$namespace}or {
+  text-align: center;
+  color: map-fetch($color, text, base);
+  text-transform: uppercase;
+  margin: spacer(1.5) auto;
+  position: relative;
+
+  &::before,
+  &::after {
+    content: '';
+    border-top: 1px dotted map-fetch($color, ui, base);
+    width: 40%;
+    position: absolute;
+    left: 0;
+    top: 50%;
+  }
+
+  &::after {
+    left: auto;
+    right: 0;
+  }
+}
+
+// Icons in inputs
+// This places an svg icon "inside" an input, to the right.
+
+.#{$namespace}icon-input {
+  display: flex;
+  align-items: center;
+
+  > input {
+    z-index: 1;
+    background: transparent;
+  }
+
+  .#{$namespace}icon-input__icon {
+    margin-left: -(spacer(2.5));
+    line-height: 1;
+  }
+}
+
+// Form Notes
+
+.#{$namespace}form-note,
+.oui-form-note {
+  padding-top: spacer(0.5);
+  font-size: map-fetch($font, size, micro);
+}
+
+.#{$namespace}form-note--good-news,
+.oui-form-good-news .oui-form-note {
+  color: map-fetch($color, text, good-news);
+}
+
+.#{$namespace}form-note--bad-news,
+.oui-form-bad-news .oui-form-note {
+  color: map-fetch($color, text, bad-news);
+}
+
+.#{$namespace}form-note--warning,
+.oui-form-warning .oui-form-note {
+  color: map-fetch($color, text, warning);
+}
+
+// Form Validations
+
+.#{$namespace}form-good-news {
+  .#{$namespace}label {
+    color: map-fetch($color, text, good-news);
+  }
+
+  .#{$namespace}text-input,
+  .oui-text-input,
+  .#{$namespace}select,
+  .#{$namespace}textarea,
+  .oui-textarea {
+    border-color: map-fetch($color, ui, good-news);
+  }
+}
+
+.#{$namespace}form-bad-news,
+.oui-form-bad-news {
+  .#{$namespace}label,
+  .oui-label,
+  &.oui-label {
+    color: map-fetch($color, text, bad-news);
+  }
+
+  .#{$namespace}text-input,
+  &.oui-text-input,
+  .oui-text-input,
+  .oui-button--outline,
+  &.oui-dropdown-group .oui-button,
+  .#{$namespace}select,
+  .#{$namespace}textarea,
+  .oui-textarea {
+    border-color: map-fetch($color, ui, bad-news);
+
+    &:hover {
+      border-color: shade(map-fetch($color, ui, bad-news), 40%);
+    }
+
+    &:focus {
+      border-color: tint(map-fetch($color, ui, bad-news), 60%);
+    }
+
+  }
+}
+
+
+.#{$namespace}form-warning {
+  .#{$namespace}label {
+    color: map-fetch($color, text, warning);
+  }
+
+  .#{$namespace}text-input,
+  .oui-text-input,
+  .#{$namespace}select,
+  .#{$namespace}textarea,
+  .oui-textarea {
+    border-color: map-fetch($color, ui, warning);
+  }
+}
+
+// Form Validation Browser Overrides
+// This prevents Firefox from adding an ugly red box shadow around required
+// inputs.
+
+[required] {
+  box-shadow: none;
+}

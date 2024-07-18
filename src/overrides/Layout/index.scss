@@ -1,0 +1,240 @@
+////
+/// Layout
+/// @example[html]
+///   <div class="cf">
+///     <div class="float--left">Float to the left</div>
+///     <div class="float--right">Float to the right</div>
+///   </div>
+/// @example[html]
+///   <div class="anchor--middle background--faint width--300">
+///     Anchor to the middle
+///   </div>
+/// @example[html] Right aligned text
+///   <div class="text--left">Left aligned text</div>
+///   <div class="text--center">Center aligned text</div>
+///   <div class="text--right">Right aligned text</div>
+/// @example[html] A `div` that has been set to `inline`.
+///   <div class="display--inline background--light">Display Inline</div>
+///   <div class="display--block background--faint">Display Block</div>
+///   <div class="display--inline-block background--light">Display Inline-Block</div>
+///   <div class="display--none">Display none</div>
+/// @example[html]
+///   <div class="faded push--bottom">
+///     This text is faded. As is the icon below.
+///     <svg class="#{$namespace}icon faded">
+///       <use xlink:href="#collaborators-16"></use>
+///     </svg>
+///   </div>
+////
+
+/// Floats
+/// @description Classes to add/remove floats.
+
+.float--right {
+  float: right !important;
+}
+
+.float--left {
+  float: left !important;
+}
+
+.float--none {
+  float: none !important;
+}
+
+/// Anchor
+/// @description Can be used to position elements on the page.
+
+.anchor--middle {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+
+.anchor--right {
+  margin-left: auto !important;
+}
+
+.anchor--left {
+  margin-right: auto !important;
+}
+
+.anchor--top {
+  margin-bottom: auto !important;
+}
+
+.anchor--bottom {
+  margin-top: auto !important;
+}
+
+/// Text Alignment
+
+.text--left {
+  text-align: left !important;
+}
+
+.text--center,
+.oui-text--center {
+  text-align: center !important;
+}
+
+.text--right {
+  text-align: right !important;
+}
+
+/// Display
+
+.display--block {
+  display: block !important;
+}
+
+.display--inline-block {
+  display: inline-block !important;
+}
+
+.display--inline {
+  display: inline !important;
+}
+
+.display--none {
+  display: none !important;
+}
+
+/// Faded
+/// @description Sets opacity to `0.5`. Useful for a simulated disabled state.
+
+.faded {
+  opacity: map-fetch($opacity, medium) !important;
+}
+
+/// Vertical Alignment for table cells
+
+.vertical-align--top {
+  vertical-align: top !important;
+}
+
+.vertical-align--middle {
+  vertical-align: middle !important;
+}
+
+.vertical-align--bottom {
+  vertical-align: bottom !important;
+}
+
+.vertical-align--text-top {
+  vertical-align: text-top !important;
+}
+
+/// Overflow
+/// @description Force scroll bars when overflowed.
+
+.overflow--hidden {
+  overflow: hidden !important;
+}
+
+.overflow-x--auto {
+  overflow-x: auto !important;
+}
+
+.overflow-y--auto {
+  overflow-y: auto !important;
+}
+
+.overflow-y--scroll {
+  overflow-y: scroll !important;
+}
+
+/// Max Scroll
+/// @description Set a `max-height` to provide scrolling.
+
+.max-scroll--small {
+  max-height: 100px !important;
+  overflow-y: auto !important;
+}
+
+.max-scroll--medium {
+  max-height: 200px !important;
+  overflow-y: auto !important;
+}
+
+.max-scroll--large {
+  max-height: 300px !important;
+  overflow-y: auto !important;
+}
+
+/// Max Width
+/// @description Set a max-width for content.
+
+.max-width--large {
+  max-width: 800px !important;
+}
+
+/// Cursors
+/// @description Helpers for cursors.
+
+.cursor--auto {
+  cursor: auto !important;
+}
+
+.cursor--default {
+  cursor: default !important;
+}
+
+.cursor--help {
+  cursor: help !important;
+}
+
+.cursor--move {
+  cursor: move !important;
+}
+
+.cursor--pointer {
+  cursor: pointer !important;
+}
+
+.cursor--text {
+  cursor: text !important;
+}
+
+.pointer-events--none {
+  pointer-events: none !important;
+}
+
+/// Text Area No Resize
+/// @description Prevent resizing of textarea. Use only if absolutely
+/// necessary.
+
+.no-resize {
+  resize: none !important;
+}
+
+/// Position
+/// @description Change the positioning of element.
+
+.position--relative {
+  position: relative !important;
+}
+
+.position--absolute {
+  position: absolute !important;
+}
+
+.position--fixed {
+  position: fixed !important;
+}
+
+
+/// Visibility
+/// @description Change the positioning of element.
+
+.visibility--hidden {
+  visibility: hidden !important;
+}
+
+/// Prevent User Selection
+/// @description Text inside element will not be selectable by the user.
+
+.unselectable {
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+}

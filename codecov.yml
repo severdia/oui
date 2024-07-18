@@ -1,0 +1,4 @@
+comment:
+  layout: "diff, tree"
+  behavior: default
+  require_changes: true

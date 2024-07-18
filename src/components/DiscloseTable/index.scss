@@ -1,0 +1,52 @@
+
+.oui-disclose-table {
+  @extend %oui-table;
+
+  > thead {
+
+    > th {
+      padding-bottom: spacer(1);
+    }
+
+    > tr {
+      border-bottom: 1px solid map-fetch($border, color, base);
+    }
+  }
+
+  & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
+    border-top: 1px solid map-fetch($color, ui, light);
+
+    &:first-child {
+      border-top: 0;
+    }
+
+    &:last-child {
+      border-bottom: 1px solid map-fetch($color, ui, light);
+    }
+  }
+
+  &--row
+    {
+      &__toggle {
+      @extend %oui-disclose;
+      border-left: 1px solid transparent;
+      border-right: 1px solid transparent;
+
+      &:hover {
+        cursor: pointer;
+        background-color: map-fetch($brand-color, light-blue-6);
+      }
+
+      &.is-active {
+        @extend %border--sides;
+        @extend %border--top;
+        background-color: map-fetch($root-color, grey-03);
+      }
+    }
+
+    &__content {
+      @extend %border--sides;
+      @extend %border--bottom;
+    }
+  }
+}

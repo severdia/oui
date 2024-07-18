@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/CopyButton should render children the icon button 1`] = `
+<CopyToClipboard
+  text="let bingo = \\"BINGO\\""
+>
+  <Button
+    ariaLabel="Copy code snippet"
+    isDisabled={false}
+    isLink={false}
+    isLoading={false}
+    isSubmit={false}
+    loadingText=""
+    onBlur={[Function]}
+    onClick={[Function]}
+    onMouseDown={[Function]}
+    style="plain"
+    testSection="fake-test-section-copy-button"
+    width="default"
+  >
+    <Icon
+      name="clipboard"
+    />
+  </Button>
+</CopyToClipboard>
+`;

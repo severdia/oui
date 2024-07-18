@@ -1,0 +1,232 @@
+////
+/// Text
+/// @example[html]
+///   <p class="color--base">This is base color text</p>
+///   <p class="color--brand">This is brand color text</p>
+///   <p class="color--good-news">This is good news text</p>
+///   <p class="color--warning">This is warning text</p>
+///   <p class="color--bad-news">This is bad news text</p>
+///   <p class="color--charcoal">This is charcoal</p>
+/// @example[html]
+///   <p><a href="#" class="link">Link</a></p>
+///   <p><a href="#" class="link--dark">Dark link</a></p>
+///   <p><a href="#" class="link--bad-news">Bad news link</a></p>
+///   <p><a href="#" class="link--muted">Muted link</a></p>
+///   <p><a href="#" class="link--disabled">Disabled link</a></p>
+///   <p class="background--brand-dark"><a href="#" class="link--reverse">Reverse link</a></p>
+/// @example[html]
+///   <p class="weight--light">Light weight</p>
+///   <p class="weight--normal">Normal weight</p>
+///   <p class="weight--bold">Bold weight</p>
+/// @example[html]
+///   <div class="style--italic">This is italic text.</div>
+/// @example[html]
+///   <div>You can <span class="underline">underline</span> words.</div>
+/// @example[html]
+///   <div>You can <span class="strike">strike</span> words.</div>
+/// @example[html]
+///   <div class="reverse background--brand-dark">This is a rerverse text color.</div>
+///   <div class="muted">This is a muted color.</div>
+///   <div class="muted">This is a faint color.</div>
+/// @example[html]
+///   <div class="truncate" style="width: 200px;">
+///     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas
+///     voluptatibus aliquam pariatur consequuntur, dicta reiciendis numquam
+///     vero.
+///   </div>
+/// @example[html]
+///   <a href=# class="caps">All caps</a>
+////
+
+/// Text Color
+/// @description Use for both text and on icons.
+
+%color--base,
+.color--base {
+  color: map-fetch($color, text, base) !important;
+}
+
+%color--brand,
+.color--brand {
+  color: map-fetch($color, text, brand) !important;
+}
+
+%color--good-news,
+.color--good-news {
+  color: $green-dark !important;
+}
+
+%color--warning,
+.color--warning {
+  color: $orange-dark !important;
+}
+
+%color--bad-news,
+.color--bad-news {
+  color: $red-dark !important;
+}
+
+%color--charcoal,
+.color--charcoal {
+  color: map-fetch($color, text, charcoal) !important;
+}
+
+%color--draft,
+.color--draft {
+  color: map-fetch($color, ui, draft) !important;
+}
+
+%color--live,
+.color--live {
+  color: map-fetch($color, ui, good-news) !important;
+}
+
+
+/// Font Weights
+/// @example[html]
+///   <div class="weight--light">This is light text.</div>
+
+.weight--light {
+  font-weight: 300 !important;
+}
+
+.weight--normal {
+  font-weight: 400 !important;
+}
+
+.weight--bold {
+  font-weight: 500 !important;
+}
+
+
+/// Font Style
+
+.style--italic {
+  font-style: italic !important;
+}
+
+.style--normal {
+  font-style: normal !important;
+}
+
+
+/// Underline
+/// @description Adds `text-decoration: underline` to text.
+
+.underline {
+  text-decoration: underline !important;
+}
+
+/// Strike through
+/// @description Add a line through text.
+
+.strike {
+  text-decoration: line-through !important;
+}
+
+/// Font Colors
+/// @description Mute text or reverse for dark backgrounds.
+
+.reverse {
+  color: map-fetch($color, text, white) !important;
+}
+
+.muted {
+  color: map-fetch($color, text, muted) !important;
+}
+
+.faint {
+  color: map-fetch($color, text, faint) !important;
+}
+
+/// Proceed (Align Right)
+/// @description Align items to the right where they imply progression/movement
+/// forward, e.g.:
+/// @example[html]
+///   <div class="proceed"><a href="#">Read more...</a></div>
+
+.proceed {
+  text-align: right !important;
+}
+
+/// Ellipsis
+/// @description Truncates item to a single line, adding ellipsis at the end.
+/// @example[html]
+///   <div class="truncate">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptas voluptatibus aliquam pariatur consequuntur, dicta reiciendis numquam vero.</div>
+
+%truncate,
+.truncate {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/// Right-Angle Quote
+/// @description Add a right-angled quote to links that imply movement, e.g.:
+/// @example[html]
+///   <a href=# class="go">Read more</a>
+
+.go::after {
+  content: '\00A0' '\00BB' !important;
+}
+
+/// Uppercase
+/// @description Apply capital case to an element.
+/// @example[html]
+///   <a href=# class="caps">Read more</a>
+
+.caps {
+  text-transform: uppercase !important;
+}
+
+/// Break Word & No Wrap
+/// @description Break or don't break long strings.
+/// @example[html]
+///   <a href=# class="force-break">alongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoesonalongunbrokenstringthatgoeson</a>
+
+.force-break {
+  word-wrap: break-word !important;
+}
+
+.nowrap {
+  white-space: nowrap !important;
+}
+
+.wrap-text {
+  white-space: normal !important;
+}
+
+/// Text
+/// @description Adjust block and inline.
+/// @example[html]
+///   <a href="#" class="text--block">block link</a>
+
+.text--block {
+  display: block !important;
+}
+
+.text--inline {
+  display: inline !important;
+}
+
+/// Line Height
+/// @description For adjusting line-heights.
+
+.line--tight {
+  line-height: map-fetch($font, line-height, tight) !important;
+}
+
+.line--loose {
+  line-height: map-fetch($font, line-height, loose) !important;
+}
+
+.line--1 {
+  line-height: 1 !important;
+}
+
+
+/// Text wrapping &amp; breaking
+
+.word-break {
+  word-break: break-all !important;
+}

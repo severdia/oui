@@ -1,0 +1,2447 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/FilterPicker with Immutable data (mocked) with CUSTOM keysToSearch and customFilterFn should match the Jest Snapshot 1`] = `
+<FilterPicker
+  allEntities={
+    Object {
+      "filter": [Function],
+      "map": [Function],
+      "value": Array [
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "An audience used by QA to verify tests are working.",
+            "id": 123,
+            "name": "QA Group",
+            "status": "inactive",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users who have purchased over 5k.",
+            "id": 456,
+            "name": "Lifetime Revenue Over 5k",
+            "status": "active",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users who have purchased under 1k.",
+            "id": 789,
+            "name": "Lifetime Revenue Under 1k",
+            "status": "active",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users over 25 who identify as male.",
+            "id": 135,
+            "name": "Men over 25",
+            "status": "active",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users over 25 who identify as female.",
+            "id": 246,
+            "name": "Women over 25",
+            "status": "active",
+          },
+        },
+      ],
+    }
+  }
+  customFilterFn={[Function]}
+  keysToSearch={
+    Array [
+      "name",
+    ]
+  }
+  selectedEntityIds={
+    Array [
+      123,
+      456,
+    ]
+  }
+  testSection="audiences-filter-picker"
+>
+  <div
+    className="oui-filter-picker"
+    data-test-section="audiences-filter-picker"
+  >
+    <div>
+      Selected
+    </div>
+    <ul
+      data-test-section="selected-entities"
+    >
+      <ul
+        data-test-section="selected-entity-123"
+        key="123"
+      >
+        <li>
+          Name: 
+          QA Group
+        </li>
+        <li>
+          Description: 
+          An audience used by QA to verify tests are working.
+        </li>
+        <li>
+          ID: 
+          123
+        </li>
+      </ul>
+      <ul
+        data-test-section="selected-entity-456"
+        key="456"
+      >
+        <li>
+          Name: 
+          Lifetime Revenue Over 5k
+        </li>
+        <li>
+          Description: 
+          Authenticated users who have purchased over 5k.
+        </li>
+        <li>
+          ID: 
+          456
+        </li>
+      </ul>
+    </ul>
+    <Input
+      isFilter={true}
+      isRequired={false}
+      note={null}
+      onInput={[Function]}
+      placeholder="Browse for Audiences"
+      testSection="filter-query-input"
+      type="search"
+    >
+      <input
+        className="oui-text-input oui-text-input--search"
+        data-oui-component={true}
+        data-test-section="filter-query-input"
+        onInput={[Function]}
+        placeholder="Browse for Audiences"
+        required={false}
+        type="search"
+      />
+    </Input>
+    <div>
+      Available
+    </div>
+    <BlockList
+      hasBorder={true}
+    >
+      <div
+        className="background--white overflow-x--auto border--all"
+        data-oui-component={true}
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <ul
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+            }
+          }
+        >
+          <BlockList.Category>
+            <li
+              className="oui-block-list__category"
+            >
+              <ul>
+                <ListItem
+                  buttonText=""
+                  description=""
+                  id={0}
+                  name="Create New Audience"
+                  onClick={[Function]}
+                  testSection="filter-picker-create-item"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-create-item"
+                  >
+                    <li
+                      data-test-section="filter-picker-create-item"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1 push-half--ends"
+                          >
+                            <div>
+                              Create New Audience
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+          <BlockList.Category
+            header="Recently Created Audiences"
+          >
+            <li
+              className="oui-block-list__category"
+            >
+              <div
+                className="oui-block-list__category__name soft-half--ends soft--sides"
+                style={
+                  Object {
+                    "wordBreak": "break-word",
+                  }
+                }
+              >
+                Recently Created Audiences
+              </div>
+              <ul>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users who have purchased under 1k."
+                  id={789}
+                  key="789"
+                  name="Lifetime Revenue Under 1k"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-789"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-789"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-789"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Lifetime Revenue Under 1k
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users who have purchased under 1k.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as male."
+                  id={135}
+                  key="135"
+                  name="Men over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-135"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-135"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-135"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Men over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as male.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as female."
+                  id={246}
+                  key="246"
+                  name="Women over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-246"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-246"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-246"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Women over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as female.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+        </ul>
+      </div>
+    </BlockList>
+  </div>
+</FilterPicker>
+`;
+
+exports[`components/FilterPicker with Immutable data (mocked) with DEFAULT keysToSearch and customFilterFn should match the Jest Snapshot 1`] = `
+<FilterPicker
+  allEntities={
+    Object {
+      "filter": [Function],
+      "map": [Function],
+      "value": Array [
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "An audience used by QA to verify tests are working.",
+            "id": 123,
+            "name": "QA Group",
+            "status": "inactive",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users who have purchased over 5k.",
+            "id": 456,
+            "name": "Lifetime Revenue Over 5k",
+            "status": "active",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users who have purchased under 1k.",
+            "id": 789,
+            "name": "Lifetime Revenue Under 1k",
+            "status": "active",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users over 25 who identify as male.",
+            "id": 135,
+            "name": "Men over 25",
+            "status": "active",
+          },
+        },
+        Object {
+          "get": [Function],
+          "size": 4,
+          "value": Object {
+            "description": "Authenticated users over 25 who identify as female.",
+            "id": 246,
+            "name": "Women over 25",
+            "status": "active",
+          },
+        },
+      ],
+    }
+  }
+  customFilterFn={[Function]}
+  keysToSearch={
+    Array [
+      "name",
+      "description",
+    ]
+  }
+  selectedEntityIds={
+    Array [
+      123,
+      456,
+    ]
+  }
+  testSection="audiences-filter-picker"
+>
+  <div
+    className="oui-filter-picker"
+    data-test-section="audiences-filter-picker"
+  >
+    <div>
+      Selected
+    </div>
+    <ul
+      data-test-section="selected-entities"
+    >
+      <ul
+        data-test-section="selected-entity-123"
+        key="123"
+      >
+        <li>
+          Name: 
+          QA Group
+        </li>
+        <li>
+          Description: 
+          An audience used by QA to verify tests are working.
+        </li>
+        <li>
+          ID: 
+          123
+        </li>
+      </ul>
+      <ul
+        data-test-section="selected-entity-456"
+        key="456"
+      >
+        <li>
+          Name: 
+          Lifetime Revenue Over 5k
+        </li>
+        <li>
+          Description: 
+          Authenticated users who have purchased over 5k.
+        </li>
+        <li>
+          ID: 
+          456
+        </li>
+      </ul>
+    </ul>
+    <Input
+      isFilter={true}
+      isRequired={false}
+      note={null}
+      onInput={[Function]}
+      placeholder="Browse for Audiences"
+      testSection="filter-query-input"
+      type="search"
+    >
+      <input
+        className="oui-text-input oui-text-input--search"
+        data-oui-component={true}
+        data-test-section="filter-query-input"
+        onInput={[Function]}
+        placeholder="Browse for Audiences"
+        required={false}
+        type="search"
+      />
+    </Input>
+    <div>
+      Available
+    </div>
+    <BlockList
+      hasBorder={true}
+    >
+      <div
+        className="background--white overflow-x--auto border--all"
+        data-oui-component={true}
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <ul
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+            }
+          }
+        >
+          <BlockList.Category>
+            <li
+              className="oui-block-list__category"
+            >
+              <ul>
+                <ListItem
+                  buttonText=""
+                  description=""
+                  id={0}
+                  name="Create New Audience"
+                  onClick={[Function]}
+                  testSection="filter-picker-create-item"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-create-item"
+                  >
+                    <li
+                      data-test-section="filter-picker-create-item"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1 push-half--ends"
+                          >
+                            <div>
+                              Create New Audience
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+          <BlockList.Category
+            header="Recently Created Audiences"
+          >
+            <li
+              className="oui-block-list__category"
+            >
+              <div
+                className="oui-block-list__category__name soft-half--ends soft--sides"
+                style={
+                  Object {
+                    "wordBreak": "break-word",
+                  }
+                }
+              >
+                Recently Created Audiences
+              </div>
+              <ul>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users who have purchased under 1k."
+                  id={789}
+                  key="789"
+                  name="Lifetime Revenue Under 1k"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-789"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-789"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-789"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Lifetime Revenue Under 1k
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users who have purchased under 1k.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as male."
+                  id={135}
+                  key="135"
+                  name="Men over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-135"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-135"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-135"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Men over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as male.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as female."
+                  id={246}
+                  key="246"
+                  name="Women over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-246"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-246"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-246"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Women over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as female.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+        </ul>
+      </div>
+    </BlockList>
+  </div>
+</FilterPicker>
+`;
+
+exports[`components/FilterPicker with POJO data with CUSTOM keysToSearch and customFilterFn should match the Jest Snapshot 1`] = `
+<FilterPicker
+  allEntities={
+    Array [
+      Object {
+        "description": "An audience used by QA to verify tests are working.",
+        "id": 123,
+        "name": "QA Group",
+        "status": "inactive",
+      },
+      Object {
+        "description": "Authenticated users who have purchased over 5k.",
+        "id": 456,
+        "name": "Lifetime Revenue Over 5k",
+        "status": "active",
+      },
+      Object {
+        "description": "Authenticated users who have purchased under 1k.",
+        "id": 789,
+        "name": "Lifetime Revenue Under 1k",
+        "status": "active",
+      },
+      Object {
+        "description": "Authenticated users over 25 who identify as male.",
+        "id": 135,
+        "name": "Men over 25",
+        "status": "active",
+      },
+      Object {
+        "description": "Authenticated users over 25 who identify as female.",
+        "id": 246,
+        "name": "Women over 25",
+        "status": "active",
+      },
+    ]
+  }
+  customFilterFn={[Function]}
+  keysToSearch={
+    Array [
+      "name",
+    ]
+  }
+  selectedEntityIds={
+    Array [
+      123,
+      456,
+    ]
+  }
+  testSection="audiences-filter-picker"
+>
+  <div
+    className="oui-filter-picker"
+    data-test-section="audiences-filter-picker"
+  >
+    <div>
+      Selected
+    </div>
+    <ul
+      data-test-section="selected-entities"
+    >
+      <ul
+        data-test-section="selected-entity-123"
+        key="123"
+      >
+        <li>
+          Name: 
+          QA Group
+        </li>
+        <li>
+          Description: 
+          An audience used by QA to verify tests are working.
+        </li>
+        <li>
+          ID: 
+          123
+        </li>
+      </ul>
+      <ul
+        data-test-section="selected-entity-456"
+        key="456"
+      >
+        <li>
+          Name: 
+          Lifetime Revenue Over 5k
+        </li>
+        <li>
+          Description: 
+          Authenticated users who have purchased over 5k.
+        </li>
+        <li>
+          ID: 
+          456
+        </li>
+      </ul>
+    </ul>
+    <Input
+      isFilter={true}
+      isRequired={false}
+      note={null}
+      onInput={[Function]}
+      placeholder="Browse for Audiences"
+      testSection="filter-query-input"
+      type="search"
+    >
+      <input
+        className="oui-text-input oui-text-input--search"
+        data-oui-component={true}
+        data-test-section="filter-query-input"
+        onInput={[Function]}
+        placeholder="Browse for Audiences"
+        required={false}
+        type="search"
+      />
+    </Input>
+    <div>
+      Available
+    </div>
+    <BlockList
+      hasBorder={true}
+    >
+      <div
+        className="background--white overflow-x--auto border--all"
+        data-oui-component={true}
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <ul
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+            }
+          }
+        >
+          <BlockList.Category>
+            <li
+              className="oui-block-list__category"
+            >
+              <ul>
+                <ListItem
+                  buttonText=""
+                  description=""
+                  id={0}
+                  name="Create New Audience"
+                  onClick={[Function]}
+                  testSection=""
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection=""
+                  >
+                    <li
+                      data-test-section=""
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1 push-half--ends"
+                          >
+                            <div>
+                              Create New Audience
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+          <BlockList.Category
+            header="Recently Created Audiences"
+          >
+            <li
+              className="oui-block-list__category"
+            >
+              <div
+                className="oui-block-list__category__name soft-half--ends soft--sides"
+                style={
+                  Object {
+                    "wordBreak": "break-word",
+                  }
+                }
+              >
+                Recently Created Audiences
+              </div>
+              <ul>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users who have purchased under 1k."
+                  id={789}
+                  key="789"
+                  name="Lifetime Revenue Under 1k"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-789"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-789"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-789"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Lifetime Revenue Under 1k
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users who have purchased under 1k.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as male."
+                  id={135}
+                  key="135"
+                  name="Men over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-135"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-135"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-135"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Men over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as male.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as female."
+                  id={246}
+                  key="246"
+                  name="Women over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-246"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-246"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-246"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Women over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as female.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+        </ul>
+      </div>
+    </BlockList>
+  </div>
+</FilterPicker>
+`;
+
+exports[`components/FilterPicker with POJO data with DEFAULT keysToSearch and customFilterFn should match the Jest Snapshot 1`] = `
+<FilterPicker
+  allEntities={
+    Array [
+      Object {
+        "description": "An audience used by QA to verify tests are working.",
+        "id": 123,
+        "name": "QA Group",
+        "status": "inactive",
+      },
+      Object {
+        "description": "Authenticated users who have purchased over 5k.",
+        "id": 456,
+        "name": "Lifetime Revenue Over 5k",
+        "status": "active",
+      },
+      Object {
+        "description": "Authenticated users who have purchased under 1k.",
+        "id": 789,
+        "name": "Lifetime Revenue Under 1k",
+        "status": "active",
+      },
+      Object {
+        "description": "Authenticated users over 25 who identify as male.",
+        "id": 135,
+        "name": "Men over 25",
+        "status": "active",
+      },
+      Object {
+        "description": "Authenticated users over 25 who identify as female.",
+        "id": 246,
+        "name": "Women over 25",
+        "status": "active",
+      },
+    ]
+  }
+  customFilterFn={[Function]}
+  keysToSearch={
+    Array [
+      "name",
+      "description",
+    ]
+  }
+  selectedEntityIds={
+    Array [
+      123,
+      456,
+    ]
+  }
+  testSection="audiences-filter-picker"
+>
+  <div
+    className="oui-filter-picker"
+    data-test-section="audiences-filter-picker"
+  >
+    <div>
+      Selected
+    </div>
+    <ul
+      data-test-section="selected-entities"
+    >
+      <ul
+        data-test-section="selected-entity-123"
+        key="123"
+      >
+        <li>
+          Name: 
+          QA Group
+        </li>
+        <li>
+          Description: 
+          An audience used by QA to verify tests are working.
+        </li>
+        <li>
+          ID: 
+          123
+        </li>
+      </ul>
+      <ul
+        data-test-section="selected-entity-456"
+        key="456"
+      >
+        <li>
+          Name: 
+          Lifetime Revenue Over 5k
+        </li>
+        <li>
+          Description: 
+          Authenticated users who have purchased over 5k.
+        </li>
+        <li>
+          ID: 
+          456
+        </li>
+      </ul>
+    </ul>
+    <Input
+      isFilter={true}
+      isRequired={false}
+      note={null}
+      onInput={[Function]}
+      placeholder="Browse for Audiences"
+      testSection="filter-query-input"
+      type="search"
+    >
+      <input
+        className="oui-text-input oui-text-input--search"
+        data-oui-component={true}
+        data-test-section="filter-query-input"
+        onInput={[Function]}
+        placeholder="Browse for Audiences"
+        required={false}
+        type="search"
+      />
+    </Input>
+    <div>
+      Available
+    </div>
+    <BlockList
+      hasBorder={true}
+    >
+      <div
+        className="background--white overflow-x--auto border--all"
+        data-oui-component={true}
+        style={
+          Object {
+            "maxHeight": undefined,
+          }
+        }
+      >
+        <ul
+          style={
+            Object {
+              "display": "inline-block",
+              "minWidth": "100%",
+            }
+          }
+        >
+          <BlockList.Category>
+            <li
+              className="oui-block-list__category"
+            >
+              <ul>
+                <ListItem
+                  buttonText=""
+                  description=""
+                  id={0}
+                  name="Create New Audience"
+                  onClick={[Function]}
+                  testSection=""
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection=""
+                  >
+                    <li
+                      data-test-section=""
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1 push-half--ends"
+                          >
+                            <div>
+                              Create New Audience
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+          <BlockList.Category
+            header="Recently Created Audiences"
+          >
+            <li
+              className="oui-block-list__category"
+            >
+              <div
+                className="oui-block-list__category__name soft-half--ends soft--sides"
+                style={
+                  Object {
+                    "wordBreak": "break-word",
+                  }
+                }
+              >
+                Recently Created Audiences
+              </div>
+              <ul>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users who have purchased under 1k."
+                  id={789}
+                  key="789"
+                  name="Lifetime Revenue Under 1k"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-789"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-789"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-789"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Lifetime Revenue Under 1k
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users who have purchased under 1k.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as male."
+                  id={135}
+                  key="135"
+                  name="Men over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-135"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-135"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-135"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Men over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as male.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+                <ListItem
+                  buttonText="View"
+                  description="Authenticated users over 25 who identify as female."
+                  id={246}
+                  key="246"
+                  name="Women over 25"
+                  onButtonClick={[Function]}
+                  onClick={[Function]}
+                  testSection="filter-picker-list-item-246"
+                >
+                  <BlockList.Item
+                    gutters="loose"
+                    onClick={[Function]}
+                    testSection="filter-picker-list-item-246"
+                  >
+                    <li
+                      data-test-section="filter-picker-list-item-246"
+                      style={
+                        Object {
+                          "wordBreak": "break-word",
+                        }
+                      }
+                    >
+                      <div
+                        className="oui-block-list__item link oui-block-list__link"
+                        onClick={[Function]}
+                        onKeyDown={[Function]}
+                        role="button"
+                        tabIndex="0"
+                      >
+                        <div
+                          className="flex flex-align--center"
+                        >
+                          <div
+                            className="push--right flex"
+                          >
+                            <Icon
+                              name="add"
+                            >
+                              <svg
+                                className="oui-icon display--inline oui-icon--16"
+                                data-oui-component={true}
+                                fill="currentColor"
+                                height="16"
+                                name="add"
+                                stroke="none"
+                                style={
+                                  Object {
+                                    "fill": "currentColor",
+                                    "stroke": "none",
+                                  }
+                                }
+                                viewBox="0 0 24 24"
+                                width="16"
+                              >
+                                <title>
+                                  add
+                                </title>
+                                <desc>
+                                  icon
+                                </desc>
+                                <path
+                                  d="M11.5 24.5a.5.5 0 0 1-.5-.5V1a.5.5 0 0 1 1 0v23a.5.5 0 0 1-.5.5z"
+                                  key="path-0"
+                                />
+                                <path
+                                  d="M23 13H0a.5.5 0 0 1 0-1h23a.5.5 0 0 1 0 1z"
+                                  key="path-1"
+                                />
+                              </svg>
+                            </Icon>
+                          </div>
+                          <div
+                            className="flex--1"
+                          >
+                            <div>
+                              Women over 25
+                            </div>
+                            <div
+                              className="muted micro"
+                            >
+                              Authenticated users over 25 who identify as female.
+                            </div>
+                          </div>
+                          <Button
+                            isDisabled={false}
+                            isLink={false}
+                            isLoading={false}
+                            isSubmit={false}
+                            loadingText=""
+                            onBlur={[Function]}
+                            onClick={[Function]}
+                            onMouseDown={[Function]}
+                            size="tiny"
+                            style="outline"
+                            width="default"
+                          >
+                            <button
+                              aria-live="polite"
+                              className="oui-button oui-button--outline oui-button--tiny oui-button--default"
+                              data-oui-component={true}
+                              disabled={false}
+                              onBlur={[Function]}
+                              onClick={[Function]}
+                              onMouseDown={[Function]}
+                              type="button"
+                            >
+                              View
+                            </button>
+                          </Button>
+                        </div>
+                      </div>
+                    </li>
+                  </BlockList.Item>
+                </ListItem>
+              </ul>
+            </li>
+          </BlockList.Category>
+        </ul>
+      </div>
+    </BlockList>
+  </div>
+</FilterPicker>
+`;

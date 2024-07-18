@@ -1,0 +1,1 @@
+{"description":"","methods":[],"props":{"children":{"type":{"name":"string"},"required":true,"description":"Content that appears within the popover body"},"testSection":{"type":{"name":"string"},"required":false,"description":"Hook for automated JavaScript tests"}},"private":true}

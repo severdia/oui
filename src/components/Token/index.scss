@@ -1,0 +1,118 @@
+////
+/// Token
+/// @description Tokens are used to denote which items you’ve selected from a multi-select list.
+/// @example[html] secondary
+///   <div class="oui-token-wrap">
+///     <div class="oui-token oui-token--secondary">Experiment Page Title</div>
+///   </div>
+/// @example[html] primary
+///   <div class="oui-token-wrap">
+///     <div class="oui-token oui-token--primary">
+///       <span class="push--right">Experiment Page Title</span>
+///       <a class="flex">
+///         <svg class="oui-icon oui-token__close">
+///           <use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close-16"></use>
+///         </svg>
+///       </a>
+///     </div>
+///   </div>
+////
+
+.#{$namespace}token-wrap,
+.oui-token-wrap {
+  display: inline-flex;
+  padding: map-fetch($token, padding);
+
+  &--well {
+    background: map-fetch($color, background, light);
+    border-radius: map-fetch($token, border-radius);
+    border: 1px solid map-fetch($color, ui, base);
+  }
+}
+
+.#{$namespace}token-wrap--snug,
+.oui-token-wrap--snug {
+  display: inline-flex;
+  padding: map-fetch($token, padding)/2;
+}
+
+.#{$namespace}token,
+.oui-token {
+  display: inline-flex;
+  align-items: flex-start;
+  color: map-fetch($color, text, white);
+  line-height: 1;
+  padding: spacer(0.5) spacer(1);
+  border-radius: map-fetch($token, border-radius);
+  text-shadow: map-fetch($token, text-shadow);
+}
+
+.#{$namespace}token,
+.oui-token{
+  &--primary {
+    background: map-fetch($token, background-color, primary);
+  }
+  &--secondary {
+    background: map-fetch($token, background-color, secondary);
+  }
+  &--tertiary {
+    background: map-fetch($token, background-color, tertiary);
+  }
+  &--error {
+    background: map-fetch($token, background-color, error);
+  }
+  &--font-dark {
+    color: map-fetch($token, font-color, dark);
+  }
+  &--font-light {
+    color: map-fetch($token, font-color, light);
+  }
+}
+
+.#{$namespace}token-tool,
+.oui-token-tool {
+  display: flex;
+  align-items: center;
+  flex: none;
+  min-width: 0;
+  min-height: 0;
+  padding-left: map-fetch($token, padding) * 2;
+}
+
+.#{$namespace}token__number,
+.oui-token__number {
+  color: map-fetch($color, text, light);
+  font-size: map-fetch($font, size, milli);
+  min-width: map-fetch($token, token__number, min-width);
+}
+
+.#{$namespace}token__move,
+.oui-token__move {
+  transform: rotate(90deg);
+  color: map-fetch($token, move-drag-handle);
+  svg {
+    fill: map-fetch($token, move-drag-handle) !important;
+  }
+}
+
+.#{$namespace}token-tool,
+.oui-token-tool {
+  &:hover {
+    .oui-token__move svg {
+      fill: darken(map-fetch($token, move-drag-handle), 10) !important;
+    }
+  }
+}
+
+.#{$namespace}token__description,
+.oui-token__description {
+  font-size: map-fetch($font, size, micro);
+  margin-top: spacer(0.5);
+}
+
+.#{$namespace}token__close,
+.oui-token__close {
+  color: map-fetch($color, ui, white);
+  height: map-fetch($token, token__close, height);
+  width: map-fetch($token, token__close, width);
+}

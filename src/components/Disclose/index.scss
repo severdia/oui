@@ -1,0 +1,83 @@
+////
+/// Disclose
+/// @description Similar to an accordion but any number of items can be opened
+/// closed independently.
+/// @example[html]
+///   <div class="#{$namespace}disclose is-active">
+///     <a href="#" class="#{$namespace}disclose__link link--dark">
+///       <div class="#{$namespace}disclose__arrow is-active">
+///         <span class="#{$namespace}disclose__symbol"></span>
+///         Title of Disclosure
+///       </div>
+///     </a>
+///     <div class="#{$namespace}disclose__content">
+///       <h3>Some Title</h3>
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi id voluptas vitae eius expedita alias iste deserunt rndis earum voluptatibus quae, numquam dolorum perspiciatis accusantium corporis, beatae maxime quasi. Tempora.</p>
+///     </div>
+///   </div>
+////
+
+.#{$namespace}disclose,
+.oui-disclose,
+%oui-disclose {
+  @extend %kill-last-child-margin;
+
+  &__link {
+    display: block;
+    position: relative;
+    margin-bottom: 5px;
+  }
+
+  &__symbol {
+    width: spacer(1);
+    display: inline-block;
+    pointer-events: none; // Make clicking the arrow icon still open the disclose object.
+    margin-right: spacer(0.5);
+
+    &::before {
+      @extend %oui-arrow-inline;
+      content: '';
+      transform: rotate(-135deg);
+    }
+  }
+
+  &--right {
+    .#{$namespace}disclose__symbol,
+    .oui-disclose__symbol {
+      float: right;
+      transform: rotate(180deg);
+      margin-right: 0;
+      margin-left: spacer(0.5);
+    }
+  }
+
+  // By default item is closed.
+
+  &__content {
+    display: none;
+  }
+
+  &__item {
+    margin-bottom: spacer(1);
+  }
+
+  &.is-active {
+
+    .#{$namespace}disclose__content,
+    .oui-disclose__content {
+      display: block;
+    }
+
+    .oui-disclose__content > :last-child {
+        padding-bottom: 20px;
+    }
+
+    .#{$namespace}disclose__symbol,
+    .oui-disclose__symbol {
+      transform: rotate(90deg);
+      top: -4px;
+      position: relative;
+    }
+
+  }
+}

@@ -1,0 +1,1 @@
+{"description":"Generates an `ProgressDots`","displayName":"ProgressDots","methods":[],"props":{"testSection":{"type":{"name":"string"},"required":false,"description":"Hook for automated JavaScript tests"}},"private":false}

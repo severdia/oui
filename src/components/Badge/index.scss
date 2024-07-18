@@ -1,0 +1,75 @@
+////
+/// Badge
+/// @description Useful for counts like the number of live or draft changes.
+/// @example[html] Default
+///   <span class="oui-badge">Default</span>
+/// @example[html] Draft
+///   <span class="oui-badge oui-badge--draft">Draft</span>
+/// @example[html] Live
+///   <span class="oui-badge oui-badge--live">Live</span>
+/// @example[html] Primary
+///   <span class="oui-badge oui-badge--primary">Primary</span>
+/// @example[html] Plain
+///   <span class="oui-badge oui-badge--plain">Plain</span>
+////
+
+@mixin badge {
+  height: map-fetch($badge, size);
+  line-height: 13px;
+  background: map-fetch($badge, background-color);
+  color: map-fetch($color, ui, white);
+  min-width: map-fetch($badge, min-width);
+  text-align: center;
+  margin-right: spacer(0.5);
+  border-radius: map-fetch($badge, size);
+  font-size: map-fetch($badge, font-size);
+  padding: 2px spacer(1) !important; // TODO(dave) HTML FIX: remove .soft-half--sides from .badge__draft
+  font-weight: map-fetch($badge, font-weight);
+  letter-spacing: map-fetch($badge, letter-spacing);
+  text-transform: uppercase;
+}
+
+.#{$namespace}badge {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+
+  > li {
+    @include badge;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+.oui-badge {
+  display: inline-block;
+  @include badge;
+}
+
+.#{$namespace}badge > li.badge__draft,
+.oui-badge--draft {
+  background: map-fetch($color, ui, draft);
+}
+
+.#{$namespace}badge > li.badge__live,
+.oui-badge--live {
+  background: map-fetch($color, ui, live);
+}
+
+.#{$namespace}badge > li.badge__primary,
+.oui-badge--primary {
+  background: map-fetch($token, background-color, primary);
+}
+
+.#{$namespace}badge > li.badge__plain,
+.oui-badge--plain {
+  background: transparent;
+  color: map-fetch($badge, background-color);
+}
+
+.#{$namespace}badge > li.badge__bad-news,
+.oui-badge--bad-news {
+  background: map-fetch($color, ui, bad-news);
+}

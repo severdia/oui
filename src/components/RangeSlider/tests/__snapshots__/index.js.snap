@@ -1,0 +1,97 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/RangeSlider default fill color should render component same as snapshot 1`] = `
+<div
+  className="oui-rangeslider"
+  data-test-section="myTestSection"
+>
+  <div
+    className="oui-grid"
+  >
+    <div
+      className="oui-grid__cell position--relative"
+    >
+      <div
+        className="range-labels flex"
+      >
+        <label
+          className="oui-label muted flush flex--1"
+        >
+          0%
+        </label>
+        <label
+          className="oui-label muted flush"
+        >
+          100%
+        </label>
+      </div>
+      <div
+        className="range-display"
+      >
+        <svg
+          height="256"
+          preserveAspectRatio="none"
+          viewBox="0 0 256 256"
+          width="256"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 256h256V0z"
+            fill="hsla(227, 100%, 50%, 1)"
+          />
+        </svg>
+        <div
+          className="range-display range-display-overlay"
+          style={
+            Object {
+              "left": "50%",
+            }
+          }
+        />
+      </div>
+      <div
+        className="range-grid"
+      >
+        <div
+          className="gridline grid-1"
+        />
+        <div
+          className="gridline grid-2"
+        />
+        <div
+          className="gridline grid-3"
+        />
+        <div
+          className="gridline grid-4"
+        />
+        <div
+          className="gridline grid-5"
+        />
+        <div
+          className="gridline gridline-half grid-h1"
+        />
+        <div
+          className="gridline gridline-half grid-h2"
+        />
+        <div
+          className="gridline gridline-half grid-h3"
+        />
+        <div
+          className="gridline gridline-half grid-h4"
+        />
+      </div>
+      <input
+        className="hard position--relative width--1-1"
+        data-traffic-group="1"
+        disabled={false}
+        max="100"
+        min="0"
+        onChange={[Function]}
+        step="1"
+        type="range"
+        value={50}
+      />
+    </div>
+  </div>
+</div>
+`;

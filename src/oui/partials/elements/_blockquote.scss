@@ -1,0 +1,14 @@
+////
+/// Blockquotes
+/// @description For quoting blocks of content.
+/// @group Elements
+/// @example[html]
+///   <blockquote>
+///     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+///   </blockquote>
+////
+
+blockquote {
+  border-left: 3px solid map-fetch($color, ui, base);
+  padding-left: spacer(1.5);
+}

@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Switch should render an \`Switch\` with correct props 1`] = `
+<div
+  className="position--relative"
+  data-oui-component={true}
+>
+  <input
+    className="oui-switch"
+    id="switch1"
+    type="checkbox"
+  />
+  <label
+    data-off-label="Off"
+    data-on-label="On"
+    htmlFor="switch1"
+  />
+</div>
+`;

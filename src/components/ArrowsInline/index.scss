@@ -1,0 +1,53 @@
+////
+/// Arrow Inline
+/// @description Small arrows as needed next to navigational elements. The
+/// arrows will inherit the color of the parent `color` value.
+/// @example[html]
+///   <div><span class="oui-arrow-inline--up"></span> Up</div>
+///   <div><span class="oui-arrow-inline--down"></span> Down</div>
+///   <div><span class="oui-arrow-inline--right"></span> Right</div>
+///   <div><span class="oui-arrow-inline--left"></span> Left</div>
+////
+
+%#{$namespace}arrow-inline,
+%oui-arrow-inline,
+.#{$namespace}arrow-inline,
+.oui-arrow-inline {
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border: 1px solid currentColor;
+  border-top: none;
+  border-right: none;
+  vertical-align: middle;
+  margin-top: -4px;
+  margin-left: 3px;
+
+  &--up {
+    @extend %oui-arrow-inline;
+    transform: rotate(135deg);
+    vertical-align: -2%;
+  }
+
+  &--down {
+    @extend %oui-arrow-inline;
+    transform: rotate(-45deg);
+    vertical-align: 6%;
+  }
+
+  &--right {
+    @extend %oui-arrow-inline;
+    transform: rotate(-135deg);
+  }
+
+  &--left {
+    @extend %oui-arrow-inline;
+    transform: rotate(45deg);
+  }
+
+  &--small {
+    width: 6px;
+    height: 6px;
+    vertical-align: 20%;
+  }
+}

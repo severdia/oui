@@ -1,0 +1,51 @@
+////
+/// Select
+/// @example[html]
+///   <select name="zoo" id="zoo" class="#{$namespace}select">
+///     <option value="one">This is option one</option>
+///     <option value="two">And this is option two</option>
+///   </select>
+/// @example[html]
+///   <select name="zoo" disabled id="zoo" class="#{$namespace}select">
+///     <option value="one">This is option one</option>
+///     <option value="two">And this is option two</option>
+///   </select>
+////
+.#{$namespace}select,
+.oui-select {
+  appearance: none;
+  -webkit-appearance: none;
+  transition: border-color map-fetch($transition-duration, base);
+  border: 1px solid map-fetch($border, color, base);
+  height: map-fetch($button, size, base, height);
+  border-radius: map-fetch($border, radius, base);
+  font-size: map-fetch($font, size, base);
+  padding: 0 spacer(3) 0 map-fetch($form, input, padding);
+  outline: none;
+  cursor: pointer;
+  vertical-align: middle;
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE1LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPgo8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPgo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkNhcGFfMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiCgkgd2lkdGg9IjIwcHgiIGhlaWdodD0iMjBweCIgdmlld0JveD0iMCAwIDIwIDIwIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCAyMCAyMCIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+Cjxwb2x5Z29uIHBvaW50cz0iMTAsMTEuMiA2LjQsNy42IDQuMyw3LjYgMTAsMTMuMyAxNS43LDcuNiAxMy42LDcuNiAiLz4KPC9zdmc+Cg==);
+  background-position: right map-fetch($form, input, padding) center;
+  background-repeat: no-repeat;
+  background-size: auto 16px;
+  max-width: 100%;
+
+  &:hover:not([disabled]) {
+    box-shadow: map-fetch($button, type, base, hover, box-shadow);
+    border-color: map-fetch($color, ui, medium);
+  }
+
+  &:disabled {
+    cursor: default;
+  }
+
+  &--small {
+    font-size: map-fetch($button, size, small, font-size);
+    height: map-fetch($button, size, small, height);
+  }
+
+  &--large {
+    font-size: map-fetch($button, size, large, font-size);
+    height: map-fetch($button, size, large, height);
+  }
+}

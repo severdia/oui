@@ -1,0 +1,174 @@
+////
+/// Tabs
+////
+
+.#{$namespace}tabs-nav,
+.oui-tabs-nav {
+  display: flex;
+  border-bottom: 1px solid map-fetch($color, ui, light);
+
+  &__item {
+    position: relative;
+    text-align: center;
+    padding: spacer(1) spacer(1.5);
+    border: 1px solid map-fetch($border, color, base);
+    border-right: 0;
+    border-bottom: 0;
+    color: var(--dark-blue-75);
+    font-weight: 400;
+    background-color: map-fetch($color, background, faint);
+    cursor: pointer;
+
+    &.link--muted {
+      color: inherit;
+    }
+
+    &:first-child {
+      border-top-left-radius: map-fetch($border, radius, big);
+    }
+
+    &:last-child {
+      border-top-right-radius: map-fetch($border, radius, big);
+      border-right: 1px solid map-fetch($border, color, base);
+    }
+
+    &:hover {
+      color: var(--light-blue-75);
+    }
+
+    &.is-active {
+      background-color: map-fetch($color, background, white);
+      cursor: default;
+
+      &::after { // Creates the white bar under the active tab.
+        content: '';
+        display: block;
+        height: 3px;
+        background: var(--light-blue-75);
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -3px;
+      }
+    }
+  }
+}
+
+.oui-tabs--left-pad {
+  .#{$namespace}tabs-nav,
+  .oui-tabs-nav {
+    padding-left: 25px;
+  }
+}
+
+.oui-tabs--plain {
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
+    background-color: transparent;
+    border: 0;
+  }
+}
+
+.#{$namespace}tabs--small,
+.oui-tabs--small {
+
+  .#{$namespace}tabs-nav,
+  .oui-tabs-nav {
+    border-width: 1px;
+  }
+
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
+    background-color: transparent;
+    padding: spacer(0.5) spacer(1);
+    font-size: 11.5px; // TODO: @dave.rau Adding these overrides for Ron
+    letter-spacing: -0.3px;
+    &.is-active {
+      &::after { // Creates the white bar under the active tab.
+        height: 1px;
+        bottom: -1px;
+      }
+    }
+  }
+}
+
+.#{$namespace}tabs--center,
+.oui-tabs--center {
+  .#{$namespace}tabs-nav,
+  .oui-tabs-nav {
+    justify-content: center;
+  }
+
+  .#{$namespace}tabs-nav__item:first-child,
+  .oui-tabs-nav__item:first-child {
+    margin-left: spacer(0.5);
+  }
+}
+
+.#{$namespace}tabs--sub,
+.oui-tabs--sub {
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
+    border: 0;
+
+    &.is-active::after {
+      height: 2px;
+      bottom: -1px;
+    }
+
+    &.tab-disabled {
+      @extend %link--disabled;
+      cursor: default;
+    }
+  }
+}
+
+.oui-tabs--header {
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
+
+    &.is-active::after {
+      height: 1px;
+      bottom: -1px;
+    }
+
+    &.tab-disabled {
+      @extend %link--disabled;
+      cursor: default;
+    }
+  }
+}
+
+.#{$namespace}tabs-pane,
+.oui-tabs-pane {
+
+  &__item {
+    display: none;
+
+    &.is-active {
+      display: block;
+    }
+  }
+}
+
+.dashboard-tabs,
+.oui-tabs--dashboard {
+  margin-left: -(spacer(4));
+  margin-right: -(spacer(4));
+
+  &--half {
+    margin-left: -(spacer(2));
+    margin-right: -(spacer(2));
+  }
+
+  .#{$namespace}tabs-nav__item,
+  .oui-tabs-nav__item {
+    padding-top: 8px;
+    border: none;
+    background: none;
+
+    &:first-child {
+      margin-left: spacer(2.5);
+    }
+  }
+}

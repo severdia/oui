@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Link should render as a span if there is no href 1`] = `
+<span
+  className="link"
+  data-oui-component={true}
+  disabled={false}
+>
+  Faux Link
+</span>
+`;
+
+exports[`components/Link should render disabled 1`] = `
+<a
+  className="link link--disabled pointer-events--none"
+  data-oui-component={true}
+  disabled={true}
+  href="http://google.com"
+>
+  Test Link
+</a>
+`;
+
+exports[`components/Link should render style classes 1`] = `
+<a
+  className="link link--muted"
+  data-oui-component={true}
+  disabled={false}
+  href="http://google.com"
+>
+  Test Link
+</a>
+`;
+
+exports[`components/Link should render target blank attribute 1`] = `
+<a
+  className="link"
+  data-oui-component={true}
+  disabled={false}
+  href="http://google.com"
+  rel="noopener noreferrer"
+  target="_blank"
+>
+  Test Link
+</a>
+`;

@@ -1,0 +1,42 @@
+////
+/// Media
+/// @description Place any image and text-like content side-by-side.
+/// @example[html] Image on the left
+///   <div class="#{$namespace}media">
+///     <img src="https://placekitten.com/g/50/50" alt="" class="#{$namespace}media__img">
+///     <div class="#{$namespace}media__body">
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam corporis velit harum quia eaque accusantium nam sint fugit!</p>
+///     </div>
+///   </div>
+/// @example[html] Image on the right
+///   <div class="#{$namespace}media">
+///     <div class="#{$namespace}media__body">
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam corporis velit harum quia eaque accusantium nam sint fugit!</p>
+///     </div>
+///     <img src="https://placekitten.com/g/50/50" alt="" class="#{$namespace}media__img--rev">
+///   </div>
+/// @example[html] Nested
+///   <div class="#{$namespace}media">
+///     <img src="https://placekitten.com/g/50/50" alt="" class="#{$namespace}media__img">
+///     <div class="#{$namespace}media__body">
+///       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam corporis velit harum quia eaque accusantium nam sint fugit!</p>
+///       <div class="#{$namespace}media push--bottom">
+///         <img src="https://placekitten.com/g/25/25" alt="" class="#{$namespace}media__img">
+///         <div class="#{$namespace}media__body">
+///           <p class="micro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam nam sint fugit!</p>
+///         </div>
+///       </div>
+///       <div class="#{$namespace}media">
+///         <img src="https://placekitten.com/g/25/25" alt="" class="#{$namespace}media__img">
+///         <div class="#{$namespace}media__body">
+///           <p class="micro">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero similique aut iste, labore esse delectus molestias, beatae sapiente nemo voluptates quam nam sint fugit!</p>
+///         </div>
+///       </div>
+///     </div>
+///   </div>
+////
+
+%#{$namespace}media,
+.#{$namespace}media {
+  @include media;
+}

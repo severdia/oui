@@ -1,0 +1,257 @@
+%#{$namespace}table,
+.#{$namespace}table,
+%oui-table,
+.oui-table {
+  width: 100%;
+  font-size: inherit;
+
+  &:not(.oui-table--loose) th,
+  &:not(.oui-table--loose) td {
+    padding-left: spacer(2);
+    padding-top: spacer(0.5);
+    padding-bottom: spacer(0.5);
+
+    &:first-child {
+      padding-left: 0;
+    }
+  }
+
+  th {
+    font-weight: 500;
+    font-size: 12px;
+    color: map-fetch($color, text, muted);
+    text-align: left;
+
+    // For columns that are sortable.
+
+    &[field] {
+      cursor: pointer;
+    }
+  }
+
+  td {
+    vertical-align: top;
+  }
+
+  // Cell Alignments
+  // Defaults for cell alignments with one helper class for numbers.
+
+  [rowspan] {
+    vertical-align: middle;
+  }
+
+  [rowspan="1"] {
+    vertical-align: top;
+  }
+
+  .numerical,
+  .oui-numerical {
+    text-align: right;
+  }
+
+  .cell-collapse,
+  .oui-cell-collapse {
+    width: 1%;
+  }
+
+  // Table Variations
+  // We're using direct decendent selectors so any child tables do not
+  // inherit styles.
+
+  &--rule,
+  &--rule-no-bottom-border {
+
+    > thead {
+
+      > th {
+        padding-bottom: spacer(1);
+      }
+
+      > tr {
+        border-bottom: 1px solid map-fetch($border, color, base);
+      }
+    }
+
+    & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
+      border-bottom: 1px solid map-fetch($color, ui, light);
+
+      // If no `thead` is present we'll have a border top.
+
+      &:first-child {
+        border-bottom: 1px solid map-fetch($color, ui, light);
+      }
+    }
+
+  }
+
+  &--rule-no-bottom-border > tbody > tr:last-child { // scss-lint:disable UnnecessaryParentReference
+    border-bottom: 0;
+  }
+
+  &--wall {
+
+    & > thead > tr > th, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td { // scss-lint:disable UnnecessaryParentReference
+      border-left: 1px solid map-fetch($color, ui, light);
+      padding-right: spacer(1);
+
+      &:first-child {
+        border-left: 0;
+      }
+    }
+  }
+
+  &--hover {
+
+    & > tbody > tr { // scss-lint:disable UnnecessaryParentReference
+
+      &:hover {
+        background-color: map-fetch($color, background, brand-light);
+        cursor: pointer;
+      }
+    }
+
+    & > thead > tr > th:first-child, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td:first-child { // scss-lint:disable UnnecessaryParentReference
+      padding-left: spacer(1);
+    }
+
+    & > thead > tr > th:last-child, // scss-lint:disable UnnecessaryParentReference
+    & > tbody > tr > td:last-child { // scss-lint:disable UnnecessaryParentReference
+      padding-right: spacer(1);
+    }
+  }
+
+  &--loose {
+    th,
+    td {
+      padding-left: spacer(1);
+      padding-right: spacer(1);
+
+      &:first-child {
+        padding-left: spacer(2);
+      }
+
+      &:last-child {
+        padding-right: spacer(2);
+      }
+    }
+
+    th {
+      padding-top: spacer(0.5);
+      padding-bottom: spacer(0.5);
+    }
+
+    td {
+      padding-top: spacer(1);
+      padding-bottom: spacer(1);
+    }
+  }
+
+  // Add/Remove Rows
+  // In button rows use a placeholder button with `.visibility--hidden` in
+  // the `--controls` cell to maintain spacing.
+
+  &--add-row {
+
+    // Removes top padding of first row so spacing is consistent with other
+    // form elements.
+    tbody > tr:first-child > td { // scss-lint:disable UnnecessaryParentReference
+      padding-top: 0;
+    }
+
+    td {
+      padding-bottom: spacer(1);
+    }
+
+    &__controls {
+      width: 1%;
+      white-space: nowrap;
+    }
+  }
+}
+
+// Added to the table row.
+
+.#{$namespace}table-row--active,
+.oui-table-row--active {
+  background-color: map-fetch($color, background, faint);
+}
+
+/// Scrolling Tables
+/// @description Uses flexbox to change the default behavior of the table
+/// elements.
+///
+/// - The parents of `table-scroll` MUST be `display: flex`.
+/// - All `<th>` and `<td>` elements must have matching widths.
+///
+/// @example[html]
+///   <table class="table table--scroll table--rule">
+///     <thead>
+///       <tr>
+///         <th class="width--2-4">one</th>
+///         <th class="width--1-4">two</th>
+///         <th class="width--1-4">three</th>
+///       </tr>
+///     </thead>
+///     <tbody>
+///       <tr>
+///         <td class="width--2-4">one</td>
+///         <td class="width--1-4">two</td>
+///         <td class="width--1-4">three</td>
+///       </tr>
+///     </tbody>
+///   </table>
+
+.#{$namespace}table--scroll,
+.oui-table--scroll {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  thead {
+    display: flex;
+    flex: none;
+  }
+
+  tbody {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    width: 100%;
+    overflow-y: auto;
+    min-height: 0;
+    -ms-overflow-style: -ms-autohiding-scrollbar; // Shows/hides scroll bar on Windows.
+  }
+
+  tr {
+    display: flex; // All table rows changed to flexbox.
+    flex: none;
+    width: 100%;
+  }
+
+  th,
+  td {
+    display: block;
+  }
+}
+
+//TODO(Dave) verify we need this
+.oui-table > tbody tr:hover td a:hover {
+  color: var(--light-blue-75);
+}
+.oui-table > tbody > tr:hover > td:not(.CalendarDay) {
+  background-color: var(--grey-25);
+}
+
+// p13n table spread for taller table rows
+.oui-table--loose > tbody > tr > td {
+  padding-top: spacer(1.5);
+  padding-bottom: spacer(1.5);
+}
+
+// Older code, should be refactored.
+.lego-table--add-row__controls .flex {
+  width: 72px;
+}
+

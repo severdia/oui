@@ -1,0 +1,1 @@
+{"description":"","displayName":"CopyButton","methods":[{"name":"supportsCopyAPI","docblock":null,"modifiers":[],"params":[],"returns":null}],"props":{"code":{"type":{"name":"string"},"required":true,"description":"The code that will be copied"},"testSection":{"type":{"name":"string"},"required":false,"description":"Hook for automated JavaScript tests"}},"private":true}

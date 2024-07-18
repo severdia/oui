@@ -1,0 +1,272 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Dropdown should highlight button class when style equals highlight 1`] = `
+<withHandlers(withState(Dropdown))
+  arrowIcon="none"
+  buttonContent="Dropdown"
+  displayError={false}
+  fullWidth={false}
+  icon={true}
+  isDisabled={false}
+  isOpen={false}
+  overChildren={false}
+  placement="bottom-start"
+  setOverChildren={[Function]}
+  shouldHideChildrenOnClick={true}
+  style="highlight"
+  testSection=""
+  toggle={[Function]}
+  width={200}
+  zIndex={999}
+>
+  <ul>
+    <li
+      key="0"
+    >
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(withState(Dropdown))>
+`;
+
+exports[`components/Dropdown should include oui-form-bad-news class when display error is true 1`] = `
+<withHandlers(withState(Dropdown))
+  arrowIcon="none"
+  buttonContent="Dropdown"
+  displayError={true}
+  fullWidth={false}
+  isDisabled={false}
+  isOpen={false}
+  overChildren={false}
+  placement="bottom-start"
+  setOverChildren={[Function]}
+  shouldHideChildrenOnClick={true}
+  testSection=""
+  toggle={[Function]}
+  width={200}
+  zIndex={999}
+/>
+`;
+
+exports[`components/Dropdown should not render children or Popper when isDisabled is true 1`] = `
+<withState(withHandlers(withState(Dropdown)))
+  arrowIcon="none"
+  buttonContent="Dropdown"
+  displayError={false}
+  fullWidth={false}
+  icon={true}
+  idDisabled={true}
+  isDisabled={false}
+  isOpen={false}
+  overChildren={false}
+  placement="bottom-start"
+  setOverChildren={[Function]}
+  shouldHideChildrenOnClick={true}
+  testSection=""
+  toggle={[Function]}
+  width={200}
+  zIndex={999}
+>
+  <withHandlers(withState(Dropdown))
+    arrowIcon="none"
+    buttonContent="Dropdown"
+    displayError={false}
+    fullWidth={false}
+    icon={true}
+    idDisabled={true}
+    isDisabled={false}
+    isOpen={false}
+    overChildren={false}
+    placement="bottom-start"
+    setOverChildren={[Function]}
+    shouldHideChildrenOnClick={true}
+    testSection=""
+    toggle={[Function]}
+    width={200}
+    zIndex={999}
+  >
+    <withState(Dropdown)
+      arrowIcon="none"
+      buttonContent="Dropdown"
+      displayError={false}
+      fullWidth={false}
+      hide={[Function]}
+      icon={true}
+      idDisabled={true}
+      isDisabled={false}
+      isOpen={false}
+      overChildren={false}
+      placement="bottom-start"
+      setOverChildren={[Function]}
+      shouldHideChildrenOnClick={true}
+      show={[Function]}
+      testSection=""
+      toggle={[Function]}
+      width={200}
+      zIndex={999}
+    >
+      <Dropdown
+        arrowIcon="none"
+        buttonContent="Dropdown"
+        displayError={false}
+        fullWidth={false}
+        hide={[Function]}
+        icon={true}
+        idDisabled={true}
+        isDisabled={false}
+        isOpen={false}
+        overChildren={false}
+        placement="bottom-start"
+        setOverChildren={[Function]}
+        shouldHideChildrenOnClick={true}
+        show={[Function]}
+        testSection=""
+        toggle={[Function]}
+        width={200}
+        zIndex={999}
+      >
+        <Manager>
+          <div
+            className="oui-dropdown-group"
+            data-oui-component={true}
+            data-test-section=""
+          >
+            <Reference>
+              <InnerReference
+                setReferenceNode={[Function]}
+              >
+                <button
+                  className="oui-button"
+                  disabled={false}
+                  onBlur={[Function]}
+                  onClick={[Function]}
+                  type="button"
+                >
+                  <div
+                    className="flex flex-align--center"
+                  >
+                    <div
+                      className="flex--1 truncate"
+                    >
+                      Dropdown
+                    </div>
+                  </div>
+                </button>
+              </InnerReference>
+            </Reference>
+          </div>
+        </Manager>
+      </Dropdown>
+    </withState(Dropdown)>
+  </withHandlers(withState(Dropdown))>
+</withState(withHandlers(withState(Dropdown)))>
+`;
+
+exports[`components/Dropdown should not use .oui-arrow-inline--down when icon isEqual to triangle 1`] = `
+<withHandlers(withState(Dropdown))
+  arrowIcon="none"
+  buttonContent="Dropdown"
+  displayError={false}
+  fullWidth={false}
+  icon={true}
+  isDisabled={false}
+  isOpen={false}
+  overChildren={false}
+  placement="bottom-start"
+  setOverChildren={[Function]}
+  shouldHideChildrenOnClick={true}
+  testSection=""
+  toggle={[Function]}
+  width={200}
+  zIndex={999}
+>
+  <ul>
+    <li
+      key="0"
+    >
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(withState(Dropdown))>
+`;
+
+exports[`components/Dropdown should render an activator node when passed as a prop 1`] = `
+<withHandlers(withState(Dropdown))
+  activator={
+    <button>
+      Click me
+    </button>
+  }
+  arrowIcon="none"
+  displayError={true}
+  fullWidth={false}
+  isDisabled={false}
+  isOpen={false}
+  overChildren={false}
+  placement="bottom-start"
+  setOverChildren={[Function]}
+  shouldHideChildrenOnClick={true}
+  testSection=""
+  toggle={[Function]}
+  width={200}
+  zIndex={999}
+/>
+`;
+
+exports[`components/Dropdown should use oui-button--full class when fullWidth is true 1`] = `
+<withHandlers(withState(Dropdown))
+  arrowIcon="none"
+  buttonContent="Dropdown"
+  displayError={false}
+  fullWidth={true}
+  icon={true}
+  isDisabled={false}
+  isOpen={false}
+  overChildren={false}
+  placement="bottom-start"
+  setOverChildren={[Function]}
+  shouldHideChildrenOnClick={true}
+  testSection=""
+  toggle={[Function]}
+  width={200}
+  zIndex={999}
+>
+  <ul>
+    <li
+      key="0"
+    >
+      Manual
+    </li>
+    <li
+      key="1"
+    >
+      Maximize Conventions
+    </li>
+    <li
+      key="2"
+    >
+      Faster Results
+    </li>
+  </ul>
+</withHandlers(withState(Dropdown))>
+`;

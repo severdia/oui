@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`components/Spinner should render correctly 1`] = `
+<div
+  className="oui-spinner"
+/>
+`;
+
+exports[`components/Spinner should render correctly including testSection prop 1`] = `
+<div
+  className="oui-spinner"
+  data-test-section="testing-foo"
+/>
+`;
+
+exports[`components/Spinner should render correctly with overlay 1`] = `
+<div
+  className="oui-overlay"
+  data-oui-component={true}
+>
+  <div
+    className="oui-spinner"
+  />
+</div>
+`;
+
+exports[`components/Spinner should render correctly with size & overlay props 1`] = `
+<div
+  className="oui-overlay"
+  data-oui-component={true}
+>
+  <div
+    className="oui-spinner oui-spinner--tiny"
+  />
+</div>
+`;
+
+exports[`components/Spinner should render correctly with size property set to tiny 1`] = `
+<div
+  className="oui-spinner oui-spinner--tiny"
+/>
+`;

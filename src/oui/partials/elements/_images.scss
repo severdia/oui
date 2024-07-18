@@ -1,0 +1,86 @@
+////
+/// Images
+////
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+figure > img {
+  display: block;
+}
+
+a img {
+  border: 0;
+}
+
+/// Non Fluid
+/// @description Non-fluid images if you specify `width` and/or `height`
+/// attributes.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" width="20" height="20">
+
+img[width],
+img[height] {
+  max-width: none;
+}
+
+/// Rounded images
+/// @description Extend or add class to HTML.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" class="img--round">
+
+%img--round,
+.img--round {
+  border-radius: map-fetch($border, radius, base);
+}
+
+/// Circle images
+/// @description Extend or add class to HTML.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" class="img--circle">
+
+%img--circle,
+.img--circle {
+  border-radius: 100%;
+}
+
+/// Border images
+/// @description Extend or add class to html.
+/// @example[html]
+///   <img src="http://fillmurray.com/100/100" class="img--border">
+
+%img--border,
+.img--border {
+  border: 1px solid map-fetch($border, color, base);
+}
+
+/// Image placement
+/// @description Align images with floats and margins.
+/// @example[html] Image floated right with a clearfix.
+///   <div class="cf">
+///     <img src="http://fillmurray.com/100/100" class="img--right">
+///   </div>
+
+%img--right,
+.img--right {
+  float: right;
+  margin-bottom: spacer(1);
+  margin-left: spacer(1);
+}
+
+%img--left,
+.img--left {
+  float: left;
+  margin-right: spacer(1);
+  margin-bottom: spacer(1);
+}
+
+%img--center,
+.img--center {
+  display: block;
+  margin-right: auto;
+  margin-bottom: spacer(1);
+  margin-left: auto;
+}

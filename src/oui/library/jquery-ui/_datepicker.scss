@@ -1,0 +1,140 @@
+// # Datepicker Skin
+// Overrides jQuery's default styling for the Datepicker.
+
+#ui-datepicker-div {
+  display: none;
+  background: map-fetch($color, background, white);
+  border: 1px solid map-fetch($border, color, base);
+  padding: spacer(2);
+  font-size: map-fetch($font, size, epsilon);
+  overflow: hidden;
+  border-radius: 0 !important;
+
+  .ui-widget-header {
+    background: none; // Legacy override.
+    border: 0; // Legacy override.
+    padding: 0; // Legacy override.
+  }
+
+  .ui-datepicker-header {
+    position: relative;
+  }
+
+  &.ui-datepicker-multi-2 .ui-datepicker-group {
+    width: 50%;
+  }
+
+  .ui-datepicker-row-break {
+    clear: both;
+    width: 100%;
+    font-size: 0;
+  }
+
+  .ui-datepicker-group {
+    float: left;
+    font-size: map-fetch($font, size, zeta);
+  }
+
+  .ui-datepicker-group-first {
+    padding-right: spacer(2);
+    border-right: 1px solid map-fetch($border, color, base);
+  }
+
+  .ui-datepicker-group-last {
+    padding-left: spacer(2);
+  }
+
+  .ui-datepicker-title {
+    font-weight: 400;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: map-fetch($font, size, base);
+    padding-bottom: spacer(1);
+  }
+
+  .ui-datepicker-calendar {
+    width: 100%;
+    margin: 0;
+
+    th {
+      color: map-fetch($color, text, light);
+      font-weight: 400;
+      font-size: map-fetch($font, size, milli);
+      text-transform: uppercase;
+    }
+
+    td {
+      font-size: map-fetch($font, size, milli);
+
+      a,
+      &.ui-state-disabled span {
+        text-align: center;
+        display: block;
+        padding: 4px;
+        border: 1px solid transparent;
+        background: map-fetch($color, background, white);
+        color: map-fetch($color, text, base);
+      }
+
+      &.ui-state-disabled span {
+        color: map-fetch($color, text, light);
+      }
+    }
+
+    .ui-state-hover,
+    .ui-state-active  {
+      background: map-fetch($color, ui, brand-light);
+    }
+  }
+
+  .ui-datepicker-buttonpane { // Hiding nav buttons.
+    display: none;
+  }
+
+  .ui-datepicker-prev,
+  .ui-datepicker-next {
+    position: absolute;
+    top: 2px; // Moving into correct position.
+    cursor: pointer;
+    width: 16px;
+    height: 16px;
+    border: 1px solid transparent;
+
+    &::before {
+      @extend %#{$namespace}arrow-inline;
+      position: absolute;
+      top: 5px;
+      content: "";
+    }
+
+    .ui-icon {
+      display: block;
+      text-indent: -99999px; // Moving default prev/next text off screen.
+      overflow: hidden;
+      position: static; // Legacy override.
+      background: none; // Legacy override.
+    }
+
+    &.ui-state-disabled {
+      display: none;
+    }
+  }
+
+  .ui-datepicker-prev {
+    left: 0;
+
+    &::before {
+      @extend %#{$namespace}arrow-inline--left;
+      left: 2px;
+    }
+  }
+
+  .ui-datepicker-next {
+    right: 0;
+
+    &::before {
+      @extend %#{$namespace}arrow-inline--right;
+      left: 3px;
+    }
+  }
+}

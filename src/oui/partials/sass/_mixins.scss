@@ -1,0 +1,324 @@
+////
+/// Mixins
+////
+
+/// Font Smoothing
+/// @description Better rendering of fonts on OS X. Does not affect IE.
+
+@mixin font-smoothing($value: antialiased) {
+  @if $value == antialiased {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  } @else {
+    -webkit-font-smoothing: subpixel-antialiased;
+    -moz-osx-font-smoothing: auto;
+  }
+}
+
+/// Media Query Breakpoints
+/// @description Provides a simple way of adding custom breakpoints. Note that
+/// you cannot use `@extend` inside media queries.
+/// @example[scss] Include the breakpoint mixin with a min and/or max value.
+///   @include breakpoint($min: 992px) {
+///     color: red;
+///   }
+///   @include breakpoint($max: 1000px) {
+///     color: red;
+///   }
+///   @include breakpoint($min: 992px, $max: 1000px) {
+///     color: red;
+///   }
+/// @example[css] Sample output
+///   @media (min-width: 992px) {
+///     color: red;
+///   }
+///   @media (max-width: 1000px) {
+///     color: red;
+///   }
+///   @media (min-width: 992px) and (max-width: 1000px) {
+///     color: red;
+///   }
+
+@mixin breakpoint($min: 0, $max: 0) {
+  $query: '';
+  @if $min != 0 and $max != 0 {
+    $query: '(min-width: #{$min}) and (max-width: #{$max})';
+  } @else if $min != 0 and $max == 0 {
+    $query: '(min-width: #{$min})';
+  } @else if $min == 0 and $max != 0 {
+    $query: '(max-width: #{$max})';
+  }
+
+  @media #{$query} {
+    @content;
+  }
+}
+
+/// Dead Center
+/// @description Centers an element using flexbox.
+/// @example[scss]
+///   @include flex-center;
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/// CSS Arrows
+/// @description This mixin creates a CSS arrow on a given element. We can have
+/// the arrow appear in one of 12 locations, 3 positions for each side.
+///
+/// @example[scss] Pass this position in along with a desired arrow color and
+/// optional border color for just a single, red arrow.
+///   @include arrow(top, left, red)
+/// @example[scss] A red triangle with a black border which sits at the bottom
+/// center of the element.
+///   @include arrow(bottom, center, red, black)
+
+@mixin arrow($arrow-edge, $arrow-location, $arrow-color, $border-color: $arrow-color) {
+  @if $arrow-edge == top {
+    @extend %arrow--top;
+
+    &::before {
+      border-bottom-color: $border-color;
+    }
+
+    &::after {
+      border-bottom-color: $arrow-color;
+    }
+
+    @if $arrow-location == left {
+      @extend %arrow--left;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--center;
+    }
+
+    @if $arrow-location == right {
+      @extend %arrow--right;
+    }
+  }
+
+  @if $arrow-edge == right {
+    @extend %arrow--far;
+
+    &::before {
+      border-left-color: $border-color;
+    }
+
+    &::after {
+      border-left-color: $arrow-color;
+    }
+
+    @if $arrow-location == top {
+      @extend %arrow--upper;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--middle;
+    }
+
+    @if $arrow-location == bottom {
+      @extend %arrow--lower;
+    }
+  }
+
+  @if $arrow-edge == bottom {
+    @extend %arrow--bottom;
+
+    &::before {
+      border-top-color: $border-color;
+    }
+
+    &::after {
+      border-top-color: $arrow-color;
+    }
+
+    @if $arrow-location == left {
+      @extend %arrow--left;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--center;
+    }
+
+    @if $arrow-location == right {
+      @extend %arrow--right;
+    }
+  }
+
+  @if $arrow-edge == left {
+    @extend %arrow--near;
+
+    &::before {
+      border-right-color: $border-color;
+    }
+
+    &::after {
+      border-right-color: $arrow-color;
+    }
+
+    @if $arrow-location == top {
+      @extend %arrow--upper;
+    }
+
+    @if $arrow-location == center {
+      @extend %arrow--middle;
+    }
+
+    @if $arrow-location == bottom {
+      @extend %arrow--lower;
+    }
+  }
+}
+
+/// Grid
+@mixin grid($responsive: null) {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -(spacer(2));
+
+  &__cell {
+    flex: 1;
+    padding-left: spacer(2);
+  }
+
+  &--gutter--narrow {
+    margin-left: -(spacer(1));
+
+    > .#{$namespace}grid__cell {
+      padding-left: spacer(1);
+    }
+  }
+
+  &--gutter--wide {
+    margin-left: -(spacer(4));
+
+    > .#{$namespace}grid__cell {
+      padding-left: spacer(4);
+    }
+  }
+
+  &--flush {
+    margin-left: 0;
+
+    > .#{$namespace}grid__cell {
+      padding-left: 0;
+    }
+  }
+
+  // Grid cells only grow as large as the content.
+  &--natural {
+    > .#{$namespace}grid__cell {
+      flex: none;
+    }
+  }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+      margin-left: 0;
+
+      &__cell {
+        flex: none;
+        padding-left: 0 !important;
+        margin-bottom: spacer(2);
+      }
+
+      &--gutter--wide,
+      &--gutter--narrow {
+        margin-left: 0;
+      }
+    }
+  }
+
+  // Grid Alignment
+  // Moves grid cells to align center or anchored at the bottom of the grid.
+
+  &--center {
+    align-items: center;
+  }
+
+  &--bottom {
+    align-items: flex-end;
+  }
+
+  // Grid Widths
+  // If a width is specificed on a `cell__grid` then have to disable the
+  // default `flex` value otherwise it won't obey the width.
+
+  &__cell[class*="width-"] {
+    -webkit-flex: none;
+    -ms-flex: none;
+    flex: none;
+  }
+}
+
+/// Matrix
+@mixin matrix($columns: null, $spacing: 2, $responsive: null) {
+  @extend %#{$namespace}grid;
+  margin-left: -(spacer($spacing));
+
+  > li {
+    padding-left: spacer($spacing);
+  }
+
+  @if ($columns) {
+    &--1-#{$columns} {
+      > li {
+        width: percentage(1 / $columns);
+      }
+    }
+  }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+      margin-left: 0;
+
+      > li {
+        padding-left: 0;
+        margin-bottom: spacer($spacing);
+        width: auto;
+      }
+    }
+  }
+}
+
+/// Media
+@mixin media($responsive: null) {
+  display: flex;
+  align-items: flex-start;
+
+  &__img {
+    margin-right: spacer(1);
+    margin-top: 0.7%; // Aligns image better with text.
+  }
+
+  &__img--rev {
+    margin-left: spacer(1);
+    margin-top: 0.7%; // Aligns image better with text.
+  }
+
+  &__body {
+    @extend %kill-last-child-margin;
+    flex: 1;
+  }
+
+  @if ($responsive) {
+    @include breakpoint($max: $responsive) {
+      display: block;
+
+      &__img,
+      &__img--rev {
+        margin-right: 0;
+        margin-top: 0;
+      }
+
+      &__body {
+        flex: none;
+      }
+    }
+  }
+}

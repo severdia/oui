@@ -1,0 +1,30 @@
+////
+/// Stats
+/// @description Simple object to display key-value statistic-like information,
+/// for example issue counts.
+/// @example[html]
+///   <div class="#{$namespace}stat-group">
+///     <div class="#{$namespace}stat">
+///       <div class="stat__value">200</div>
+///       <div class="stat__title">Visitors</div>
+///     </div>
+///     <div class="#{$namespace}stat">
+///       <div class="stat__value">7000</div>
+///       <div class="stat__title">View</div>
+///     </div>
+///     <div class="#{$namespace}stat">
+///       <div class="stat__value">9,600</div>
+///       <div class="stat__title">Followers</div>
+///     </div>
+///   </div>
+////
+
+%#{$namespace}stat-group,
+.#{$namespace}stat-group {
+  display: flex;
+}
+
+%#{$namespace}stat,
+.#{$namespace}stat {
+  margin-right: spacer(1);
+}

@@ -1,0 +1,133 @@
+////
+/// Accordion
+/// @example[html] Button colors
+/// <div class="flex height--300 border--all">
+///   <ul class="oui-accordion">
+///     <li class="oui-accordion__item is-active">
+///       <a class="oui-accordion__link" href="#">Item One</a>
+///       <div class="oui-accordion__content-wrap">
+///         <div class="oui-accordion__content">
+///           <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or de  fine new audiences for targeting. Learn more.</p>
+///         </div>
+///       </div>
+///     </li>
+///     <li class="oui-accordion__item">
+///       <a class="oui-accordion__link" href="#">Item Two</a>
+///       <div class="oui-accordion__content-wrap">
+///         <div class="oui-accordion__content">
+///           <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or de  fine new audiences for targeting. Learn more.</p>
+///         </div>
+///       </div>
+///     </li>
+///     <li class="oui-accordion__item">
+///       <a class="oui-accordion__link" href="#">Item Three</a>
+///       <div class="oui-accordion__content-wrap">
+///         <div class="oui-accordion__content">
+///           <p>Dimensions can be used to track extra data about visitors. You can use dimensions to filter your results or de  fine new audiences for targeting. Learn more.</p>
+///         </div>
+///       </div>
+///     </li>
+///   </ul>
+/// </div>
+
+.#{$namespace}accordion,
+.accordion,
+.oui-accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  
+  /// TODO: move these styles once all accordions have been reactified
+  &__react {
+    background: map-fetch($color, background, faint);
+    height: 100%;
+  }
+
+  &__link {
+    transition-property: height;
+    transition-duration: map-fetch($transition-duration, base);
+    display: flex;
+    align-items: center;
+    letter-spacing: map-fetch($font, letter-spacing, loose);
+    font-size: map-fetch($font, size, milli);
+    padding: 0 spacer(2);
+    background: map-fetch($color, background, faint);
+    line-height: 1;
+    height: $accordion-link-height;
+    box-shadow: inset 0 1px 0 map-fetch($color, ui, base);
+    font-weight: 500;
+    text-transform: uppercase;
+
+    &:hover {
+      background: map-fetch($color, background, light);
+      color: map-fetch($color, text, base);
+    }
+
+    &:focus {
+      outline: none;
+    }
+
+    &::before {
+      content: '+';
+      margin-left: -(spacer(1));
+      width: spacer(1);
+      display: inline-block;
+    }
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    min-height: $accordion-link-height;
+    height: $accordion-link-height;
+    overflow: hidden;
+
+    &__react {
+      flex: 0.001;
+      transition: flex-grow 0.166s ease-in-out;
+    }
+
+    &:first-child .accordion__link {
+      box-shadow: none;
+    }
+
+    &--empty {
+      .accordion__content-wrap {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .accordion__content {
+        flex: 1;
+      }
+    }
+  }
+
+  .is-active {
+    flex: 1;
+
+    .accordion__link {
+      color: map-fetch($color, text, base);
+      cursor: default;
+
+      &:hover {
+        background: map-fetch($color, background, faint);
+      }
+
+      &::before {
+        opacity: 0;
+      }
+    }
+  }
+
+  &__content-wrap {
+    flex: 1;
+    overflow-y: auto;
+  }
+
+  &__content {
+    padding: spacer(2);
+  }
+
+}

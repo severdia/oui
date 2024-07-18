@@ -1,0 +1,1 @@
+{"description":"","methods":[],"props":{"testSection":{"type":{"name":"string"},"required":false,"description":"Hook for automated JavaScript tests"},"text":{"type":{"name":"string"},"required":true,"description":"The text or code that will be copied"}},"private":true}

@@ -1,0 +1,77 @@
+////
+/// Functions
+////
+
+/// Spacer
+/// @description Using this function requires that the value passed be a
+/// multiple of `0.5` This encourages greater spacing consistentcy. The
+/// following example will output `25px`. It will test to see if value is
+/// multiple of `0.5`. If not it will provide a warning.
+/// @example[scss]
+///   padding: spacer(2.5);
+
+@function spacer($value) {
+  @if ($value * 2) % 1 != 0 {
+    @warn 'Spacer value must be a multiple of 0.5';
+    @return 'Spacer value must be a multiple of 0.5';
+  } @else {
+    @return $spacer-unit * $value;
+  }
+}
+
+/// Map Fetch
+/// @description Retrieves values from any map, nested or not.
+/// https://github.com/optimizely/oui/issues/239
+/// Usage: map-fetch($color, ui, base);
+
+@function map-fetch($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+
+    @if not $map {
+      @error 'The value `#{$key}` doesn’t exist in the map.';
+    }
+  }
+  @return $map;
+}
+
+/// Map Extend
+/// @description Extends Sass maps. Adapted from
+/// [sitepoint.com/extra-map-functions-sass/](http://www.sitepoint.com/extra-map-functions-sass/).
+
+@function map-extend($map, $maps...) {
+  $max: length($maps);
+  @for $i from 1 through $max {
+    $current: nth($maps, $i);
+    @each $key, $value in $current {
+      @if type-of($value) == 'map' and type-of(map-get($map, $key)) == 'map' {
+        $value: map-extend(map-get($map, $key), $value);
+      }
+      $map: map-merge($map, ($key: $value));
+    }
+  }
+  @return $map;
+}
+
+
+/// Tint
+
+@function tint($color, $percent) {
+  @return mix(#FFF, $color, $percent);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+
+/// Replace #hex with %23hex for valid use inside <svg>
+
+@function encodecolor($string) {
+	@if type-of($string) == 'color' {
+    $hex: str-slice(ie-hex-str($string), 4);
+    $string:unquote("#{$hex}");
+	}
+  $string: '%23' + $string;
+	@return $string;
+}
