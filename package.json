@@ -11,7 +11,7 @@
     "classnames": "^2.2.5",
     "clipboard": "^1.5.12",
     "highlight.js": "9.5.0",
-    "immutable": "3.x.x",
+    "immutable": "4.x.x",
     "lodash.debounce": "^4.0.8",
     "lodash.noop": "^3.0.1",
     "react-copy-to-clipboard": "^5.0.1",
